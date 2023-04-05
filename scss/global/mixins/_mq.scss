@@ -1,0 +1,25 @@
+@use "../variables/" as v;
+
+@mixin mq($breakpoint) {
+  @if map-has-key(v.$breakpoints, $breakpoint) {
+    @media screen and #{inspect(map-get(v.$breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+  @else {
+    @error '指定されたブレークポイントは定義されていません' + '指定できるブレークポイントは次の通りです。 => #{map-keys($breakpoints)}';
+  }
+}
+
+// usage
+// body {
+//   @include g.mq(sm) {
+//     margin: 0;
+//   }
+// }
+
+// @include g.mq(sm) {
+//   body {
+//     margin: 0;
+//   }
+// }

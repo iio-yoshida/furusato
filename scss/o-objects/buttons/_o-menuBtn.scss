@@ -1,0 +1,59 @@
+@use "../../global/" as g;
+
+.o-menuBtn {
+  position: relative;
+  width: g.rem(40px);
+  height: g.rem(40px);
+  padding: 8px;
+  cursor: pointer;
+
+  span {
+    position: absolute;
+    display: inline-block;
+    height: g.rem(3px);
+    background-color: g.colors(base-white);
+    border-radius: .5em;
+    transition: all .5s;
+  }
+
+  span:nth-of-type(2n-1) {
+    width: g.rem(3px);
+    left: g.rem(8px);
+  }
+  span:nth-of-type(2n) {
+    width: g.rem(16px);
+    left: g.rem(14px);
+  }
+  span:nth-child(1), span:nth-child(2) {
+    top: g.rem(12px);
+    transform-origin: left top;
+  }
+  span:nth-child(3), span:nth-child(4) {
+    bottom: g.rem(12px);
+    transform-origin: left bottom;
+  }
+}
+
+.o-menuBtn.is-open {
+  .o-menuBtn__dot {
+    transform: scale(0);
+  }
+  .o-menuBtn__bar {
+    left: g.rem(12px);
+    width: g.rem(25px);
+  }
+  span:nth-child(2) {
+    top: g.rem(10px);
+    transform: rotate(45deg) ;
+  }
+  span:nth-child(4) {
+    bottom: g.rem(10px);
+    transform: rotate(-45deg);
+  }
+}
+
+.o-menuBtn.is-change {
+  span {
+    background-color: g.colors(base-black);
+  }
+}

@@ -1,0 +1,7 @@
+@use "../../global/" as g;
+
+.o-logoIio {
+  & .fill {
+    fill: g.colors(base-white);
+  }
+}

@@ -1,0 +1,147 @@
+@use "../global/" as g;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1100;
+  transition: all .25s;
+}
+.header.is-hidden {
+  top: -10%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.header__inner {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1920px;
+  padding: g.clampPx(0.625rem, 0.074rem, 2.45vw, 1.25rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  width: g.clampPx(5rem, 3.897rem, 4.9vw, 6.25rem);
+  transition: opacity .25s;
+
+  @include g.hover() {
+    opacity: .8;
+  }
+}
+
+.header__nav {
+  display: none;
+  @include g.mq(md) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+.header__btn {
+  @include g.mq(md) {
+    display: none;
+  }
+}
+
+.header__navMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__navItem {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 1em;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: g.colors(base-white);
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: all .25s;
+  }
+  @include g.hover(true) {
+    &::after {
+      transform: translateX(-50%) scaleX(1);
+    }
+  }
+
+  &:last-child {
+    border-right: none;
+    margin-right: g.clampPx(0.625rem, 0.074rem, 2.45vw, 1.25rem);
+  }
+}
+.header__navItem > a {
+  position: relative;
+  padding: 1.5em;
+  color: g.colors(base-white);
+  font-size: g.rem(16px);
+}
+
+.header__navChild {
+  visibility: hidden;
+  opacity: 0;
+  width: 150%;
+  position: absolute;
+  top: 3.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity .25s;
+}
+
+.header__navItem {
+  @include g.hover(true) {
+    .header__navChild {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.header__navChildItem {
+  position: relative;
+  background: g.colors(base-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .25s;
+
+  &:not(:first-child)::before {
+    position: absolute;
+    content:"";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: g.colors(base-black);
+  }
+  @include g.hover(true) {
+    background-color: g.colors(base-black);
+
+    & > a {
+      color: g.colors(base-white);
+    }
+  }
+}
+
+.header__navChildItem > a {
+  width: 100%;
+  padding: 1em;
+  color: g.colors(base-black);
+  font-size: g.rem(16px);
+  text-align: center;
+  transition: all .25s;
+}

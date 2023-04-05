@@ -1,0 +1,45 @@
+@mixin hover($within: false, $ie: false) {
+  @if $within == false {
+    &:focus {
+      @content;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        @content;
+      }
+    }
+  }
+  @if $within == true {
+    &:focus-within {
+      @content;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        @content;
+      }
+    }
+  }
+
+  @if $ie {
+    @at-root .ua-ie &:hover {
+      @content;
+    }
+  }
+}
+
+// ie対応を行う場合はjsに下記を追加
+// !function() {
+//   const browser = window.navigator.userAgent.toLowerCase();
+//   const root = document.documentElement;
+
+//   if(browser.indexOf('msie') > 0 || browser.indexOf('trident') > 0) {
+//     root.classList.add('ua-ie');
+//   }
+// }();
+
+// usage
+// .class {
+//   @include g.hover() {
+//       // ie対応の場合、引数にtrueを渡す
+//   }
+// }

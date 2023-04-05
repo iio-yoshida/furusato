@@ -1,0 +1,10 @@
+@use "../variables/" as v;
+
+@function colors($key) {
+  @return map-get(v.$colors, $key);
+}
+
+// usage
+// .class {
+//   color: g.colors($colors);
+// }

@@ -1,0 +1,15 @@
+@use "../global/" as g;
+
+.l-siteWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+.l-main {
+  flex: 1;
+  // 横スクロール防止 *mainにstickyが含まれる場合は外す
+  overflow: hidden;
+}

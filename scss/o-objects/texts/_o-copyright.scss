@@ -1,0 +1,6 @@
+@use "../../global/" as g;
+
+.o-copyright {
+  color: g.colors(base-white);
+  text-align: center;
+}

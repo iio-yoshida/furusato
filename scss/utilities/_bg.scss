@@ -1,0 +1,16 @@
+@use "../global/" as g;
+
+.bg-black {
+  background-color: g.colors(base-black);
+  transition: all .5s ease-in-out;
+}
+.bg-white {
+  background-color: g.colors(base-white);
+}
+
+.bg-op-black {
+  background-color: rgba(g.colors(base-black), 0.6);
+}
+.bg-op-white {
+  background-color: rgba(g.colors(base-white), 0.6);
+}
