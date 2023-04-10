@@ -144,7 +144,7 @@ button {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fff;
+  background-color: #fcfcfc;
   box-shadow: 0 0 6px rgba(34, 34, 34, 0.6);
   z-index: 1100;
   opacity: 1;
@@ -153,7 +153,6 @@ button {
 .header .header__inner {
   margin-inline: auto;
   width: 100%;
-  max-width: 1440px;
   padding: 0 0 0 20px;
   display: flex;
   justify-content: space-between;
@@ -227,7 +226,7 @@ button {
 }
 .header .header__navBtn a:focus {
   background-color: #222;
-  color: #fff;
+  color: #fcfcfc;
 }
 .header .header__navBtn a:focus::after {
   background-image: url(../img/btn_arrow_white.png);
@@ -235,7 +234,7 @@ button {
 @media (hover: hover) and (pointer: fine) {
   .header .header__navBtn a:hover {
     background-color: #222;
-    color: #fff;
+    color: #fcfcfc;
   }
   .header .header__navBtn a:hover::after {
     background-image: url(../img/btn_arrow_white.png);
@@ -333,7 +332,7 @@ button {
   width: calc(100px + (160 - 100) * ((100vw - 360px) / (1440 - 360)));
   height: 100%;
   background-color: #cd5231;
-  color: #fff;
+  color: #fcfcfc;
   font-size: 0.625rem;
   text-align: center;
   transition: opacity 0.25s;
@@ -374,15 +373,9 @@ button {
 .header .header__navContact:focus {
   opacity: 0.6;
 }
-.header .header__navContact:focus > span::after {
-  transform: translateX(-50%) scaleX(1);
-}
 @media (hover: hover) and (pointer: fine) {
   .header .header__navContact:hover {
     opacity: 0.6;
-  }
-  .header .header__navContact:hover > span::after {
-    transform: translateX(-50%) scaleX(1);
   }
 }
 .header .header__navContact > span {
@@ -390,20 +383,8 @@ button {
   display: inline-block;
   bottom: 1em;
   left: 50%;
-  width: 100%;
-  transform: translateX(-50%);
-}
-.header .header__navContact > span::after {
-  position: absolute;
-  content: "";
-  bottom: -0.1em;
-  left: 50%;
   width: 80%;
-  height: 1px;
-  background-color: #fff;
-  transform: translateX(-50%) scaleX(0);
-  transform-origin: center;
-  transition: all 0.25s;
+  transform: translateX(-50%);
 }
 .header .header__navMenuBtn {
   position: relative;
@@ -499,8 +480,8 @@ button {
 }
 .header.is-active .header__navBtn a {
   background-color: transparent;
-  border-color: #fff;
-  color: #fff;
+  border-color: #fcfcfc;
+  color: #fcfcfc;
 }
 .header.is-active .header__navBtn a::after {
   background-image: url(../img/btn_arrow_white.png);
@@ -515,17 +496,17 @@ button {
 }
 .header.is-active .header__navItem > a,
 .header.is-active .header__navItem > button {
-  color: #fff;
+  color: #fcfcfc;
 }
 .header.is-active .header__navItem > a span::after,
 .header.is-active .header__navItem > button span::after {
-  background-color: #fff;
+  background-color: #fcfcfc;
 }
 .header.is-active .header__navMenuBtn > span:not(:last-child) {
-  background-color: #fff;
+  background-color: #fcfcfc;
 }
 .header.is-active .header__navMenuBtn > span:last-child {
-  color: #fff;
+  color: #fcfcfc;
 }
 
 .l-footer {
@@ -556,7 +537,7 @@ button {
 }
 
 .o-copyright {
-  color: #fff;
+  color: #fcfcfc;
   text-align: center;
 }
 
@@ -682,7 +663,7 @@ button {
   }
 }
 .o-logoIio .fill {
-  fill: #fff;
+  fill: #fcfcfc;
 }
 
 .p-mobileMenu {
@@ -728,7 +709,7 @@ button {
   position: relative;
   display: inline-block;
   padding: 0.5em 2em;
-  color: #fff;
+  color: #fcfcfc;
   font-size: clamp(1.25rem, 0.809rem + 1.96vw, 1.75rem);
 }
 .p-mobileMenu__item > a::after,
@@ -739,7 +720,7 @@ button {
   left: 50%;
   width: 100%;
   height: 2px;
-  background-color: #fff;
+  background-color: #fcfcfc;
   transform: translateX(-50%) scaleX(0);
   transform-origin: center;
   transition: transform 0.25s;
@@ -775,7 +756,7 @@ button {
 
 .p-mobileMenu__navChildItem > a {
   padding: 0.5em 2em;
-  color: #fff;
+  color: #fcfcfc;
   font-size: clamp(1rem, 0.559rem + 1.96vw, 1.5rem);
 }
 
@@ -787,7 +768,7 @@ button {
 .p-mobileMenu__credit {
   margin-top: 40px;
   padding-top: 40px;
-  border-top: 1px solid #fff;
+  border-top: 1px solid #fcfcfc;
 }
 
 .p-kv {
@@ -840,7 +821,7 @@ button {
 }
 
 .bg-white {
-  background-color: #fff;
+  background-color: #fcfcfc;
 }
 
 .bg-op-black {
@@ -848,5 +829,5 @@ button {
 }
 
 .bg-op-white {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(252, 252, 252, 0.6);
 }

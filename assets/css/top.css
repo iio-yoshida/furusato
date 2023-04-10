@@ -6,8 +6,8 @@
 }
 .header .header__navBtn a {
   background-color: transparent;
-  border-color: #fff;
-  color: #fff;
+  border-color: #fcfcfc;
+  color: #fcfcfc;
 }
 .header .header__navBtn a::after {
   background-image: url(../img/btn_arrow_white.png);
@@ -22,17 +22,17 @@
 }
 .header .header__navItem > a,
 .header .header__navItem > button {
-  color: #fff;
+  color: #fcfcfc;
 }
 .header .header__navItem > a span::after,
 .header .header__navItem > button span::after {
-  background-color: #fff;
+  background-color: #fcfcfc;
 }
 .header .header__navMenuBtn > span:not(:last-child) {
-  background-color: #fff;
+  background-color: #fcfcfc;
 }
 .header .header__navMenuBtn > span:last-child {
-  color: #fff;
+  color: #fcfcfc;
 }
 
 .header.is-hidden {
@@ -43,7 +43,7 @@
 }
 
 .header.is-shown {
-  background-color: #fff;
+  background-color: #fcfcfc;
 }
 .header.is-shown .header__logo a::after {
   opacity: 0;
@@ -86,8 +86,8 @@
 }
 .header.is-shown.is-active .header__navBtn a {
   background-color: transparent;
-  border-color: #fff;
-  color: #fff;
+  border-color: #fcfcfc;
+  color: #fcfcfc;
 }
 .header.is-shown.is-active .header__navBtn a::after {
   background-image: url(../img/btn_arrow_white.png);
@@ -102,15 +102,15 @@
 }
 .header.is-shown.is-active .header__navItem > a,
 .header.is-shown.is-active .header__navItem > button {
-  color: #fff;
+  color: #fcfcfc;
 }
 .header.is-shown.is-active .header__navItem > a::after,
 .header.is-shown.is-active .header__navItem > button::after {
-  background-color: #fff;
+  background-color: #fcfcfc;
 }
 .header.is-shown.is-active .header__navMenuBtn > span:not(:last-child) {
-  background-color: #fff;
+  background-color: #fcfcfc;
 }
 .header.is-shown.is-active .header__navMenuBtn > span:last-child {
-  color: #fff;
+  color: #fcfcfc;
 }

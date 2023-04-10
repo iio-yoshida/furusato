@@ -17,7 +17,6 @@
   .header__inner {
     margin-inline: auto;
     width: 100%;
-    max-width: 1440px;
     padding: 0 0 0 20px;
     display: flex;
     justify-content: space-between;
@@ -209,10 +208,6 @@
     }
     @include g.hover() {
       opacity: .6;
-
-      & > span::after {
-        transform: translateX(-50%) scaleX(1);
-      }
     }
   }
 
@@ -221,20 +216,8 @@
     display: inline-block;
     bottom: 1em;
     left: 50%;
-    width: 100%;
+    width: 80%;
     transform: translateX(-50%);
-    &::after {
-      position: absolute;
-      content: "";
-      bottom: -0.1em;
-      left: 50%;
-      width: 80%;
-      height: 1px;
-      background-color: g.colors(base-white);
-      transform: translateX(-50%) scaleX(0);
-      transform-origin: center;
-      transition: all .25s;
-    }
   }
 
   .header__navMenuBtn {
