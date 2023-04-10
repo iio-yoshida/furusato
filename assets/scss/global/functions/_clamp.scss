@@ -4,7 +4,7 @@
 // min,maxをpx単位、中央値をpx + vwで出力
 // min-max-value interpolationを使用
 // https://min-max-calculator.9elements.com/
-@function clampPx($min, $medianRem, $medianVw, $max, $base: 16px, $vp: 768px) {
+@function clampPx($min, $medianRem, $medianVw, $max, $base: 16px) {
   $min: su.strip-unit($min) * $base;
   $max: su.strip-unit($max) * $base;
   $medianPx: (su.strip-unit($medianRem) * $base);

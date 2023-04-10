@@ -1,0 +1,116 @@
+.header {
+  background-color: transparent;
+}
+.header .header__logo a::after {
+  opacity: 1;
+}
+.header .header__navBtn a {
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+.header .header__navBtn a::after {
+  background-image: url(../img/btn_arrow_white.png);
+}
+.header .header__navBtn a:focus {
+  opacity: 0.6;
+}
+@media (hover: hover) and (pointer: fine) {
+  .header .header__navBtn a:hover {
+    opacity: 0.6;
+  }
+}
+.header .header__navItem > a,
+.header .header__navItem > button {
+  color: #fff;
+}
+.header .header__navItem > a::after,
+.header .header__navItem > button::after {
+  background-color: #fff;
+}
+.header .header__menuBtn > span:not(:last-child) {
+  background-color: #fff;
+}
+.header .header__menuBtn > span:last-child {
+  color: #fff;
+}
+
+.header.is-hidden {
+  top: -10%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.header.is-shown {
+  background-color: #fff;
+}
+.header.is-shown .header__logo a::after {
+  opacity: 0;
+}
+.header.is-shown .header__navBtn a {
+  border-color: #222;
+  color: #222;
+}
+.header.is-shown .header__navBtn a::after {
+  background-image: url(../img/btn_arrow_black.png);
+}
+.header.is-shown .header__navBtn a:focus {
+  opacity: 0.6;
+}
+@media (hover: hover) and (pointer: fine) {
+  .header.is-shown .header__navBtn a:hover {
+    opacity: 0.6;
+  }
+}
+.header.is-shown .header__navItem > a,
+.header.is-shown .header__navItem > button {
+  color: #222;
+}
+.header.is-shown .header__navItem > a::after,
+.header.is-shown .header__navItem > button::after {
+  background-color: #222;
+}
+.header.is-shown .header__menuBtn > span:not(:last-child) {
+  background-color: #222;
+}
+.header.is-shown .header__menuBtn > span:last-child {
+  color: #222;
+}
+
+.header.is-shown.is-active {
+  background-color: transparent;
+}
+.header.is-shown.is-active .header__logo a::after {
+  opacity: 1;
+}
+.header.is-shown.is-active .header__navBtn a {
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+.header.is-shown.is-active .header__navBtn a::after {
+  background-image: url(../img/btn_arrow_white.png);
+}
+.header.is-shown.is-active .header__navBtn a:focus {
+  opacity: 0.6;
+}
+@media (hover: hover) and (pointer: fine) {
+  .header.is-shown.is-active .header__navBtn a:hover {
+    opacity: 0.6;
+  }
+}
+.header.is-shown.is-active .header__navItem > a,
+.header.is-shown.is-active .header__navItem > button {
+  color: #fff;
+}
+.header.is-shown.is-active .header__navItem > a::after,
+.header.is-shown.is-active .header__navItem > button::after {
+  background-color: #fff;
+}
+.header.is-shown.is-active .header__menuBtn > span:not(:last-child) {
+  background-color: #fff;
+}
+.header.is-shown.is-active .header__menuBtn > span:last-child {
+  color: #fff;
+}

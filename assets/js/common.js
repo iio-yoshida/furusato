@@ -13,32 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // モバイルメニューボタンの動作
   new MobileMenu();
 
-  // Topページにのみ適用する処理
-  if (document.body.classList.contains('is-top')) {
-    // ヘッダーの表示切り替え
-    function headerToggle() {
-      const header = document.querySelector('.js-header');
-      const firstView = document.querySelector('.js-firstView');
-      const scrollValue = window.scrollY;
-      let position = firstView.offsetHeight - header.offsetHeight;
-
-      if(scrollValue > 1) {
-        header.classList.add('is-hidden');
-      } else {
-        header.classList.remove('is-hidden');
-      }
-      if(scrollValue > position) {
-        header.classList.remove('is-hidden');
-        // headerのスタイルを初期状態と変更する場合は以下コメントアウト外す
-        // header.classList.add('is-shown');
-      } else {
-        // headerのスタイルを初期状態と変更する場合は以下コメントアウト外す
-        // header.classList.remove('is-shown');
-      }
-    }
-    window.addEventListener('scroll', headerToggle);
-  }
-
   // ScrollObserverで背景色と文字色を切り替える
   const colorChange = function(el, isIntersecting) {
     const changeItem = document.querySelector('.js-changeClr');
