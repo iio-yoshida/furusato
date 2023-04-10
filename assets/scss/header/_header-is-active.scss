@@ -20,11 +20,11 @@
   .header__navItem > a,
   .header__navItem > button {
     color: g.colors(base-white);
-    &::after {
+    & span::after {
       background-color: g.colors(base-white);
     }
   }
-  .header__menuBtn {
+  .header__navMenuBtn {
     & > span:not(:last-child) {
       background-color: g.colors(base-white);
     }

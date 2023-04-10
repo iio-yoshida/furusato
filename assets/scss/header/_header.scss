@@ -17,29 +17,18 @@
   .header__inner {
     margin-inline: auto;
     width: 100%;
-    max-width: 1360px;
+    max-width: 1440px;
     padding: 0 0 0 20px;
     display: flex;
     justify-content: space-between;
   }
 
-  .header__menu {
-    display: flex;
-    justify-content: space-between;
-  }
-
   .header__logo {
-    width: g.calcPx(155px, 310px);
-    min-width: 155px;
-    max-width: 310px;
-    margin-top: 20px;
+    align-self: center;
+    width: g.calcPx(150px, 280px);
+    min-width: 150px;
+    max-width: 280px;
     transition: opacity .25s;
-    @include g.mq(md) {
-      margin-top: 25px;
-    }
-    @include g.mq(lg) {
-      margin-top: 30px;
-    }
     @include g.hover() {
       opacity: .6;
     }
@@ -63,17 +52,13 @@
   }
 
   .header__nav {
-    display: none;
-    @include g.mq(lg) {
-      position: relative;
-      display: block;
-      margin-top: 30px;
-    }
+    display: flex;
+    justify-content: space-between;
   }
 
   .header__navBtn {
     position: absolute;
-    top: -15px;
+    top: 10px;
     right: 25px;
     @include g.mq(xl) {
       right: 30px;
@@ -85,7 +70,7 @@
     padding: 4px 32px 4px 8px;
     border: 1px solid g.colors(base-black);
     color: g.colors(base-black);
-    font-size: g.rem(10px);
+    font-size: g.rem(12px);
     text-transform: uppercase;
     transition: background-color .25s, color .25s, opacity .25s;
     &::after {
@@ -108,18 +93,25 @@
       }
     }
   }
-
   .header__navMenu {
+    display: none;
+    @include g.mq(lg) {
+      position: relative;
+      display: block;
+    }
+  }
+
+  .header__navList {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+    height: g.calcPx(60px, 120px);
+    min-height: 60px;
+    max-height: 120px;
   }
 
   .header__navItem {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 60%;
     margin-right: 25px;
     @include g.mq(xl) {
       margin-right: 30px;
@@ -128,45 +120,57 @@
 
   .header__navItem > a,
   .header__navItem > button {
-    position: relative;
-    margin-top: 10px;
-    padding: 16px 0 12px;
+    display: flex;
+    height: 100%;
     color: g.colors(base-black);
-    font-size: g.rem(16px);
+    font-size: g.rem(14px);
     transition: color .25s, opacity .25s;
     @include g.mq(xl) {
-      padding: 18px 0 14px;
+      font-size: g.rem(16px);
+    }
+    @include g.mq(xxl) {
       font-size: g.rem(18px);
     }
+    & > span {
+      position: relative;
+      display: inline-block;
+      height: fit-content;
+      margin-top: 15px;
 
-    &::after {
-      position: absolute;
-      content: "";
-      bottom: .5em;
-      left: 50%;
-      width: 100%;
-      height: 1px;
-      background-color: g.colors(base-black);
-      transform: translateX(-50%) scaleX(0);
-      transform-origin: center;
-      transition: transform .25s, background-color .25s;
-    }
-    @include g.hover() {
-      opacity: .8;
       &::after {
-        transform: translateX(-50%) scaleX(1);
+        position: absolute;
+        content: "";
+        bottom: -0.5em;
+        left: 50%;
+        width: 100%;
+        height: 1px;
+        background-color: g.colors(base-black);
+        transform: translateX(-50%) scaleX(0);
+        transform-origin: center;
+        transition: transform .25s, background-color .25s;
+      }
+    }
+
+  }
+  .header__navItem {
+    @include g.hover(true) {
+      a, button {
+        opacity: .8;
+        & span::after {
+          transform: translateX(-50%) scaleX(1);
+        }
       }
     }
   }
 
-  .header__btns {
+  .header__navBtns {
     height: g.calcPx(60px, 120px);
     min-height: 60px;
     max-height: 120px;
     display: flex;
   }
 
-  .header__contact {
+  .header__navContact {
     position: relative;
     display: inline-block;
     width: g.calcPx(100px, 160px);
@@ -179,7 +183,10 @@
     @include g.mq(md) {
       font-size: g.rem(14px);
     }
-    @include g.mq(lg) {
+    @include g.mq(xl) {
+      font-size: g.rem(16px);
+    }
+    @include g.mq(xxl) {
       font-size: g.rem(18px);
     }
 
@@ -209,7 +216,7 @@
     }
   }
 
-  .header__contact > span {
+  .header__navContact > span {
     position: absolute;
     display: inline-block;
     bottom: 1em;
@@ -230,7 +237,7 @@
     }
   }
 
-  .header__menuBtn {
+  .header__navMenuBtn {
     position: relative;
     display: inline-block;
     width: 60px;

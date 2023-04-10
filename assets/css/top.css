@@ -24,14 +24,14 @@
 .header .header__navItem > button {
   color: #fff;
 }
-.header .header__navItem > a::after,
-.header .header__navItem > button::after {
+.header .header__navItem > a span::after,
+.header .header__navItem > button span::after {
   background-color: #fff;
 }
-.header .header__menuBtn > span:not(:last-child) {
+.header .header__navMenuBtn > span:not(:last-child) {
   background-color: #fff;
 }
-.header .header__menuBtn > span:last-child {
+.header .header__navMenuBtn > span:last-child {
   color: #fff;
 }
 
@@ -67,14 +67,14 @@
 .header.is-shown .header__navItem > button {
   color: #222;
 }
-.header.is-shown .header__navItem > a::after,
-.header.is-shown .header__navItem > button::after {
+.header.is-shown .header__navItem > a span::after,
+.header.is-shown .header__navItem > button span::after {
   background-color: #222;
 }
-.header.is-shown .header__menuBtn > span:not(:last-child) {
+.header.is-shown .header__navMenuBtn > span:not(:last-child) {
   background-color: #222;
 }
-.header.is-shown .header__menuBtn > span:last-child {
+.header.is-shown .header__navMenuBtn > span:last-child {
   color: #222;
 }
 
@@ -108,9 +108,9 @@
 .header.is-shown.is-active .header__navItem > button::after {
   background-color: #fff;
 }
-.header.is-shown.is-active .header__menuBtn > span:not(:last-child) {
+.header.is-shown.is-active .header__navMenuBtn > span:not(:last-child) {
   background-color: #fff;
 }
-.header.is-shown.is-active .header__menuBtn > span:last-child {
+.header.is-shown.is-active .header__navMenuBtn > span:last-child {
   color: #fff;
 }

@@ -153,31 +153,17 @@ button {
 .header .header__inner {
   margin-inline: auto;
   width: 100%;
-  max-width: 1360px;
+  max-width: 1440px;
   padding: 0 0 0 20px;
   display: flex;
   justify-content: space-between;
 }
-.header .header__menu {
-  display: flex;
-  justify-content: space-between;
-}
 .header .header__logo {
-  width: calc(155px + (310 - 155) * ((100vw - 360px) / (1440 - 360)));
-  min-width: 155px;
-  max-width: 310px;
-  margin-top: 20px;
+  align-self: center;
+  width: calc(150px + (280 - 150) * ((100vw - 360px) / (1440 - 360)));
+  min-width: 150px;
+  max-width: 280px;
   transition: opacity 0.25s;
-}
-@media screen and (min-width: 768px) {
-  .header .header__logo {
-    margin-top: 25px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .header .header__logo {
-    margin-top: 30px;
-  }
 }
 .header .header__logo:focus {
   opacity: 0.6;
@@ -205,18 +191,12 @@ button {
   transition: opacity 0.25s;
 }
 .header .header__nav {
-  display: none;
-}
-@media screen and (min-width: 1024px) {
-  .header .header__nav {
-    position: relative;
-    display: block;
-    margin-top: 30px;
-  }
+  display: flex;
+  justify-content: space-between;
 }
 .header .header__navBtn {
   position: absolute;
-  top: -15px;
+  top: 10px;
   right: 25px;
 }
 @media screen and (min-width: 1280px) {
@@ -230,7 +210,7 @@ button {
   padding: 4px 32px 4px 8px;
   border: 1px solid #222;
   color: #222;
-  font-size: 0.625rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   transition: background-color 0.25s, color 0.25s, opacity 0.25s;
 }
@@ -262,15 +242,24 @@ button {
   }
 }
 .header .header__navMenu {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .header .header__navMenu {
+    position: relative;
+    display: block;
+  }
+}
+.header .header__navList {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
+  height: calc(60px + (120 - 60) * ((100vw - 360px) / (1440 - 360)));
+  min-height: 60px;
+  max-height: 120px;
 }
 .header .header__navItem {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 60%;
   margin-right: 25px;
 }
 @media screen and (min-width: 1280px) {
@@ -280,25 +269,36 @@ button {
 }
 .header .header__navItem > a,
 .header .header__navItem > button {
-  position: relative;
-  margin-top: 10px;
-  padding: 16px 0 12px;
+  display: flex;
+  height: 100%;
   color: #222;
-  font-size: 1rem;
+  font-size: 0.875rem;
   transition: color 0.25s, opacity 0.25s;
 }
 @media screen and (min-width: 1280px) {
   .header .header__navItem > a,
   .header .header__navItem > button {
-    padding: 18px 0 14px;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header .header__navItem > a,
+  .header .header__navItem > button {
     font-size: 1.125rem;
   }
 }
-.header .header__navItem > a::after,
-.header .header__navItem > button::after {
+.header .header__navItem > a > span,
+.header .header__navItem > button > span {
+  position: relative;
+  display: inline-block;
+  height: fit-content;
+  margin-top: 15px;
+}
+.header .header__navItem > a > span::after,
+.header .header__navItem > button > span::after {
   position: absolute;
   content: "";
-  bottom: 0.5em;
+  bottom: -0.5em;
   left: 50%;
   width: 100%;
   height: 1px;
@@ -307,31 +307,27 @@ button {
   transform-origin: center;
   transition: transform 0.25s, background-color 0.25s;
 }
-.header .header__navItem > a:focus,
-.header .header__navItem > button:focus {
+.header .header__navItem:focus-within a, .header .header__navItem:focus-within button {
   opacity: 0.8;
 }
-.header .header__navItem > a:focus::after,
-.header .header__navItem > button:focus::after {
+.header .header__navItem:focus-within a span::after, .header .header__navItem:focus-within button span::after {
   transform: translateX(-50%) scaleX(1);
 }
 @media (hover: hover) and (pointer: fine) {
-  .header .header__navItem > a:hover,
-  .header .header__navItem > button:hover {
+  .header .header__navItem:hover a, .header .header__navItem:hover button {
     opacity: 0.8;
   }
-  .header .header__navItem > a:hover::after,
-  .header .header__navItem > button:hover::after {
+  .header .header__navItem:hover a span::after, .header .header__navItem:hover button span::after {
     transform: translateX(-50%) scaleX(1);
   }
 }
-.header .header__btns {
+.header .header__navBtns {
   height: calc(60px + (120 - 60) * ((100vw - 360px) / (1440 - 360)));
   min-height: 60px;
   max-height: 120px;
   display: flex;
 }
-.header .header__contact {
+.header .header__navContact {
   position: relative;
   display: inline-block;
   width: calc(100px + (160 - 100) * ((100vw - 360px) / (1440 - 360)));
@@ -343,16 +339,21 @@ button {
   transition: opacity 0.25s;
 }
 @media screen and (min-width: 768px) {
-  .header .header__contact {
+  .header .header__navContact {
     font-size: 0.875rem;
   }
 }
-@media screen and (min-width: 1024px) {
-  .header .header__contact {
+@media screen and (min-width: 1280px) {
+  .header .header__navContact {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header .header__navContact {
     font-size: 1.125rem;
   }
 }
-.header .header__contact::before {
+.header .header__navContact::before {
   position: absolute;
   content: "";
   top: 20%;
@@ -365,26 +366,26 @@ button {
   transform: translateX(-50%);
 }
 @media screen and (min-width: 1280px) {
-  .header .header__contact::before {
+  .header .header__navContact::before {
     width: 42px;
     height: 36px;
   }
 }
-.header .header__contact:focus {
+.header .header__navContact:focus {
   opacity: 0.6;
 }
-.header .header__contact:focus > span::after {
+.header .header__navContact:focus > span::after {
   transform: translateX(-50%) scaleX(1);
 }
 @media (hover: hover) and (pointer: fine) {
-  .header .header__contact:hover {
+  .header .header__navContact:hover {
     opacity: 0.6;
   }
-  .header .header__contact:hover > span::after {
+  .header .header__navContact:hover > span::after {
     transform: translateX(-50%) scaleX(1);
   }
 }
-.header .header__contact > span {
+.header .header__navContact > span {
   position: absolute;
   display: inline-block;
   bottom: 1em;
@@ -392,7 +393,7 @@ button {
   width: 100%;
   transform: translateX(-50%);
 }
-.header .header__contact > span::after {
+.header .header__navContact > span::after {
   position: absolute;
   content: "";
   bottom: -0.1em;
@@ -404,7 +405,7 @@ button {
   transform-origin: center;
   transition: all 0.25s;
 }
-.header .header__menuBtn {
+.header .header__navMenuBtn {
   position: relative;
   display: inline-block;
   width: 60px;
@@ -415,18 +416,18 @@ button {
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
-  .header .header__menuBtn {
+  .header .header__navMenuBtn {
     width: 90px;
     padding: 0 15px;
     font-size: 0.875rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  .header .header__menuBtn {
+  .header .header__navMenuBtn {
     display: none;
   }
 }
-.header .header__menuBtn > span:not(:last-child) {
+.header .header__navMenuBtn > span:not(:last-child) {
   position: absolute;
   left: 50%;
   width: 1.8em;
@@ -435,25 +436,25 @@ button {
   transform: translateX(-50%);
   transition: transform 0.25s, opacity 0.25s;
 }
-.header .header__menuBtn > span:nth-child(1) {
+.header .header__navMenuBtn > span:nth-child(1) {
   top: 1.6em;
 }
-.header .header__menuBtn > span:nth-child(2) {
+.header .header__navMenuBtn > span:nth-child(2) {
   top: 2.2em;
 }
-.header .header__menuBtn > span:nth-child(3) {
+.header .header__navMenuBtn > span:nth-child(3) {
   top: 2.8em;
 }
-.header .header__menuBtn.is-active > span:nth-child(1) {
+.header .header__navMenuBtn.is-active > span:nth-child(1) {
   transform: translateX(-50%) translateY(0.6em) rotate(-45deg);
 }
-.header .header__menuBtn.is-active > span:nth-child(2) {
+.header .header__navMenuBtn.is-active > span:nth-child(2) {
   opacity: 0;
 }
-.header .header__menuBtn.is-active > span:nth-child(3) {
+.header .header__navMenuBtn.is-active > span:nth-child(3) {
   transform: translateX(-50%) translateY(-0.6em) rotate(45deg);
 }
-.header .header__menuBtn > span:last-child {
+.header .header__navMenuBtn > span:last-child {
   position: absolute;
   display: inline-block;
   bottom: 1em;
@@ -463,10 +464,10 @@ button {
   overflow: hidden;
   transform: translateX(-50%);
 }
-.header .header__menuBtn > span:last-child.fade-out {
+.header .header__navMenuBtn > span:last-child.fade-out {
   animation: fade-out 0.25s ease-in-out;
 }
-.header .header__menuBtn > span:last-child.fade-in {
+.header .header__navMenuBtn > span:last-child.fade-in {
   animation: fade-in 0.25s ease-in-out;
 }
 @keyframes fade-out {
@@ -516,14 +517,14 @@ button {
 .header.is-active .header__navItem > button {
   color: #fff;
 }
-.header.is-active .header__navItem > a::after,
-.header.is-active .header__navItem > button::after {
+.header.is-active .header__navItem > a span::after,
+.header.is-active .header__navItem > button span::after {
   background-color: #fff;
 }
-.header.is-active .header__menuBtn > span:not(:last-child) {
+.header.is-active .header__navMenuBtn > span:not(:last-child) {
   background-color: #fff;
 }
-.header.is-active .header__menuBtn > span:last-child {
+.header.is-active .header__navMenuBtn > span:last-child {
   color: #fff;
 }
 
