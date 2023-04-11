@@ -518,7 +518,7 @@ button {
 .footer::before {
   position: absolute;
   content: "";
-  top: calc(-30px + (-50 - -30) * ((100vw - 360px) / (1440 - 360)));
+  top: calc(-29px + (-49 - -29) * ((100vw - 360px) / (1440 - 360)));
   right: 0;
   width: 100%;
   max-width: 658px;

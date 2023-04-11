@@ -9,7 +9,7 @@
   &::before {
     position: absolute;
     content: '';
-    top: g.calcPx(-30px, -50px);
+    top: g.calcPx(-29px, -49px);
     right: 0;
     width: 100%;
     max-width: 658px;
@@ -246,7 +246,6 @@
     transform: scale(1.2);
   }
 }
-
 
 .footer__secondary {
   display: flex;
