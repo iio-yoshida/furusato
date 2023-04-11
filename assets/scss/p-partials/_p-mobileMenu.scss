@@ -13,11 +13,11 @@
   transform-origin: top;
   transition: transform .5s;
 
-  @include g.mq(md) {
+  @include g.mq(xl) {
     display: none;
   }
 
-  &.is-open {
+  &.is-active {
     transform: translateX(0);
   }
 

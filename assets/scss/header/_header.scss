@@ -44,7 +44,7 @@
     height: 100%;
     background-image: url(../img/logo_white.svg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: 0 0;
     opacity: 0;
     transition: opacity .25s;

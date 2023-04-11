@@ -184,7 +184,7 @@ button {
   height: 100%;
   background-image: url(../img/logo_white.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: 0 0;
   opacity: 0;
   transition: opacity 0.25s;
@@ -955,12 +955,12 @@ button {
   transform-origin: top;
   transition: transform 0.5s;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1280px) {
   .p-mobileMenu {
     display: none;
   }
 }
-.p-mobileMenu.is-open {
+.p-mobileMenu.is-active {
   transform: translateX(0);
 }
 
