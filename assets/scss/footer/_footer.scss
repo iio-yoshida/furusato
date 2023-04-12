@@ -50,12 +50,14 @@
 }
 
 .footer__info {
-  margin-bottom: 50px;
+  padding-bottom: 50px;
   border-bottom: 1px solid g.colors(base-white);
   text-align: center;
 
   @include g.mq(md) {
     width: 50%;
+    padding-bottom: 0;
+    margin-bottom: 50px;
     border-bottom: none;
     border-right: 1px solid g.colors(base-white);
     text-align: left;

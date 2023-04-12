@@ -11,6 +11,11 @@ body {
   line-height: 1.5;
 }
 
+body.is-active {
+  height: 100%;
+  overflow: hidden;
+}
+
 img, svg {
   max-width: 100%;
   vertical-align: middle;
