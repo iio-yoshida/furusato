@@ -1,4 +1,4 @@
-@use "../global/" as g;
+@use "../../global/" as g;
 
 .header.is-active {
   background-color: rgba(g.colors(base-black), .9);

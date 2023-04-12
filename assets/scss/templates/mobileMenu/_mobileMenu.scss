@@ -1,6 +1,6 @@
-@use "../global/" as g;
+@use "../../global/" as g;
 
-.p-mobileMenu {
+.mobileMenu {
   position: fixed;
   z-index: 1000;
   top: 0;
@@ -22,7 +22,7 @@
     transform: translateX(0);
   }
 }
-.p-mobileMenu__inner {
+.mobileMenu__inner {
   display: flex;
   flex-direction: column;
   @include g.mq(md) {
@@ -33,7 +33,7 @@
   }
 }
 
-.p-mobileMenu__navPrimary {
+.mobileMenu__navPrimary {
   padding-bottom: 30px;
   border-bottom: 1px solid g.colors(base-white);
   @include g.mq(md) {
@@ -42,7 +42,7 @@
   }
 }
 
-.p-mobileMenu__navItem {
+.mobileMenu__navItem {
   width: 100%;
   margin-bottom: 5px;
   text-align: left;
@@ -52,8 +52,8 @@
   }
 }
 
-.p-mobileMenu__navItem > a,
-.p-mobileMenu__navItem > span {
+.mobileMenu__navItem > a,
+.mobileMenu__navItem > span {
   position: relative;
   display: inline-block;
   padding: .5em 1em;
@@ -80,17 +80,17 @@
   }
 }
 
-.p-mobileMenu__navChild {
+.mobileMenu__navChild {
   padding: 10px 20px;
 }
 
-.p-mobileMenu__navChild li {
+.mobileMenu__navChild li {
   margin-bottom: 15px;
   &:last-child {
     margin-bottom: 0;
   }
 }
-.p-mobileMenu__navChild li > a {
+.mobileMenu__navChild li > a {
   position: relative;
   padding: .5em 1em;
   color: g.colors(base-white);
@@ -127,12 +127,12 @@
   }
 }
 
-.p-mobileMenu__btn {
+.mobileMenu__btn {
   margin-inline: auto;
   text-align: center;
 }
 
-.p-mobileMenu__info {
+.mobileMenu__info {
   margin-top: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid g.colors(base-white);
@@ -146,13 +146,13 @@
   }
 }
 
-.p-mobileMenu__logo {
+.mobileMenu__logo {
   display: inline-block;
   width: g.calcPx(200px, 280px);
   min-width: 200px;
   max-width: 280px;
 }
-.p-mobileMenu__address {
+.mobileMenu__address {
   margin-top: 20px;
   color: g.colors(base-white);
   font-size: g.rem(12px);
@@ -169,7 +169,7 @@
   }
 }
 
-.p-mobileMenu__cta {
+.mobileMenu__cta {
   margin-top: 20px;
   color: g.colors(base-white);
   font-size: g.rem(16px);
@@ -183,19 +183,19 @@
   }
 }
 
-.p-mobileMenu__navSecondary {
+.mobileMenu__navSecondary {
   margin-top: 20px;
   @include g.mq(md) {
     margin-top: 30px;
   }
 }
-.p-mobileMenu__navSecondary li {
+.mobileMenu__navSecondary li {
   margin-bottom: 10px;
   &:last-child {
     margin-bottom: 0;
   }
 }
-.p-mobileMenu__navSecondary li a {
+.mobileMenu__navSecondary li a {
   position: relative;
   padding: .5em 1em;
   color: g.colors(base-white);
@@ -232,7 +232,7 @@
   }
 }
 
-.p-mobileMenu__copyright {
+.mobileMenu__copyright {
   margin-top: 20px;
   color: g.colors(base-white);
   font-size: g.rem(12px);
