@@ -1,0 +1,309 @@
+@use "../../global/" as g;
+
+.header {
+  position: fixed;
+  height: g.calcPx(60px, 120px);
+  min-height: 60px;
+  max-height: 120px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: g.colors(base-white);
+  box-shadow: 0 0 6px rgba(g.colors(base-black), .6);
+  z-index: 1100;
+  opacity: 1;
+  transition: background-color .25s, opacity .25s;
+
+  .header__inner {
+    margin-inline: auto;
+    width: 100%;
+    padding: 0 0 0 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__logo {
+    align-self: center;
+    width: g.calcPx(150px, 280px);
+    min-width: 150px;
+    max-width: 280px;
+    transition: opacity .25s;
+    @include g.hover() {
+      opacity: .6;
+    }
+  }
+  .header__logo a {
+    position: relative;
+    display: block;
+  }
+  .header__logo a::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/logo_white.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+    opacity: 0;
+    transition: opacity .25s;
+  }
+
+  .header__nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__navBtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    @include g.mq(xl) {
+      right: 30px;
+    }
+  }
+  .header__navBtn a {
+    position: relative;
+    display: block;
+    padding: 4px 32px 4px 8px;
+    border: 1px solid g.colors(base-black);
+    color: g.colors(base-black);
+    font-size: g.rem(12px);
+    text-transform: uppercase;
+    transition: background-color .25s, color .25s, opacity .25s;
+    &::after {
+      position: absolute;
+      content: '';
+      top: 30%;
+      right: 1em;
+      width: 1em;
+      height: 1em;
+      background-image: url(../img/btn_arrow_black.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    @include g.hover() {
+      background-color: g.colors(base-black);
+      color: g.colors(base-white);
+      &::after {
+        background-image: url(../img/btn_arrow_white.png);
+      }
+    }
+  }
+  .header__navMenu {
+    display: none;
+    @include g.mq(lg) {
+      position: relative;
+      display: block;
+    }
+  }
+
+  .header__navList {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: g.calcPx(60px, 120px);
+    min-height: 60px;
+    max-height: 120px;
+  }
+
+  .header__navItem {
+    height: 60%;
+    margin-right: 25px;
+    @include g.mq(xl) {
+      margin-right: 30px;
+    }
+  }
+
+  .header__navItem > a,
+  .header__navItem > button {
+    display: flex;
+    height: 100%;
+    color: g.colors(base-black);
+    font-size: g.rem(14px);
+    transition: color .25s, opacity .25s;
+    @include g.mq(xl) {
+      font-size: g.rem(16px);
+    }
+    @include g.mq(xxl) {
+      font-size: g.rem(18px);
+    }
+    & > span {
+      position: relative;
+      display: inline-block;
+      height: fit-content;
+      margin-top: 15px;
+
+      &::after {
+        position: absolute;
+        content: "";
+        bottom: -0.5em;
+        left: 50%;
+        width: 100%;
+        height: 1px;
+        background-color: g.colors(base-black);
+        transform: translateX(-50%) scaleX(0);
+        transform-origin: center;
+        transition: transform .25s, background-color .25s;
+      }
+    }
+
+  }
+  .header__navItem {
+    @include g.hover(true) {
+      a, button {
+        opacity: .8;
+        & span::after {
+          transform: translateX(-50%) scaleX(1);
+        }
+      }
+    }
+  }
+
+  .header__navBtns {
+    height: g.calcPx(60px, 120px);
+    min-height: 60px;
+    max-height: 120px;
+    display: flex;
+  }
+
+  .header__navContact {
+    position: relative;
+    display: inline-block;
+    width: g.calcPx(100px, 160px);
+    height: 100%;
+    background-color: g.colors(main);
+    color: g.colors(base-white);
+    font-size: g.rem(10px);
+    text-align: center;
+    transition: opacity .25s;
+    @include g.mq(md) {
+      font-size: g.rem(14px);
+    }
+    @include g.mq(xl) {
+      font-size: g.rem(16px);
+    }
+    @include g.mq(xxl) {
+      font-size: g.rem(18px);
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 20%;
+      left: 50%;
+      width: g.calcPx(23px, 42px);
+      height: g.calcPx(20px, 36px);
+      background-image: url(../img/contact_icon.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      transform: translateX(-50%);
+
+      @include g.mq(xl) {
+        width: 42px;
+        height: 36px;
+      }
+    }
+    @include g.hover() {
+      opacity: .6;
+    }
+  }
+
+  .header__navContact > span {
+    position: absolute;
+    display: inline-block;
+    bottom: 1em;
+    left: 50%;
+    width: 80%;
+    transform: translateX(-50%);
+  }
+
+  .header__navMenuBtn {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 100%;
+    padding: 0 10px;
+    font-size: g.rem(10px);
+    text-align: center;
+    overflow: hidden;
+    @include g.mq(md) {
+      width: 90px;
+      padding: 0 15px;
+      font-size: g.rem(14px);
+    }
+    @include g.mq(lg) {
+      display: none;
+    }
+
+    & > span:not(:last-child) {
+      position: absolute;
+      left: 50%;
+      width: 1.8em;
+      height: 1px;
+      background-color: g.colors(base-black);
+      transform: translateX(-50%);
+      transition: transform .25s, opacity .25s;
+    }
+    & > span:nth-child(1) {
+      top: 1.6em;
+    }
+    & > span:nth-child(2) {
+      top: 2.2em;
+    }
+    & > span:nth-child(3) {
+      top: 2.8em;
+    }
+    &.is-active > span:nth-child(1) {
+      transform: translateX(-50%) translateY(0.6em) rotate(-45deg);
+    }
+    &.is-active > span:nth-child(2) {
+      opacity: 0;
+    }
+    &.is-active > span:nth-child(3) {
+      transform: translateX(-50%) translateY(-0.6em) rotate(45deg);
+    }
+
+    & > span:last-child {
+      position: absolute;
+      display: inline-block;
+      bottom: 1em;
+      left: 50%;
+      width: 80%;
+      color: g.colors(base-black);
+      overflow: hidden;
+      transform: translateX(-50%);
+
+      &.fade-out {
+        animation: fade-out .25s ease-in;
+      }
+      &.fade-in {
+        animation: fade-in .25s ease-in-out;
+      }
+    }
+  }
+
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+      transform: translateX(-50%);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+}
