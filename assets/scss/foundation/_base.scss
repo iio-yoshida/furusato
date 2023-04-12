@@ -1,0 +1,40 @@
+@use "../global/" as g;
+
+/* _base.scss */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Shippori Mincho', "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+  color: g.colors(base-black);
+  line-height: 1.5;
+}
+
+body.is-active {
+  height: 100%;
+  overflow: hidden;
+}
+
+img, svg {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+a, button {
+  font-size: 1rem;
+}
+
+button {
+  padding: 0;
+  border:none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.5;
+  cursor: pointer;
+}

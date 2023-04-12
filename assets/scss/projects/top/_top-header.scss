@@ -1,0 +1,107 @@
+@use "../../global/" as g;
+
+.header {
+  background-color: transparent;
+
+  .header__logo a::after {
+    opacity: 1;
+  }
+  .header__navBtn a {
+    background-color: transparent;
+    border-color: g.colors(base-white);
+    color: g.colors(base-white);
+    &::after {
+      background-image: url(../img/btn_arrow_white.png);
+    }
+    @include g.hover() {
+      opacity: .6;
+    }
+  }
+  .header__navItem > a,
+  .header__navItem > button {
+    color: g.colors(base-white);
+    & span::after {
+      background-color: g.colors(base-white);
+    }
+  }
+  .header__navMenuBtn {
+    & > span:not(:last-child) {
+      background-color: g.colors(base-white);
+    }
+    & > span:last-child {
+      color: g.colors(base-white);
+    }
+  }
+}
+
+.header.is-hidden {
+  top: -10%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.header.is-shown {
+  background-color: g.colors(base-white);
+  .header__logo a::after {
+    opacity: 0;
+  }
+  .header__navBtn a {
+    border-color: g.colors(base-black);
+    color: g.colors(base-black);
+    &::after {
+      background-image: url(../img/btn_arrow_black.png);
+    }
+    @include g.hover() {
+      opacity: .6;
+    }
+  }
+  .header__navItem > a,
+  .header__navItem > button {
+    color: g.colors(base-black);
+    & span::after {
+      background-color: g.colors(base-black);
+    }
+  }
+  .header__navMenuBtn {
+    & > span:not(:last-child) {
+      background-color: g.colors(base-black);
+    }
+    & > span:last-child {
+      color: g.colors(base-black);
+    }
+  }
+}
+.header.is-shown.is-active {
+  background-color: transparent;
+
+  .header__logo a::after {
+    opacity: 1;
+  }
+  .header__navBtn a {
+    background-color: transparent;
+    border-color: g.colors(base-white);
+    color: g.colors(base-white);
+    &::after {
+      background-image: url(../img/btn_arrow_white.png);
+    }
+    @include g.hover() {
+      opacity: .6;
+    }
+  }
+  .header__navItem > a,
+  .header__navItem > button {
+    color: g.colors(base-white);
+    &::after {
+      background-color: g.colors(base-white);
+    }
+  }
+  .header__navMenuBtn {
+    & > span:not(:last-child) {
+      background-color: g.colors(base-white);
+    }
+    & > span:last-child {
+      color: g.colors(base-white);
+    }
+  }
+}

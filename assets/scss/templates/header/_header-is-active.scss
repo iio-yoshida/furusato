@@ -1,0 +1,35 @@
+@use "../../global/" as g;
+
+.header.is-active {
+  background-color: rgba(g.colors(base-black), .9);
+
+  .header__logo a::after {
+    opacity: 1;
+  }
+  .header__navBtn a {
+    background-color: transparent;
+    border-color: g.colors(base-white);
+    color: g.colors(base-white);
+    &::after {
+      background-image: url(../img/btn_arrow_white.png);
+    }
+    @include g.hover() {
+      opacity: .6;
+    }
+  }
+  .header__navItem > a,
+  .header__navItem > button {
+    color: g.colors(base-white);
+    & span::after {
+      background-color: g.colors(base-white);
+    }
+  }
+  .header__navMenuBtn {
+    & > span:not(:last-child) {
+      background-color: g.colors(base-white);
+    }
+    & > span:last-child {
+      color: g.colors(base-white);
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@use "../../global/" as g;
+
+.o-btn {
+  display: inline-block;
+  min-width: 300px;
+  max-width: 100%;
+  background-color: g.colors(base-white);
+  border: 1px solid g.colors(base-white);
+  border-radius: 2em;
+  padding: .5em .8em;
+  color: g.colors(base-black);
+  font-size: g.rem(18px);
+  letter-spacing: .1em;
+  text-align: center;
+  transition: opacity .25s;
+
+  & > span {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      top: 55%;
+      right: -1.5em;
+      width: .8em;
+      height: .8em;
+      background-image: url(../img/btn_arrow_black.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      transform: translateY(-50%);
+    }
+  }
+
+  @include g.hover() {
+    opacity: .6;
+  }
+}
+
+.o-btn.o-btn--accent {
+  background-color: g.colors(main);
+  border: 1px solid g.colors(main);
+  color: g.colors(base-white);
+  & span::after {
+    background-image: url(../img/btn_arrow_white.png);
+  }
+}
