@@ -425,7 +425,8 @@ button {
 .header .header__navContact {
   position: relative;
   display: inline-block;
-  width: calc(100px + (160 - 100) * ((100vw - 360px) / (1440 - 360)));
+  width: calc(100px + (180 - 100) * ((100vw - 360px) / (1440 - 360)));
+  max-width: 180px;
   height: 100%;
   background-color: #cd5231;
   color: #fcfcfc;

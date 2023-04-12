@@ -29,7 +29,7 @@
   height: 100%;
   max-width: 1360px;
   margin-inline: auto;
-  padding: g.calcPx(80px, 180px) g.calcPx(20px, 80px) g.calcPx(20px, 60px);
+  padding: g.calcPx(80px, 160px) g.calcPx(20px, 80px) g.calcPx(20px, 60px);
 
   @include g.mq(md) {
     justify-content: flex-start;
