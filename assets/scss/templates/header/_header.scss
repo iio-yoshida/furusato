@@ -12,7 +12,7 @@
   box-shadow: 0 0 6px rgba(g.colors(base-black), .6);
   z-index: 1100;
   opacity: 1;
-  transition: background-color .25s, opacity .25s;
+  transition: background-color .25s, opacity .25s, visibility .25s, top .25s;
 
   .header__inner {
     margin-inline: auto;
@@ -172,7 +172,8 @@
   .header__navContact {
     position: relative;
     display: inline-block;
-    width: g.calcPx(100px, 160px);
+    width: g.calcPx(100px, 180px);
+    max-width: 180px;
     height: 100%;
     background-color: g.colors(main);
     color: g.colors(base-white);
