@@ -43,3 +43,21 @@
     background-image: url(../img/btn_arrow_white.png);
   }
 }
+
+.o-btn.o-btn--kv {
+  background-color: rgba(g.colors(base-white), .2);
+  color: g.colors(base-white);
+  transition: background-color .25s, color .25s;
+  & span::after {
+    background-image: url(../img/btn_arrow_white.png);
+  }
+
+  @include g.hover() {
+    opacity: 1;
+    background-color: g.colors(base-white);
+    color: g.colors(base-black);
+    & span::after {
+      background-image: url(../img/btn_arrow_black.png);
+    }
+  }
+}

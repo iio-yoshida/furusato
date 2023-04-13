@@ -73,7 +73,7 @@
   }
 }
 .header.is-shown.is-active {
-  background-color: transparent;
+  background-color: rgba(g.colors(base-black), .9);
 
   .header__logo a::after {
     opacity: 1;

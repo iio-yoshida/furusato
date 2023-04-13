@@ -1,5 +1,10 @@
 @use "../../global/" as g;
 
+body.is-active {
+  height: 100%;
+  overflow: hidden;
+}
+
 .mobileMenu {
   position: fixed;
   z-index: 1000;
@@ -9,7 +14,7 @@
   height: 100svh;
   overflow: scroll;
   padding: g.calcPx(80px, 160px) g.calcPx(20px, 80px) g.calcPx(20px, 80px);
-  background-color: rgba(g.colors(base-black), .9);
+  background-color: rgba(g.colors(base-black), .98);
   transform: translateX(100%);
   transform-origin: top;
   transition: transform .4s;
