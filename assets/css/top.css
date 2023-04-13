@@ -12,20 +12,10 @@
 .header .header__navBtn a::after {
   background-image: url(../img/btn_arrow_white.png);
 }
-.header .header__navBtn a:focus {
-  opacity: 0.6;
-}
-@media (hover: hover) and (pointer: fine) {
-  .header .header__navBtn a:hover {
-    opacity: 0.6;
-  }
-}
-.header .header__navItem > a,
-.header .header__navItem > button {
+.header .header__navItem > a {
   color: #fcfcfc;
 }
-.header .header__navItem > a span::after,
-.header .header__navItem > button span::after {
+.header .header__navItem > a span::after {
   background-color: #fcfcfc;
 }
 .header .header__navMenuBtn > span:not(:last-child) {
@@ -33,6 +23,94 @@
 }
 .header .header__navMenuBtn > span:last-child {
   color: #fcfcfc;
+}
+.header:focus-within {
+  background-color: #fcfcfc;
+}
+.header:focus-within .header__logo a::after {
+  opacity: 0;
+}
+.header:focus-within .header__navBtn a {
+  border-color: #222;
+  color: #222;
+}
+.header:focus-within .header__navBtn a::after {
+  background-image: url(../img/btn_arrow_black.png);
+}
+.header:focus-within .header__navBtn a:focus {
+  background-color: #222;
+  color: #fcfcfc;
+}
+.header:focus-within .header__navBtn a:focus::after {
+  background-image: url(../img/btn_arrow_white.png);
+}
+@media (hover: hover) and (pointer: fine) {
+  .header:focus-within .header__navBtn a:hover {
+    background-color: #222;
+    color: #fcfcfc;
+  }
+  .header:focus-within .header__navBtn a:hover::after {
+    background-image: url(../img/btn_arrow_white.png);
+  }
+}
+.header:focus-within .header__navItem > a {
+  color: #222;
+}
+.header:focus-within .header__navItem > a span::after {
+  background-color: #222;
+}
+.header:focus-within .header__navMenuBtn > span:not(:last-child) {
+  background-color: #222;
+}
+.header:focus-within .header__navMenuBtn > span:last-child {
+  color: #222;
+}
+@media (hover: hover) and (pointer: fine) {
+  .header:hover {
+    background-color: #fcfcfc;
+  }
+  .header:hover .header__logo a::after {
+    opacity: 0;
+  }
+  .header:hover .header__navBtn a {
+    border-color: #222;
+    color: #222;
+  }
+  .header:hover .header__navBtn a::after {
+    background-image: url(../img/btn_arrow_black.png);
+  }
+  .header:hover .header__navBtn a:focus {
+    background-color: #222;
+    color: #fcfcfc;
+  }
+  .header:hover .header__navBtn a:focus::after {
+    background-image: url(../img/btn_arrow_white.png);
+  }
+}
+@media (hover: hover) and (pointer: fine) and (hover: hover) and (pointer: fine) {
+  .header:hover .header__navBtn a:hover {
+    background-color: #222;
+    color: #fcfcfc;
+  }
+  .header:hover .header__navBtn a:hover::after {
+    background-image: url(../img/btn_arrow_white.png);
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .header:hover .header__navItem > a {
+    color: #222;
+  }
+  .header:hover .header__navItem > a span::after {
+    background-color: #222;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .header:hover .header__navMenuBtn > span:not(:last-child) {
+    background-color: #222;
+  }
+  .header:hover .header__navMenuBtn > span:last-child {
+    color: #222;
+  }
 }
 
 .header.is-hidden {
@@ -55,20 +133,10 @@
 .header.is-shown .header__navBtn a::after {
   background-image: url(../img/btn_arrow_black.png);
 }
-.header.is-shown .header__navBtn a:focus {
-  opacity: 0.6;
-}
-@media (hover: hover) and (pointer: fine) {
-  .header.is-shown .header__navBtn a:hover {
-    opacity: 0.6;
-  }
-}
-.header.is-shown .header__navItem > a,
-.header.is-shown .header__navItem > button {
+.header.is-shown .header__navItem > a {
   color: #222;
 }
-.header.is-shown .header__navItem > a span::after,
-.header.is-shown .header__navItem > button span::after {
+.header.is-shown .header__navItem > a span::after {
   background-color: #222;
 }
 .header.is-shown .header__navMenuBtn > span:not(:last-child) {
@@ -91,14 +159,6 @@
 }
 .header.is-shown.is-active .header__navBtn a::after {
   background-image: url(../img/btn_arrow_white.png);
-}
-.header.is-shown.is-active .header__navBtn a:focus {
-  opacity: 0.6;
-}
-@media (hover: hover) and (pointer: fine) {
-  .header.is-shown.is-active .header__navBtn a:hover {
-    opacity: 0.6;
-  }
 }
 .header.is-shown.is-active .header__navItem > a,
 .header.is-shown.is-active .header__navItem > button {

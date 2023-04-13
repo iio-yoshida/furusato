@@ -13,12 +13,8 @@
     &::after {
       background-image: url(../img/btn_arrow_white.png);
     }
-    @include g.hover() {
-      opacity: .6;
-    }
   }
-  .header__navItem > a,
-  .header__navItem > button {
+  .header__navItem > a {
     color: g.colors(base-white);
     & span::after {
       background-color: g.colors(base-white);
@@ -30,6 +26,41 @@
     }
     & > span:last-child {
       color: g.colors(base-white);
+    }
+  }
+
+  @include g.hover($within: true) {
+    background-color: g.colors(base-white);
+    .header__logo a::after {
+      opacity: 0;
+    }
+    .header__navBtn a {
+      border-color: g.colors(base-black);
+      color: g.colors(base-black);
+      &::after {
+        background-image: url(../img/btn_arrow_black.png);
+      }
+      @include g.hover() {
+        background-color: g.colors(base-black);
+        color: g.colors(base-white);
+        &::after {
+          background-image: url(../img/btn_arrow_white.png);
+        }
+      }
+    }
+    .header__navItem > a {
+      color: g.colors(base-black);
+      & span::after {
+        background-color: g.colors(base-black);
+      }
+    }
+    .header__navMenuBtn {
+      & > span:not(:last-child) {
+        background-color: g.colors(base-black);
+      }
+      & > span:last-child {
+        color: g.colors(base-black);
+      }
     }
   }
 }
@@ -52,12 +83,8 @@
     &::after {
       background-image: url(../img/btn_arrow_black.png);
     }
-    @include g.hover() {
-      opacity: .6;
-    }
   }
-  .header__navItem > a,
-  .header__navItem > button {
+  .header__navItem > a {
     color: g.colors(base-black);
     & span::after {
       background-color: g.colors(base-black);
@@ -84,9 +111,6 @@
     color: g.colors(base-white);
     &::after {
       background-image: url(../img/btn_arrow_white.png);
-    }
-    @include g.hover() {
-      opacity: .6;
     }
   }
   .header__navItem > a,

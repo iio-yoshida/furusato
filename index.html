@@ -13,7 +13,7 @@
   <script src="/assets/js/common.js" type="module" defer></script>
   <script src="/assets/js/top.js" type="module" defer></script>
 </head>
-<body>
+<body id="top">
   <div class="l-siteWrapper">
     <div class="mobileMenu js-mobileMenu">
       <div class="mobileMenu__inner">
@@ -26,9 +26,9 @@
               <span>田舎暮らし情報</span>
               <ul class="mobileMenu__navChild">
                 <li><a href="/columns/">ふるさとコラム</a></li>
-                    <li><a href="/intro/">古民家とは</a></li>
-                    <li><a href="/advice/">田舎暮らしなんでも相談</a></li>
-                    <li><a href="/lifecolumn/">ふるさと新撰組</a></li>
+                <li><a href="/intro/">古民家とは</a></li>
+                <li><a href="/advice/">田舎暮らしなんでも相談</a></li>
+                <li><a href="/lifecolumn/">ふるさと新撰組</a></li>
               </ul>
             </li>
             <li class="mobileMenu__navItem"><a href="/faq/">よくある質問</a></li>
@@ -89,7 +89,23 @@
                 <a href="/merit/"><span>選ばれる理由</span></a>
               </li>
               <li class="header__navItem">
-                <button><span>田舎暮らし情報</span></button>
+                <a role="button" href="javascript:void(0);">
+                  <span>田舎暮らし情報</span>
+                </a>
+                <div class="header__navChild">
+                  <div class="header__navChildInner">
+                    <div class="header__navChildTitle">
+                      <img src="/assets/img/icon_columns.png" alt="icon">
+                      <span>田舎暮らし情報</span>
+                    </div>
+                    <ul class="header__navChildList">
+                      <li><a href="/columns/"><span>ふるさとコラム</span></a></li>
+                      <li><a href="/intro/"><span>古民家とは</span></a></li>
+                      <li><a href="/advice/"><span>田舎暮らしなんでも相談</span></a></li>
+                      <li><a href="/lifecolumn/"><span>ふるさと新撰組</span></a></li>
+                    </ul>
+                  </div>
+                </div>
               </li>
               <li class="header__navItem">
                 <a href="/faq/"><span>よくある質問</span></a>
@@ -111,7 +127,7 @@
       </div>
     </header>
     <main class="l-main">
-      <section class="top-kv js-firstView">
+      <section class="top-kv js-firstView js-trigger">
         <div class="top-kv__main">
           <div class="top-kv__slider">
             <div class="top-kv__switch">
@@ -128,7 +144,7 @@
           </div>
         </div>
         <div class="top-kv__movie">
-          <video class="js-kv-movie" poster="./img/kv-frame.jpg" autoplay loop muted playsinline>
+          <video class="js-kv-movie" poster="/assets/img/kv_frame.jpg" autoplay loop muted playsinline>
             <source src="/assets/movie/kv_movie.mp4" type="video/mp4">
           </video>
         </div>
@@ -162,7 +178,7 @@
           <div class="footer__links">
             <nav class="footer__navPrimary">
               <ul class="footer__navMenu">
-                <li class="footer__navItem"><a href="#">Top</a></li>
+                <li class="footer__navItem"><a href="#top">Top</a></li>
                 <li class="footer__navItem"><a href="/properties/">物件一覧</a></li>
                 <li class="footer__navItem"><a href="/trade/">買取・売却</a></li>
                 <li class="footer__navItem"><a href="/merit/">選ばれる理由</a></li>
@@ -199,6 +215,7 @@
         </div>
       </div>
     </footer>
+    <a class="o-floatBtn js-returnTop" href="#top"></a>
   </div>
 </body>
 </html>

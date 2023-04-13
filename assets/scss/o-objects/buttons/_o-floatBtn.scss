@@ -1,0 +1,25 @@
+@use "../../global/" as g;
+
+.o-floatBtn {
+  position: fixed;
+  bottom: -80px;
+  right: 5%;
+  width: 60px;
+  height: 60px;
+  background-color: g.colors(main);
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: bottom .25s, opacity .25s, visibility .25s;
+
+  &::after {
+    position: absolute;
+    content: '';
+  }
+}
+
+.o-floatBtn.is-shown {
+  bottom: 20px;
+  opacity: 1;
+  visibility: visible;
+}
