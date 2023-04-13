@@ -228,6 +228,29 @@ button {
   }
 }
 
+.o-floatBtn {
+  position: fixed;
+  bottom: -80px;
+  right: 5%;
+  width: 60px;
+  height: 60px;
+  background-color: #cd5231;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: bottom 0.25s, opacity 0.25s, visibility 0.25s;
+}
+.o-floatBtn::after {
+  position: absolute;
+  content: "";
+}
+
+.o-floatBtn.is-shown {
+  bottom: 20px;
+  opacity: 1;
+  visibility: visible;
+}
+
 .o-logoIio .fill {
   fill: #fcfcfc;
 }
@@ -362,8 +385,7 @@ button {
     margin-right: 30px;
   }
 }
-.header .header__navItem > a,
-.header .header__navItem > button {
+.header .header__navItem > a {
   display: flex;
   height: 100%;
   color: #222;
@@ -371,26 +393,22 @@ button {
   transition: color 0.25s, opacity 0.25s;
 }
 @media screen and (min-width: 1280px) {
-  .header .header__navItem > a,
-  .header .header__navItem > button {
+  .header .header__navItem > a {
     font-size: 1rem;
   }
 }
 @media screen and (min-width: 1440px) {
-  .header .header__navItem > a,
-  .header .header__navItem > button {
+  .header .header__navItem > a {
     font-size: 1.125rem;
   }
 }
-.header .header__navItem > a > span,
-.header .header__navItem > button > span {
+.header .header__navItem > a > span {
   position: relative;
   display: inline-block;
   height: fit-content;
   margin-top: 15px;
 }
-.header .header__navItem > a > span::after,
-.header .header__navItem > button > span::after {
+.header .header__navItem > a > span::after {
   position: absolute;
   content: "";
   bottom: -0.5em;
@@ -402,18 +420,163 @@ button {
   transform-origin: center;
   transition: transform 0.25s, background-color 0.25s;
 }
-.header .header__navItem:focus-within a, .header .header__navItem:focus-within button {
+.header .header__navItem:focus-within > a {
   opacity: 0.8;
 }
-.header .header__navItem:focus-within a span::after, .header .header__navItem:focus-within button span::after {
+.header .header__navItem:focus-within > a span::after {
   transform: translateX(-50%) scaleX(1);
 }
 @media (hover: hover) and (pointer: fine) {
-  .header .header__navItem:hover a, .header .header__navItem:hover button {
+  .header .header__navItem:hover > a {
     opacity: 0.8;
   }
-  .header .header__navItem:hover a span::after, .header .header__navItem:hover button span::after {
+  .header .header__navItem:hover > a span::after {
     transform: translateX(-50%) scaleX(1);
+  }
+}
+.header .header__navChild {
+  position: fixed;
+  top: auto;
+  left: 0;
+  width: 100vw;
+  background-image: url(../img/back.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s, visibility 0.25s;
+  z-index: -1;
+}
+.header .header__navItem:focus-within > .header__navChild {
+  opacity: 1;
+  visibility: visible;
+}
+@media (hover: hover) and (pointer: fine) {
+  .header .header__navItem:hover > .header__navChild {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.header .header__navChildInner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1360px;
+  margin: 30px auto;
+}
+.header .header__navChildTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(160px + (180 - 160) * ((100vw - 1024px) / (1440 - 1024)));
+  max-width: 180px;
+  margin-right: calc(20px + (40 - 20) * ((100vw - 1024px) / (1440 - 1024)));
+  padding: 10px 0;
+  text-align: center;
+}
+.header .header__navChildTitle img {
+  display: inline-block;
+  width: calc(30px + (46 - 30) * ((100vw - 1024px) / (1440 - 1024)));
+}
+.header .header__navChildTitle span {
+  display: inline-block;
+  color: #222;
+  font-size: 0.875rem;
+}
+@media screen and (min-width: 1440px) {
+  .header .header__navChildTitle span {
+    font-size: 1rem;
+  }
+}
+.header .header__navChildList {
+  display: flex;
+}
+.header .header__navChildList li {
+  position: relative;
+  width: calc(160px + (200 - 160) * ((100vw - 1024px) / (1440 - 1024)));
+  max-width: 200px;
+  height: calc(80px + (100 - 80) * ((100vw - 1024px) / (1440 - 1024)));
+  max-height: 100px;
+  margin-right: calc(20px + (30 - 20) * ((100vw - 1024px) / (1440 - 1024)));
+  overflow: hidden;
+  z-index: 100;
+}
+.header .header__navChildList li::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.6);
+  z-index: 2;
+  transition: opacity 0.25s;
+}
+.header .header__navChildList li::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.25s;
+  z-index: 1;
+}
+.header .header__navChildList li:nth-child(1)::after {
+  background-image: url(../img/thumb_column.jpg);
+}
+.header .header__navChildList li:nth-child(2)::after {
+  background-image: url(../img/thumb_intro.jpg);
+}
+.header .header__navChildList li:nth-child(3)::after {
+  background-image: url(../img/thumb_advice.jpg);
+}
+.header .header__navChildList li:nth-child(4)::after {
+  background-image: url(../img/thumb_lifecolumn.jpg);
+}
+.header .header__navChildList li a {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: #fcfcfc;
+  outline-offset: -3px;
+  z-index: 101;
+}
+.header .header__navChildList li a span {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fcfcfc;
+  font-size: 12px;
+}
+@media screen and (min-width: 1280px) {
+  .header .header__navChildList li a span {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header .header__navChildList li a span {
+    font-size: 16px;
+  }
+}
+.header .header__navChildList li:focus-within::before {
+  opacity: 0.5;
+}
+.header .header__navChildList li:focus-within::after {
+  transform: scale(1.1);
+}
+@media (hover: hover) and (pointer: fine) {
+  .header .header__navChildList li:hover::before {
+    opacity: 0.5;
+  }
+  .header .header__navChildList li:hover::after {
+    transform: scale(1.1);
   }
 }
 .header .header__navBtns {
@@ -430,23 +593,23 @@ button {
   height: 100%;
   background-color: #cd5231;
   color: #fcfcfc;
-  font-size: 0.625rem;
+  font-size: 10px;
   text-align: center;
   transition: opacity 0.25s;
 }
 @media screen and (min-width: 768px) {
   .header .header__navContact {
-    font-size: 0.875rem;
+    font-size: 14px;
   }
 }
 @media screen and (min-width: 1280px) {
   .header .header__navContact {
-    font-size: 1rem;
+    font-size: 16px;
   }
 }
 @media screen and (min-width: 1440px) {
   .header .header__navContact {
-    font-size: 1.125rem;
+    font-size: 18px;
   }
 }
 .header .header__navContact::before {
@@ -489,7 +652,7 @@ button {
   width: 60px;
   height: 100%;
   padding: 0 10px;
-  font-size: 0.625rem;
+  font-size: 10px;
   text-align: center;
   overflow: hidden;
 }
@@ -497,7 +660,7 @@ button {
   .header .header__navMenuBtn {
     width: 90px;
     padding: 0 15px;
-    font-size: 0.875rem;
+    font-size: 14px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -626,6 +789,11 @@ button {
   background-repeat: no-repeat;
   background-position: right;
   background-size: cover;
+}
+@media screen and (min-width: 768px) {
+  .footer::before {
+    right: 5%;
+  }
 }
 @media screen and (min-width: 1440px) {
   .footer::before {

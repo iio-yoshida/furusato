@@ -117,8 +117,7 @@
     }
   }
 
-  .header__navItem > a,
-  .header__navItem > button {
+  .header__navItem > a {
     display: flex;
     height: 100%;
     color: g.colors(base-black);
@@ -149,11 +148,10 @@
         transition: transform .25s, background-color .25s;
       }
     }
-
   }
   .header__navItem {
-    @include g.hover(true) {
-      a, button {
+    @include g.hover($within: true) {
+      & > a {
         opacity: .8;
         & span::after {
           transform: translateX(-50%) scaleX(1);
@@ -161,6 +159,147 @@
       }
     }
   }
+
+  .header__navChild {
+    position: fixed;
+    top: auto;
+    left: 0;
+    width: 100vw;
+    background-image: url(../img/back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .25s, visibility .25s;
+    z-index: -1;
+  }
+  .header__navItem {
+    @include g.hover($within: true) {
+      & > .header__navChild {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  .header__navChildInner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1360px;
+    margin: 30px auto;
+  }
+  .header__navChildTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: g.calcPx(160px, 180px, 1024px, 1440px);
+    max-width: 180px;
+    margin-right: g.calcPx(20px, 40px, 1024px, 1440px);
+    padding: 10px 0;
+    text-align: center;
+    & img {
+      display: inline-block;
+      width: g.calcPx(30px, 46px, 1024px, 1440px);
+    }
+    & span {
+      display: inline-block;
+      color: g.colors(base-black);
+      font-size: g.rem(14px);
+
+      @include g.mq(xxl) {
+        font-size: g.rem(16px);
+      }
+    }
+  }
+
+  .header__navChildList {
+    display: flex;
+  }
+  .header__navChildList li {
+    position: relative;
+    width: g.calcPx(160px, 200px, 1024px, 1440px);
+    max-width: 200px;
+    height: g.calcPx(80px, 100px, 1024px, 1440px);
+    max-height: 100px;
+    margin-right: g.calcPx(20px, 30px, 1024px, 1440px);
+    overflow: hidden;
+    z-index: 100;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(g.colors(base-black), .6);
+      z-index: 2;
+      transition: opacity .25s;
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      transition: transform .25s;
+      z-index: 1;
+    }
+    &:nth-child(1)::after {
+      background-image: url(../img/thumb_column.jpg);
+    }
+    &:nth-child(2)::after {
+      background-image: url(../img/thumb_intro.jpg);
+    }
+    &:nth-child(3)::after {
+      background-image: url(../img/thumb_advice.jpg);
+    }
+    &:nth-child(4)::after {
+      background-image: url(../img/thumb_lifecolumn.jpg);
+    }
+  }
+
+  .header__navChildList li a {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: g.colors(base-white);
+    outline-offset: -3px;
+    z-index: 101;
+  }
+  .header__navChildList li a span {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: g.colors(base-white);
+    font-size: 12px;
+
+    @include g.mq(xl) {
+      font-size: 14px;
+    }
+    @include g.mq(xl) {
+      font-size: 16px;
+    }
+  }
+
+  .header__navChildList li {
+    @include g.hover($within: true) {
+      &::before {
+        opacity: .5;
+      }
+      &::after {
+        transform: scale(1.1);
+      }
+    }
+  }
+
 
   .header__navBtns {
     height: g.calcPx(60px, 120px);
@@ -177,17 +316,17 @@
     height: 100%;
     background-color: g.colors(main);
     color: g.colors(base-white);
-    font-size: g.rem(10px);
+    font-size: 10px;
     text-align: center;
     transition: opacity .25s;
     @include g.mq(md) {
-      font-size: g.rem(14px);
+      font-size: 14px;
     }
     @include g.mq(xl) {
-      font-size: g.rem(16px);
+      font-size: 16px;
     }
     @include g.mq(xxl) {
-      font-size: g.rem(18px);
+      font-size: 18px;
     }
 
     &::before {
@@ -227,13 +366,13 @@
     width: 60px;
     height: 100%;
     padding: 0 10px;
-    font-size: g.rem(10px);
+    font-size: 10px;
     text-align: center;
     overflow: hidden;
     @include g.mq(md) {
       width: 90px;
       padding: 0 15px;
-      font-size: g.rem(14px);
+      font-size: 14px;
     }
     @include g.mq(lg) {
       display: none;

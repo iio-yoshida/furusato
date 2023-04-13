@@ -21,6 +21,10 @@
     background-position: right;
     background-size: cover;
 
+    @include g.mq(md) {
+      right: 5%;
+    }
+
     @include g.mq(xxl) {
       top: -50px;
     }
