@@ -1,0 +1,15 @@
+@use "../global/" as g;
+
+.l-section {
+  width: 100%;
+  padding: g.calcPx(50px, 60px) 0 100px;
+
+
+}
+
+.l-section__inner {
+  width: 100%;
+  max-width: 1360px;
+  margin-inline: auto;
+  padding: 0 g.calcPx(20px, 40px);
+}

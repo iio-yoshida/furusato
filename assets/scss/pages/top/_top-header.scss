@@ -30,7 +30,6 @@
   }
 
   @include g.mq(lg) {
-
     @include g.hover($within: true) {
       background-color: g.colors(base-white);
       .header__logo a::after {

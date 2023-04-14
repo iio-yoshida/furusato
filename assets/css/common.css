@@ -149,6 +149,18 @@ button {
   overflow: hidden;
 }
 
+.l-section {
+  width: 100%;
+  padding: calc(50px + (60 - 50) * ((100vw - 360px) / (1440 - 360))) 0 100px;
+}
+
+.l-section__inner {
+  width: 100%;
+  max-width: 1360px;
+  margin-inline: auto;
+  padding: 0 calc(20px + (40 - 20) * ((100vw - 360px) / (1440 - 360)));
+}
+
 .o-copyright {
   color: #fcfcfc;
   text-align: center;
@@ -253,6 +265,23 @@ button {
 
 .o-logoIio .fill {
   fill: #fcfcfc;
+}
+
+.p-content__head {
+  text-align: center;
+  margin-bottom: calc(30px + (50 - 30) * ((100vw - 360px) / (1440 - 360)));
+}
+@media screen and (min-width: 1440px) {
+  .p-content__head {
+    margin-bottom: 50px;
+  }
+}
+
+.p-content__title {
+  margin-top: 10px;
+  color: #222;
+  font-size: 1.5rem;
+  letter-spacing: 8px;
 }
 
 .header {
@@ -953,7 +982,7 @@ button {
   height: 1px;
   background-color: #fcfcfc;
   transform: scaleX(0);
-  transform-origin: left;
+  transform-origin: right;
   transition: transform 0.25s;
 }
 .footer__navItem > a:focus {
@@ -961,6 +990,7 @@ button {
 }
 .footer__navItem > a:focus::after {
   transform: scaleX(1);
+  transform-origin: left;
 }
 @media (hover: hover) and (pointer: fine) {
   .footer__navItem > a:hover {
@@ -968,6 +998,7 @@ button {
   }
   .footer__navItem > a:hover::after {
     transform: scaleX(1);
+    transform-origin: left;
   }
 }
 
@@ -1007,7 +1038,7 @@ button {
   height: 1px;
   background-color: #fcfcfc;
   transform: scaleX(0);
-  transform-origin: left;
+  transform-origin: right;
   transition: transform 0.25s;
 }
 .footer__navChild li a:focus {
@@ -1015,6 +1046,7 @@ button {
 }
 .footer__navChild li a:focus::after {
   transform: scaleX(1);
+  transform-origin: left;
 }
 @media (hover: hover) and (pointer: fine) {
   .footer__navChild li a:hover {
@@ -1022,6 +1054,7 @@ button {
   }
   .footer__navChild li a:hover::after {
     transform: scaleX(1);
+    transform-origin: left;
   }
 }
 
@@ -1124,7 +1157,7 @@ button {
   height: 1px;
   background-color: #fcfcfc;
   transform: scaleX(0);
-  transform-origin: left;
+  transform-origin: right;
   transition: transform 0.25s;
 }
 .footer__navSecondary ul li a:focus {
@@ -1132,6 +1165,7 @@ button {
 }
 .footer__navSecondary ul li a:focus::after {
   transform: scaleX(1);
+  transform-origin: left;
 }
 @media (hover: hover) and (pointer: fine) {
   .footer__navSecondary ul li a:hover {
@@ -1139,6 +1173,7 @@ button {
   }
   .footer__navSecondary ul li a:hover::after {
     transform: scaleX(1);
+    transform-origin: left;
   }
 }
 
@@ -1229,17 +1264,19 @@ body.is-active {
   height: 1px;
   background-color: #fcfcfc;
   transform: scaleX(0);
-  transform-origin: left;
+  transform-origin: right;
   transition: transform 0.25s;
 }
 .mobileMenu__navItem > a:focus::after,
 .mobileMenu__navItem > span:focus::after {
   transform: scaleX(1);
+  transform-origin: left;
 }
 @media (hover: hover) and (pointer: fine) {
   .mobileMenu__navItem > a:hover::after,
   .mobileMenu__navItem > span:hover::after {
     transform: scaleX(1);
+    transform-origin: left;
   }
 }
 
@@ -1280,15 +1317,17 @@ body.is-active {
   height: 1px;
   background-color: #fcfcfc;
   transform: scaleX(0);
-  transform-origin: left;
+  transform-origin: right;
   transition: transform 0.25s;
 }
 .mobileMenu__navChild li > a:focus::after {
   transform: scaleX(1);
+  transform-origin: left;
 }
 @media (hover: hover) and (pointer: fine) {
   .mobileMenu__navChild li > a:hover::after {
     transform: scaleX(1);
+    transform-origin: left;
   }
 }
 
@@ -1396,15 +1435,17 @@ body.is-active {
   height: 1px;
   background-color: #fcfcfc;
   transform: scaleX(0);
-  transform-origin: left;
+  transform-origin: right;
   transition: transform 0.25s;
 }
 .mobileMenu__navSecondary li a:focus::after {
   transform: scaleX(1);
+  transform-origin: left;
 }
 @media (hover: hover) and (pointer: fine) {
   .mobileMenu__navSecondary li a:hover::after {
     transform: scaleX(1);
+    transform-origin: left;
   }
 }
 

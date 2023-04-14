@@ -169,13 +169,14 @@
     height: 1px;
     background-color: g.colors(base-white);
     transform: scaleX(0);
-    transform-origin: left;
+    transform-origin: right;
     transition: transform .25s;
   }
   @include g.hover() {
     opacity: .8;
     &::after {
       transform: scaleX(1);
+      transform-origin: left;
     }
   }
 }
@@ -217,13 +218,14 @@
     height: 1px;
     background-color: g.colors(base-white);
     transform: scaleX(0);
-    transform-origin: left;
+    transform-origin: right;
     transition: transform .25s;
   }
   @include g.hover() {
     opacity: .8;
     &::after {
       transform: scaleX(1);
+      transform-origin: left;
     }
   }
 }
@@ -315,13 +317,14 @@
     height: 1px;
     background-color: g.colors(base-white);
     transform: scaleX(0);
-    transform-origin: left;
+    transform-origin: right;
     transition: transform .25s;
   }
   @include g.hover() {
     opacity: .8;
     &::after {
       transform: scaleX(1);
+      transform-origin: left;
     }
   }
 }
