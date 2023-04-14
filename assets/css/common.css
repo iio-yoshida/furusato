@@ -1456,19 +1456,16 @@ body.is-active {
   text-align: center;
 }
 
-.bg-black {
-  background-color: #222;
-  transition: all 0.5s ease-in-out;
-}
-
-.bg-white {
+.bg--colorWhite {
   background-color: #fcfcfc;
 }
 
-.bg-op-black {
-  background-color: rgba(34, 34, 34, 0.6);
+.bg--colorMain {
+  background-color: #cd5231;
 }
 
-.bg-op-white {
-  background-color: rgba(252, 252, 252, 0.6);
+.bg--main {
+  background-image: url(../img/bg_main.png);
+  background-size: cover;
+  background-position: center;
 }
