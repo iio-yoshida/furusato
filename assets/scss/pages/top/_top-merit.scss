@@ -44,6 +44,7 @@
 }
 
 .top-merit__text {
+  position: relative;
   color: g.colors(base-white);
   & span {
     display: inline-block;
@@ -58,6 +59,12 @@
   & span.top-merit__nums {
     font-size: 56px;
     letter-spacing: 2px;
+  }
+  & img {
+    position: absolute;
+    top: -25%;
+    right: -25%;
+    width: 75%;
   }
   @include g.mq(md) {
     & span {

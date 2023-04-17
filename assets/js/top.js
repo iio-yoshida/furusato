@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   window.addEventListener('scroll', headerToggle);
 
-
   const movieBtn = document.querySelector('.js-movieBtn');
   const movieThumb = document.querySelector('.js-movieThumb');
   const movie = document.querySelector('.js-movie');

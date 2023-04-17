@@ -18,7 +18,8 @@
 
 .p-property__unit {
   position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: g.pxClamp(320px, 480px, $maxViewport: 768px);
   box-shadow: 0 3px 6px rgba(g.colors(base-black), .2);
   z-index: 1;
@@ -101,6 +102,7 @@
 
 .p-property__body {
   position: relative;
+  flex-grow: 1;
   padding: 20px;
   background-color: g.colors(base-white);
   overflow: hidden;
@@ -118,9 +120,8 @@
     height: 100%;
     background-color: g.colors(main);
     transform: translateY(-100%);
-    opacity: 0;
-    transition: transform .4s, opacity .4s;
-    will-change: transform, opacity;
+    transition: transform .4s;
+    will-change: transform;
     z-index: -1;
   }
 }
@@ -209,7 +210,6 @@
     }
     .p-property__body::after {
       transform: translateY(0);
-      opacity: 1;
     }
     .p-property__summary dl {
       color: g.colors(base-white);
