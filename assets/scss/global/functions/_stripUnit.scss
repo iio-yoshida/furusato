@@ -2,7 +2,7 @@
 
 // 数値から単位を取り除くfunction
 // _rem.scss, _vw.scss で使用
-@function strip-unit($number) {
+@function stripUnit($number) {
   @if type-of($number) == 'number' and not unitless($number) {
     @return math.div($number, $number * 0 + 1);
   }

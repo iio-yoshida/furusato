@@ -2,13 +2,8 @@
 
 .top-kv {
   position: relative;
-  height: g.calcPx(550px, 978px, 360px, 640px);
+  height: g.pxClamp(550px, 680px);
   overflow: hidden;
-
-  @include g.mq(md) {
-    height: g.calcPx(560px, 680px, 768px, 1440px);
-    max-height: 680px;
-  }
 }
 
 .top-kv__mask {
@@ -29,7 +24,7 @@
   height: 100%;
   max-width: 1360px;
   margin-inline: auto;
-  padding: g.calcPx(80px, 160px) g.calcPx(20px, 40px) g.calcPx(20px, 60px);
+  padding: g.pxClamp(80px, 160px) g.pxClamp(20px, 40px) g.pxClamp(20px, 60px);
 
   @include g.mq(md) {
     justify-content: flex-start;
@@ -37,32 +32,27 @@
 }
 
 .top-kv__slide {
-  width: g.calcPx(320px, 1160px);
+  width: g.pxClamp(320px, 1160px);
   max-width: 1160px;
   margin-inline: auto;
 }
 .top-kv__slideContents {
-  width: fit-content;
   z-index: 110;
   // background-color: rgba(g.colors(base-white), .4);
+  @include g.mq(md) {
+    width: fit-content;
+  }
 }
 .top-kv__title {
-  margin-bottom: 32px;
+  margin-bottom: g.pxClamp(28px, 32px);
   color: g.colors(base-white);
-  font-size: g.rem(32px);
-  @include g.mq(xxl) {
-    font-size: g.rem(48px);
-  }
+  font-size: g.remClamp(32px, 48px);
 }
 .top-kv__copy {
-  margin-bottom: 30px;
+  margin-bottom: g.pxClamp(24px, 30px);
   color: g.colors(base-white);
-  font-size: g.rem(16px);
+  font-size: g.remClamp(16px, 20px);
   line-height: 1.75;
-  @include g.mq(xxl) {
-    margin-bottom: 30px;
-    font-size: g.rem(20px);
-  }
 }
 .top-kv__btn {
   text-align: center;
@@ -72,21 +62,20 @@
 }
 
 .top-kv__slideBtns {
-  margin-top: 10px;
+  margin-top: g.pxClamp(20px, 25px);
   text-align: center;
   z-index: 110;
   @include g.mq(md) {
-    margin-top: 20px;
     text-align: left;
   }
 }
 
 .top-kv__slideBtns button {
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: g.pxClamp(40px, 50px);
+  height: g.pxClamp(40px, 50px);
   background-color: transparent;
-  border-radius: 50px;
+  border-radius: g.pxClamp(40px, 50px);
   transition: background-color .25s;
 
   &::after {
@@ -94,8 +83,8 @@
     content: '';
     top: 50%;
     left: 50%;
-    width: 20px;
-    height: 20px;
+    width: g.pxClamp(20px, 25px);;
+    height: g.pxClamp(20px, 25px);;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -106,7 +95,7 @@
   }
 }
 .top-kv__slideBtns button:first-child {
-  margin-right: 40px;
+  margin-right: g.pxClamp(40px, 50px);
   &::after {
     transform: translate(-60%, -50%);
     background-image: url(../img/slide_btn_l.png);

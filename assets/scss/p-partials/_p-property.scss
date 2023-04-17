@@ -1,10 +1,10 @@
 @use "../global/" as g;
 
-.p-property {
+.p-property__inner {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: g.calcPx(20px, 40px);
+  gap: g.pxClamp(20px, 40px);
 
   @include g.mq(md) {
     justify-content: space-between;
@@ -12,23 +12,19 @@
   }
   @include g.mq(lg) {
     justify-content: center;
-    gap: g.calcPx(20px, 40px);
+    gap: g.pxClamp(20px, 40px);
   }
 }
 
 .p-property__unit {
   position: relative;
   display: block;
-  width: 320px;
-  max-width: 320px;
+  width: g.pxClamp(320px, 480px, $maxViewport: 768px);
   box-shadow: 0 3px 6px rgba(g.colors(base-black), .2);
   z-index: 1;
 
   @include g.mq(md) {
-    width: 32%;
-  }
-  @include g.mq(lg) {
-    width: g.calcPx(296px, 320px, 1024px, 1440px);
+    width: g.pxClamp(236px, 320px, $minViewport: 768px);
   }
 }
 .p-property__unit.is-sold::after {
@@ -110,10 +106,7 @@
   overflow: hidden;
   z-index: 1;
   @include g.mq(md) {
-    padding: g.calcPx(15px, 20px, 768px, 1024px);
-  }
-  @include g.mq(lg) {
-    padding: 20px;
+    padding: g.pxClamp(15px, 20px, $minViewport: 768px);
   }
 
   &::after {
@@ -144,10 +137,7 @@
   transition: color .4s;
   will-change: color;
   @include g.mq(md) {
-    font-size: 14px;
-  }
-  @include g.mq(lg) {
-    font-size: g.rem(16px);
+    font-size: g.remClamp(14px, 16px, $minViewport: 768px);
   }
 }
 
@@ -192,11 +182,12 @@
 
 .p-property__tags span {
   display: inline-block;
+  margin-bottom: g.pxClamp(6px, 7px);
+  padding: 0 1em;
   background-color: g.colors(main);
   border-radius: 1em;
-  padding: 0 1em;
   color: g.colors(base-white);
-  font-size: 12px;
+  font-size: g.pxClamp(12px, 14px);
   transition: background-color .4s, color .4s;
   z-index: 2;
 }
@@ -231,4 +222,9 @@
       color: g.colors(base-black);
     }
   }
+}
+
+.p-property__link {
+  margin-top: 60px;
+  text-align: center;
 }

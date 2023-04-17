@@ -15,7 +15,7 @@
 </head>
 <body id="top">
   <div class="l-siteWrapper">
-    <div class="mobileMenu js-mobileMenu">
+    <div class="mobileMenu js-mobileMenu" aria-hidden="true">
       <div class="mobileMenu__inner">
         <nav class="mobileMenu__navPrimary">
           <ul class="mobileMenu__navList">
@@ -140,8 +140,8 @@
               </div>
             </div>
             <div class="top-kv__slideBtns">
-              <button></button>
-              <button></button>
+              <button aria-label="前のスライドへ"></button>
+              <button aria-label="次のスライドへ"></button>
             </div>
           </div>
         </div>
@@ -151,13 +151,13 @@
           </video>
         </div>
       </section>
-      <section class="top-news l-section bg--colorWhite">
+      <section class="l-section bg--colorWhite">
         <div class="l-section__inner">
           <div class="p-content__head">
             <img src="/assets/img/icon_news.png" alt="icon">
             <h2 class="p-content__title">新着情報</h2>
           </div>
-          <div class="top-news__main">
+          <div class="top-news">
             <div class="top-news__link">
               <a href="/news/"><span>新着情報一覧</span></a>
             </div>
@@ -179,103 +179,134 @@
           </div>
         </div>
       </section>
-      <section class="top-properties l-section bg--main">
+      <section class="l-section bg--main">
         <div class="l-section__inner">
           <div class="p-content__head">
             <img src="/assets/img/icon_properties.png" alt="icon">
             <h2 class="p-content__title">おすすめ物件</h2>
           </div>
           <div class="p-property">
-            <a class="p-property__unit is-sold" href="">
-              <div class="p-property__imgWrapper">
-                <img src="/assets/img/property_dummy.png" alt="物件画像">
-                <span>詳細を見る</span>
-              </div>
-              <div class="p-property__body">
-                <div class="p-property__summary">
-                  <dl class="p-property__location">
-                    <dt>所在地</dt>
-                    <dd>京都府船井郡京丹波町</dd>
-                  </dl>
-                  <dl>
-                    <dt>土地坪数</dt>
-                    <dd>約1580坪</dd>
-                  </dl>
-                  <dl>
-                    <dt>母屋坪数</dt>
-                    <dd>約57坪</dd>
-                  </dl>
+            <div class="p-property__inner">
+              <a class="p-property__unit is-sold" href="">
+                <div class="p-property__imgWrapper">
+                  <img src="/assets/img/property_dummy.png" alt="物件画像">
+                  <span>詳細を見る</span>
                 </div>
-                <div class="p-property__tags">
-                  <span>古民家</span>
-                  <span>リフォーム済</span>
-                  <span>農地付き</span>
-                  <span>上質邸宅</span>
-                  <span>里山の近く</span>
-                  <span>海・川の近く</span>
+                <div class="p-property__body">
+                  <div class="p-property__summary">
+                    <dl class="p-property__location">
+                      <dt>所在地</dt>
+                      <dd>京都府船井郡京丹波町</dd>
+                    </dl>
+                    <dl>
+                      <dt>土地坪数</dt>
+                      <dd>約1580坪</dd>
+                    </dl>
+                    <dl>
+                      <dt>母屋坪数</dt>
+                      <dd>約57坪</dd>
+                    </dl>
+                  </div>
+                  <div class="p-property__tags">
+                    <span>古民家</span>
+                    <span>リフォーム済</span>
+                    <span>農地付き</span>
+                    <span>上質邸宅</span>
+                    <span>里山の近く</span>
+                    <span>海・川の近く</span>
+                  </div>
                 </div>
-              </div>
-            </a>
-            <a class="p-property__unit" href="">
-              <div class="p-property__imgWrapper">
-                <img src="/assets/img/property_dummy.png" alt="物件画像">
-                <span>詳細を見る</span>
-              </div>
-              <div class="p-property__body">
-                <div class="p-property__summary">
-                  <dl class="p-property__location">
-                    <dt>所在地</dt>
-                    <dd>京都府船井郡京丹波町</dd>
-                  </dl>
-                  <dl>
-                    <dt>土地坪数</dt>
-                    <dd>約1580坪</dd>
-                  </dl>
-                  <dl>
-                    <dt>母屋坪数</dt>
-                    <dd>約57坪</dd>
-                  </dl>
+              </a>
+              <a class="p-property__unit" href="">
+                <div class="p-property__imgWrapper">
+                  <img src="/assets/img/property_dummy.png" alt="物件画像">
+                  <span>詳細を見る</span>
                 </div>
-                <div class="p-property__tags">
-                  <span>古民家</span>
-                  <span>リフォーム済</span>
-                  <span>農地付き</span>
-                  <span>上質邸宅</span>
-                  <span>里山の近く</span>
-                  <span>海・川の近く</span>
+                <div class="p-property__body">
+                  <div class="p-property__summary">
+                    <dl class="p-property__location">
+                      <dt>所在地</dt>
+                      <dd>京都府船井郡京丹波町</dd>
+                    </dl>
+                    <dl>
+                      <dt>土地坪数</dt>
+                      <dd>約1580坪</dd>
+                    </dl>
+                    <dl>
+                      <dt>母屋坪数</dt>
+                      <dd>約57坪</dd>
+                    </dl>
+                  </div>
+                  <div class="p-property__tags">
+                    <span>古民家</span>
+                    <span>リフォーム済</span>
+                    <span>農地付き</span>
+                    <span>上質邸宅</span>
+                    <span>里山の近く</span>
+                    <span>海・川の近く</span>
+                  </div>
                 </div>
-              </div>
-            </a>
-            <a class="p-property__unit" href="">
-              <div class="p-property__imgWrapper">
-                <img src="/assets/img/property_dummy.png" alt="物件画像">
-                <span>詳細を見る</span>
-              </div>
-              <div class="p-property__body">
-                <div class="p-property__summary">
-                  <dl class="p-property__location">
-                    <dt>所在地</dt>
-                    <dd>京都府船井郡京丹波町</dd>
-                  </dl>
-                  <dl>
-                    <dt>土地坪数</dt>
-                    <dd>約1580坪</dd>
-                  </dl>
-                  <dl>
-                    <dt>母屋坪数</dt>
-                    <dd>約57坪</dd>
-                  </dl>
+              </a>
+              <a class="p-property__unit" href="">
+                <div class="p-property__imgWrapper">
+                  <img src="/assets/img/property_dummy.png" alt="物件画像">
+                  <span>詳細を見る</span>
                 </div>
-                <div class="p-property__tags">
-                  <span>古民家</span>
-                  <span>リフォーム済</span>
-                  <span>農地付き</span>
-                  <span>上質邸宅</span>
-                  <span>里山の近く</span>
-                  <span>海・川の近く</span>
+                <div class="p-property__body">
+                  <div class="p-property__summary">
+                    <dl class="p-property__location">
+                      <dt>所在地</dt>
+                      <dd>京都府船井郡京丹波町</dd>
+                    </dl>
+                    <dl>
+                      <dt>土地坪数</dt>
+                      <dd>約1580坪</dd>
+                    </dl>
+                    <dl>
+                      <dt>母屋坪数</dt>
+                      <dd>約57坪</dd>
+                    </dl>
+                  </div>
+                  <div class="p-property__tags">
+                    <span>古民家</span>
+                    <span>リフォーム済</span>
+                    <span>農地付き</span>
+                    <span>上質邸宅</span>
+                    <span>里山の近く</span>
+                    <span>海・川の近く</span>
+                  </div>
                 </div>
+              </a>
+            </div>
+            <div class="p-property__link">
+              <a href="/properties/" class="o-btn o-btn--rev"><span>物件一覧</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="l-section bg--photo01">
+        <div class="l-section__inner">
+          <div class="p-content__head">
+            <img src="/assets/img/icon_trade.png" alt="icon">
+            <h2 class="p-content__title _rev">買取・売却</h2>
+          </div>
+          <div class="top-trade">
+            <div class="top-trade__inner">
+              <div class="top-trade__head">
+                <strong class="top-trade__catch"><span>無料</span><span>査定</span></strong>
+                <h3 class="top-trade__copy"><span>田舎家、</span><span>買い取ります。</span></h3>
               </div>
-            </a>
+              <div class="top-trade__body">
+                <p class="top-trade__text">空き家で回収が必要な住宅でも大丈夫。<br>キレイにリフォームして販売します。</p>
+                <p class="top-trade__area">
+                  <span>エリア：</span>
+                  <span>京丹波町・南丹市・福知山市</span>
+                </p>
+              </div>
+            </div>
+            <div class="top-trade__link">
+              <a href="/trade/" class="o-btn"><span>詳しくはこちら</span></a>
+            </div>
           </div>
         </div>
       </section>

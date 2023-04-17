@@ -151,14 +151,19 @@ button {
 
 .l-section {
   width: 100%;
-  padding: calc(50px + (60 - 50) * ((100vw - 360px) / (1440 - 360))) 0 100px;
+  padding: clamp(50px, 46.667px + 0.93vw, 60px) 0 clamp(80px, 73.333px + 1.85vw, 100px);
 }
 
 .l-section__inner {
   width: 100%;
   max-width: 1360px;
   margin-inline: auto;
-  padding: 0 calc(20px + (40 - 20) * ((100vw - 360px) / (1440 - 360)));
+  padding: 0 clamp(20px, 2.353px + 4.9vw, 40px);
+}
+@media screen and (min-width: 768px) {
+  .l-section__inner {
+    padding: 0 clamp(20px, -2.857px + 2.98vw, 40px);
+  }
 }
 
 .o-copyright {
@@ -171,14 +176,14 @@ button {
   min-width: 300px;
   max-width: 100%;
   background-color: #fcfcfc;
-  border: 1px solid #fcfcfc;
+  border: 1px solid transparent;
   border-radius: 2em;
   padding: 0.5em 0.8em;
   color: #222;
   font-size: 1.125rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 2px;
   text-align: center;
-  transition: opacity 0.25s;
+  transition: background-color 0.25s, color 0.25s;
 }
 .o-btn > span {
   position: relative;
@@ -196,25 +201,66 @@ button {
   transform: translateY(-50%);
 }
 .o-btn:focus {
-  opacity: 0.6;
+  background-color: #c24524;
+  color: #fcfcfc;
+}
+.o-btn:focus > span::after {
+  background-image: url(../img/btn_arrow_white.png);
 }
 @media (hover: hover) and (pointer: fine) {
   .o-btn:hover {
-    opacity: 0.6;
+    background-color: #c24524;
+    color: #fcfcfc;
+  }
+  .o-btn:hover > span::after {
+    background-image: url(../img/btn_arrow_white.png);
+  }
+}
+
+.o-btn.o-btn--rev {
+  background-color: #222;
+  color: #fcfcfc;
+}
+.o-btn.o-btn--rev > span::after {
+  background-image: url(../img/btn_arrow_white.png);
+}
+.o-btn.o-btn--rev:focus {
+  background-color: #c24524;
+}
+@media (hover: hover) and (pointer: fine) {
+  .o-btn.o-btn--rev:hover {
+    background-color: #c24524;
   }
 }
 
 .o-btn.o-btn--accent {
   background-color: #c24524;
-  border: 1px solid #c24524;
+  border-color: #c24524;
   color: #fcfcfc;
 }
-.o-btn.o-btn--accent span::after {
+.o-btn.o-btn--accent > span::after {
   background-image: url(../img/btn_arrow_white.png);
+}
+.o-btn.o-btn--accent:focus {
+  background-color: #fcfcfc;
+  color: #222;
+}
+.o-btn.o-btn--accent:focus > span::after {
+  background-image: url(../img/btn_arrow_black.png);
+}
+@media (hover: hover) and (pointer: fine) {
+  .o-btn.o-btn--accent:hover {
+    background-color: #fcfcfc;
+    color: #222;
+  }
+  .o-btn.o-btn--accent:hover > span::after {
+    background-image: url(../img/btn_arrow_black.png);
+  }
 }
 
 .o-btn.o-btn--kv {
   background-color: rgba(252, 252, 252, 0.2);
+  border-color: #fcfcfc;
   color: #fcfcfc;
   transition: background-color 0.25s, color 0.25s;
 }
@@ -222,7 +268,6 @@ button {
   background-image: url(../img/btn_arrow_white.png);
 }
 .o-btn.o-btn--kv:focus {
-  opacity: 1;
   background-color: #fcfcfc;
   color: #222;
 }
@@ -231,7 +276,6 @@ button {
 }
 @media (hover: hover) and (pointer: fine) {
   .o-btn.o-btn--kv:hover {
-    opacity: 1;
     background-color: #fcfcfc;
     color: #222;
   }
@@ -283,6 +327,10 @@ button {
   color: #222;
   font-size: 1.5rem;
   letter-spacing: 8px;
+}
+
+.p-content__title._rev {
+  color: #fcfcfc;
 }
 
 .header {
@@ -1467,6 +1515,13 @@ body.is-active {
 
 .bg--main {
   background-image: url(../img/bg_main.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.bg--photo01 {
+  position: relative;
+  background-image: url(../img/bg_photo01.png);
   background-size: cover;
   background-position: center;
 }

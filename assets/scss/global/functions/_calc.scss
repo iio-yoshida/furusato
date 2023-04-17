@@ -1,11 +1,11 @@
-@use 'sass:math';
-@use 'strip-unit' as su;
+@use "sass:math";
+@use "stripUnit" as su;
 
 @function calcPx($min, $max, $minViewport: 360px , $maxViewport: 1440px) {
-  $minSU: su.strip-unit($min);
-  $maxSU: su.strip-unit($max);
-  $minVpSU: su.strip-unit($minViewport);
-  $maxVpSU: su.strip-unit($maxViewport);
+  $minSU: su.stripUnit($min);
+  $maxSU: su.stripUnit($max);
+  $minVpSU: su.stripUnit($minViewport);
+  $maxVpSU: su.stripUnit($maxViewport);
 
   @return calc(#{$min} + (#{$maxSU} - #{$minSU}) * ((100vw - #{$minViewport}) / (#{$maxVpSU} - #{$minVpSU})));
 }
