@@ -40,6 +40,16 @@
 }
 
 .o-btn.o-btn--rev {
+  @include g.hover() {
+    background-color: g.colors(base-black);
+    color: g.colors(base-white);
+    & > span::after {
+      background-image: url(../img/btn_arrow_white.png);
+    }
+  }
+}
+
+.o-btn.o-btn--black {
   background-color: g.colors(base-black);
   color: g.colors(base-white);
   & > span::after {

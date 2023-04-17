@@ -604,6 +604,85 @@
   text-align: center;
 }
 
+.top-merit__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .top-merit__inner {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.top-merit__topic {
+  width: 320px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px 0;
+  border-top: 1px solid #fcfcfc;
+}
+@media screen and (min-width: 768px) {
+  .top-merit__topic {
+    width: clamp(236px, 140px + 12.5vw, 320px);
+    margin-left: clamp(15px, -2.143px + 2.23vw, 30px);
+    padding: 15px 0;
+    border-top: 0;
+    border-right: 1px solid #fcfcfc;
+  }
+  .top-merit__topic:last-child {
+    border-right: 0;
+  }
+}
+
+.top-merit__imgWrapper {
+  flex-basis: 110px;
+  margin-right: clamp(20px, 2.353px + 4.9vw, 40px);
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .top-merit__imgWrapper {
+    flex-basis: clamp(70px, 24.286px + 5.95vw, 110px);
+    margin-right: clamp(20px, -2.857px + 2.98vw, 40px);
+  }
+}
+
+.top-merit__text {
+  color: #fcfcfc;
+}
+.top-merit__text span {
+  display: inline-block;
+  font-size: 28px;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.top-merit__text span.top-merit__item {
+  display: block;
+  font-size: 18px;
+}
+.top-merit__text span.top-merit__nums {
+  font-size: 56px;
+  letter-spacing: 2px;
+}
+@media screen and (min-width: 768px) {
+  .top-merit__text span {
+    font-size: clamp(20px, 10.857px + 1.19vw, 28px);
+  }
+  .top-merit__text span.top-merit__item {
+    font-size: clamp(16px, 13.714px + 0.3vw, 18px);
+  }
+  .top-merit__text span.top-merit__nums {
+    font-size: clamp(40px, 21.714px + 2.38vw, 56px);
+  }
+}
+
+.top-merit__link {
+  margin-top: 60px;
+  text-align: center;
+}
+
 .p-property__inner {
   display: flex;
   flex-wrap: wrap;
