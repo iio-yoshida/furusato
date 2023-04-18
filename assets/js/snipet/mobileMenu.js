@@ -21,6 +21,8 @@ export default class MobileMenu {
     this.DOM.menu.classList.toggle('is-active');
     this.DOM.header.classList.toggle('is-active');
     document.body.classList.toggle('is-active');
+    const isMenuActive = this.DOM.menu.classList.contains('is-active');
+    this.DOM.menu.setAttribute('aria-hidden', !isMenuActive);
     if (this.DOM.btn.classList.contains('is-active')) {
       this._fadeOut(this.DOM.text, () => {
         this.DOM.text.textContent = '閉じる';

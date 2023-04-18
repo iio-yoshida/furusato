@@ -1,16 +1,25 @@
 @use "../global/" as g;
 
-.bg-black {
-  background-color: g.colors(base-black);
-  transition: all .5s ease-in-out;
-}
-.bg-white {
+.bg--colorWhite {
   background-color: g.colors(base-white);
 }
-
-.bg-op-black {
-  background-color: rgba(g.colors(base-black), 0.6);
+.bg--colorMain {
+  background-color: g.colors(main);
 }
-.bg-op-white {
-  background-color: rgba(g.colors(base-white), 0.6);
+.bg--main {
+  background-image: url(../img/bg_main.png);
+  background-size: cover;
+  background-position: center;
+}
+.bg--photo01 {
+  position: relative;
+  background-image: url(../img/bg_photo01.png);
+  background-size: cover;
+  background-position: center;
+}
+.bg--photo02 {
+  position: relative;
+  background-image: url(../img/bg_photo02.png);
+  background-size: cover;
+  background-position: center;
 }

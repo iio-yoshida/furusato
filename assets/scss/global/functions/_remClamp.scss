@@ -1,0 +1,23 @@
+@use "sass:math";
+@use "stripUnit" as su;
+
+@function remClamp($minPx, $maxPx, $minViewport: 360px, $maxViewport: 1440px) {
+  $basePx: 16px;
+  // stripUnitで単位を外す
+  $baseVal: su.stripUnit($basePx);
+  $minVal: su.stripUnit($minPx);
+  $maxVal: su.stripUnit($maxPx);
+  $minViewportVal: su.stripUnit($minViewport);
+  $maxViewportVal: su.stripUnit($maxViewport);
+
+  $variable: math.div(($maxVal - $minVal), ($maxViewportVal - $minViewportVal));
+  $constant: math.div(($maxVal - ($maxViewportVal * $variable)), $baseVal);
+
+  $minRem: math.div($minVal, $baseVal) * 1rem;
+  $maxRem: math.div($maxVal, $baseVal) * 1rem;
+
+  $variableVw: math.div(math.round($variable * 100 * 100), 100) * 1vw;
+  $constantRem: math.div(math.round($constant * 1000), 1000) * 1rem;
+
+  @return clamp(#{$minRem}, #{$constantRem} + #{$variableVw}, #{$maxRem});
+}

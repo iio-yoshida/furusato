@@ -15,7 +15,7 @@
 </head>
 <body id="top">
   <div class="l-siteWrapper">
-    <div class="mobileMenu js-mobileMenu">
+    <div class="mobileMenu js-mobileMenu" aria-hidden="true">
       <div class="mobileMenu__inner">
         <nav class="mobileMenu__navPrimary">
           <ul class="mobileMenu__navList">
@@ -34,7 +34,7 @@
             <li class="mobileMenu__navItem"><a href="/faq/">よくある質問</a></li>
           </ul>
           <div class="mobileMenu__btn">
-            <a class="o-btn o-btn--accent" href=""><span>お問い合わせ</span></a>
+            <a class="o-btn o-btn--accent" href="/contact/"><span>お問い合わせ</span></a>
           </div>
         </nav>
         <div class="mobileMenu__info">
@@ -76,14 +76,14 @@
         <nav class="header__nav">
           <div class="header__navMenu">
             <div class="header__navBtn">
-              <a href="/english">English</a>
+              <a href="/english/">English</a>
             </div>
             <ul class="header__navList">
               <li class="header__navItem">
                 <a href="/properties/"><span>物件一覧</span></a>
               </li>
               <li class="header__navItem">
-                <a href="/trade"><span>買取・売却</span></a>
+                <a href="/trade/"><span>買取・売却</span></a>
               </li>
               <li class="header__navItem">
                 <a href="/merit/"><span>選ばれる理由</span></a>
@@ -113,7 +113,7 @@
             </ul>
           </div>
           <div class="header__navBtns">
-            <a href="" class="header__navContact">
+            <a href="/contact/" class="header__navContact">
               <span>お問い合わせ</span>
             </a>
             <button class="header__navMenuBtn js-menuBtn">
@@ -128,19 +128,29 @@
     </header>
     <main class="l-main">
       <section class="top-kv js-firstView js-trigger">
+        <div class="top-kv__mask"></div>
         <div class="top-kv__main">
-          <div class="top-kv__slider">
-            <div class="top-kv__switch">
-              <h2 class="top-kv__title">心地よい古民家で、<br>あたらしい暮らし。</h2>
-              <p class="top-kv__copy">ふるさと企画では、京都の古民家を<br>独自技術で再生（リフォーム）、<br>心地よさにこだわり生まれ変わった<br>古民家物件を販売しています。</p>
-              <div class="top-kv__btn">
-                <a href="" class="o-btn o-btn--kv"><span>物件一覧</span></a>
+          <div class="top-kv__slide">
+            <div class="top-kv__slideContents js-slider">
+              <div class="top-kv__slideSwitch js-slide">
+                <h2 class="top-kv__title">心地よい古民家で、<br>あたらしい暮らし。</h2>
+                <p class="top-kv__copy">ふるさと企画では、京都の古民家を<br>独自技術で再生（リフォーム）、<br>心地よさにこだわり生まれ変わった<br>古民家物件を販売しています。</p>
+                <div class="top-kv__btn">
+                  <a href="/properties/" class="o-btn o-btn--kv"><span>物件一覧</span></a>
+                </div>
+              </div>
+              <div class="top-kv__slideSwitch is-standby js-slide">
+                <h2 class="top-kv__title">田舎家、<br>買い取ります。</h2>
+                <p class="top-kv__copy">売却をお考えの物件があれば、<br>ぜひご相談ください。<br>空き家で改修が必要な<br>物件でも買取可能です。</p>
+                <div class="top-kv__btn">
+                  <a href="/trade/" class="o-btn o-btn--kv"><span>詳しくはこちら</span></a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="top-kv__slideBtns">
-            <button></button>
-            <button></button>
+            <div class="top-kv__slideBtns">
+              <button aria-label="前のスライドへ" class="js-prev"></button>
+              <button aria-label="次のスライドへ" class="js-next"></button>
+            </div>
           </div>
         </div>
         <div class="top-kv__movie">
@@ -149,7 +159,337 @@
           </video>
         </div>
       </section>
-      <section class="dammy" style="height: 100vh;"></section>
+      <section class="l-section bg--colorWhite">
+        <div class="l-section__inner">
+          <div class="p-content__head">
+            <img src="/assets/img/icon_news.png" alt="icon">
+            <h2 class="p-content__title">新着情報</h2>
+          </div>
+          <div class="top-news">
+            <div class="top-news__link">
+              <a href="/news/"><span>新着情報一覧</span></a>
+            </div>
+            <div class="top-news__unit">
+              <p class="top-news__date">2023.04.30</p>
+              <p class="top-news__tag">お知らせ</p>
+              <p class="top-news__text">ホームページをリニューアルしました。</p>
+            </div>
+            <div class="top-news__unit">
+              <p class="top-news__date">2022.12.27</p>
+              <p class="top-news__tag">お知らせ</p>
+              <p class="top-news__text">2022年12月29日〜2023年1月5日の期間はお休みさせていただきます。</p>
+            </div>
+            <div class="top-news__unit">
+              <p class="top-news__date">2022.10.14</p>
+              <p class="top-news__tag">物件情報</p>
+              <p class="top-news__text">京都府 京丹波町<a href="">「FW-42」</a>売約済み</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="l-section bg--main">
+        <div class="l-section__inner">
+          <div class="p-content__head">
+            <img src="/assets/img/icon_properties.png" alt="icon">
+            <h2 class="p-content__title">おすすめ物件</h2>
+          </div>
+          <div class="p-property">
+            <div class="p-property__inner">
+              <a class="p-property__unit is-sold" href="">
+                <div class="p-property__imgWrapper">
+                  <img src="/assets/img/property_dummy.png" alt="物件画像">
+                  <span>詳細を見る</span>
+                </div>
+                <div class="p-property__body">
+                  <div class="p-property__summary">
+                    <dl class="p-property__location">
+                      <dt>所在地</dt>
+                      <dd>京都府船井郡京丹波町</dd>
+                    </dl>
+                    <dl>
+                      <dt>土地坪数</dt>
+                      <dd>約1580坪</dd>
+                    </dl>
+                    <dl>
+                      <dt>母屋坪数</dt>
+                      <dd>約57坪</dd>
+                    </dl>
+                  </div>
+                  <div class="p-property__tags">
+                    <span>古民家</span>
+                    <span>リフォーム済</span>
+                    <span>農地付き</span>
+                    <span>上質邸宅</span>
+                    <span>里山の近く</span>
+                    <span>海・川の近く</span>
+                  </div>
+                </div>
+              </a>
+              <a class="p-property__unit" href="">
+                <div class="p-property__imgWrapper">
+                  <img src="/assets/img/property_dummy.png" alt="物件画像">
+                  <span>詳細を見る</span>
+                </div>
+                <div class="p-property__body">
+                  <div class="p-property__summary">
+                    <dl class="p-property__location">
+                      <dt>所在地</dt>
+                      <dd>京都府船井郡京丹波町</dd>
+                    </dl>
+                    <dl>
+                      <dt>土地坪数</dt>
+                      <dd>約1580坪</dd>
+                    </dl>
+                    <dl>
+                      <dt>母屋坪数</dt>
+                      <dd>約57坪</dd>
+                    </dl>
+                  </div>
+                  <div class="p-property__tags">
+                    <span>古民家</span>
+                    <span>リフォーム済</span>
+                    <span>農地付き</span>
+                    <span>上質邸宅</span>
+                    <span>里山の近く</span>
+                    <span>海・川の近く</span>
+                  </div>
+                </div>
+              </a>
+              <a class="p-property__unit" href="">
+                <div class="p-property__imgWrapper">
+                  <img src="/assets/img/property_dummy.png" alt="物件画像">
+                  <span>詳細を見る</span>
+                </div>
+                <div class="p-property__body">
+                  <div class="p-property__summary">
+                    <dl class="p-property__location">
+                      <dt>所在地</dt>
+                      <dd>京都府船井郡京丹波町</dd>
+                    </dl>
+                    <dl>
+                      <dt>土地坪数</dt>
+                      <dd>約1580坪</dd>
+                    </dl>
+                    <dl>
+                      <dt>母屋坪数</dt>
+                      <dd>約57坪</dd>
+                    </dl>
+                  </div>
+                  <div class="p-property__tags">
+                    <span>古民家</span>
+                    <span>リフォーム済</span>
+                    <span>農地付き</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="p-property__link">
+              <a href="/properties/" class="o-btn o-btn--black"><span>物件一覧</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="l-section bg--photo01">
+        <div class="l-section__inner">
+          <div class="p-content__head">
+            <img src="/assets/img/icon_trade.png" alt="icon">
+            <h2 class="p-content__title _rev">買取・売却</h2>
+          </div>
+          <div class="top-trade">
+            <div class="top-trade__inner">
+              <div class="top-trade__head">
+                <strong class="top-trade__catch"><span>無料</span><span>査定</span></strong>
+                <h3 class="top-trade__copy"><span>田舎家、</span><span>買い取ります。</span></h3>
+              </div>
+              <div class="top-trade__body">
+                <p class="top-trade__text">空き家で改修が必要な住宅でも大丈夫。<br>キレイにリフォームして販売します。</p>
+                <p class="top-trade__area">
+                  <span>エリア：</span>
+                  <span>京丹波町・南丹市・福知山市</span>
+                </p>
+              </div>
+            </div>
+            <div class="top-trade__link">
+              <a href="/trade/" class="o-btn"><span>詳しくはこちら</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="l-section bg--colorMain">
+        <div class="p-content__head">
+          <img src="/assets/img/icon_merit.png" alt="icon">
+          <h2 class="p-content__title _rev">選ばれる理由</h2>
+        </div>
+        <div class="l-section__inner">
+          <div class="top-merit">
+            <div class="top-merit__inner">
+              <div class="top-merit__topic">
+                <div class="top-merit__imgWrapper">
+                  <img src="/assets/img/icon_merit01.png" alt="icon">
+                </div>
+                <p class="top-merit__text">
+                  <span class="top-merit__item">創業年数</span>
+                  <span><span class="top-merit__nums">28</span>年</span>
+                </p>
+              </div>
+              <div class="top-merit__topic">
+                <div class="top-merit__imgWrapper">
+                  <img src="/assets/img/icon_merit02.png" alt="icon">
+                </div>
+                <p class="top-merit__text">
+                  <span class="top-merit__item">売却数</span>
+                  <img src="/assets/img/merit_kyoto.png" alt="京都だけで">
+                  <span>約<span class="top-merit__nums">90</span>件</span>
+                </p>
+              </div>
+              <div class="top-merit__topic">
+                <div class="top-merit__imgWrapper">
+                  <img src="/assets/img/icon_merit03.png" alt="icon">
+                </div>
+                <p class="top-merit__text">
+                  <span class="top-merit__item">リノベーション数</span>
+                  <span>約<span class="top-merit__nums">40</span>件</span>
+                </p>
+              </div>
+            </div>
+            <div class="top-merit__link">
+              <a href="/merit/" class="o-btn o-btn--rev"><span>詳しくはこちら</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="l-section bg--photo02">
+        <div class="l-section__inner">
+          <div class="top-youtube">
+            <div class="top-youtube__inner">
+              <div class="top-youtube__head">
+                <div class="top-youtube__icon">
+                  <img src="/assets/img/icon_channel.png" alt="icon">
+                </div>
+                <h3 class="top-youtube__copy"><span>ふるさと企画</span><span>公式Youtubeにて</span><span>特選物件、</span><span>リフォーム情報公開中！</span></h3>
+              </div>
+              <div class="top-youtube__body">
+                <div class="top-youtube__movieWrapper">
+                  <button class="top-youtube__btn js-movieBtn" aria-label="動画再生ボタン"><img src="/assets/img/btn_youtube.png" alt="button">Play</button>
+                  <img class="top-youtube__thumb js-movieThumb"src="/assets/img/thumb_youtube.png" alt="thumbnail" data-video="" width="16" height="9">
+                  <iframe class="top-youtube__movie js-movie" src="https://www.youtube.com/embed/KfiJMDToKTU" frameborder="0" width="16" height="9" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen playsinline></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="l-section bg--main">
+        <div class="l-section__inner">
+          <div class="p-content__head">
+            <img src="/assets/img/icon_columns.png" alt="icon">
+            <h2 class="p-content__title">田舎暮らし情報</h2>
+          </div>
+          <div class="top-columns">
+            <div class="top-columns__inner">
+              <div class="top-columns__unit">
+                <div class="top-columns__imgWrapper">
+                  <img src="/assets/img/thumb_column.jpg" alt="thumbnail">
+                  <span>ふるさとコラム</span>
+                </div>
+                <p class="top-columns__text">
+                  このテキストはダミーです。このテキストはダミーです。このテキストはダミーです。このテキストはダミーです。このテキストはダミーです。
+                </p>
+                <a class="top-columns__cta" href="/columns/"><span>記事を読む</span></a>
+              </div>
+              <div class="top-columns__unit">
+                <div class="top-columns__imgWrapper">
+                  <img src="/assets/img/thumb_intro.jpg" alt="thumbnail">
+                  <span>古民家とは</span>
+                </div>
+                <p class="top-columns__text">
+                  古民家って何？どんなタイプがあるの？屋根の種類は？そもそも古民家の持つ魅力とは？あなたの古民家に関する疑問にお答えするページを作りました！是非ご覧ください。
+                </p>
+                <a class="top-columns__cta" href="/intro/"><span>記事を読む</span></a>
+              </div>
+              <div class="top-columns__unit">
+                <div class="top-columns__imgWrapper">
+                  <img src="/assets/img/thumb_advice.jpg" alt="thumbnail">
+                  <span>田舎暮らしなんでも相談</span>
+                </div>
+                <p class="top-columns__text">
+                  田舎暮らしと一言でいえどその形態は様々なものです。実際に田舎ライフを過ごす前にどのようなプランを持って田舎暮らしをスタートさせるか？まずはイメージする事が大切です。
+                </p>
+                <a class="top-columns__cta" href="/advice/"><span>記事を読む</span></a>
+              </div>
+              <div class="top-columns__unit">
+                <div class="top-columns__imgWrapper">
+                  <img src="/assets/img/thumb_lifecolumn.jpg" alt="thumbnail">
+                  <span>ふるさと新撰組</span>
+                </div>
+                <p class="top-columns__text">
+                  田舎暮らしの新生活のための雑学・知恵・魅力を語る！あなたに最適な古民家物件をお選びいただくためにお役立てください。
+                </p>
+                <a class="top-columns__cta" href="/lifecolumn/"><span>記事を読む</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="l-section bg--colorWhite">
+        <div class="l-section__inner">
+          <div class="p-content__head">
+            <img src="/assets/img/icon_sns.png" alt="icon">
+            <h2 class="p-content__title">公式SNS</h2>
+          </div>
+          <div class="top-sns">
+            <div class="top-sns__inner">
+              <a class="top-sns__item" href="https://www.youtube.com/@user-ue2dx8fx7g" target="_blank">
+                <img src="/assets/img/icon_sns_yt.svg" alt="">
+                <span>Youtube</span>
+              </a>
+              <a class="top-sns__item" href="https://www.facebook.com/furusatokikaku.jp/" target="_blank">
+                <img src="/assets/img/icon_sns_fb.svg" alt="">
+                <span>Facebook</span>
+              </a>
+              <a class="top-sns__item" href="https://www.instagram.com/furursato/" target="_blank">
+                <img src="/assets/img/icon_sns_ig.svg" alt="">
+                <span>Instagram</span>
+              </a>
+              <a class="top-sns__item" href="https://www.pinterest.jp/furusatokikaku/" target="_blank">
+                <img src="/assets/img/icon_sns_pi.svg" alt="">
+                <span>Pinterest</span>
+              </a>
+              <a class="top-sns__item" href="https://www.tiktok.com/@furusatokikaku" target="_blank">
+                <img src="/assets/img/icon_sns_tk.svg" alt="">
+                <span>TikTok</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="l-section bg--main">
+        <div class="l-section__inner">
+          <div class="p-content__head">
+            <img src="/assets/img/icon_faq.png" alt="icon">
+            <h2 class="p-content__title">よくある質問</h2>
+          </div>
+          <div class="p-faq">
+            <div class="p-faq__inner">
+              <details class="p-faq__item js-details">
+                <summary class="js-summary">
+                  <span class="p-faq__q">Q</span>
+                  <span class="p-faq__text">ここに質問テキストが入ります。</span>
+                  <span class="p-faq__icon"></span></summary>
+                <div class="js-content">
+                  <p>
+                    <span class="p-faq__a">A</span>
+                    <span class="p-faq__text">ここに回答テキストが入ります。</span>
+                  </p>
+                </div>
+              </details>
+            </div>
+            <div class="p-faq__link">
+              <a href="/faq/" class="o-btn o-btn--black"><span>すべての質問へ</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer__inner">
@@ -172,7 +512,7 @@
               <span>「ふるさと企画」にお任せください。</span>
             </p>
             <div class="footer__btn">
-              <a class="o-btn" href=""><span>お問い合わせ</span></a>
+              <a class="o-btn" href="/contact/"><span>お問い合わせ</span></a>
             </div>
           </div>
           <div class="footer__links">
@@ -194,11 +534,11 @@
               </ul>
             </nav>
             <div class="footer__sns">
-              <a href=""><img src="/assets/img/icon_youtube.png" alt="YouYube"></a>
-              <a href=""><img src="/assets/img/icon_facebook.png" alt="Facebook"></a>
-              <a href=""><img src="/assets/img/icon_instagram.png" alt="Instagram"></a>
-              <a href=""><img src="/assets/img/icon_pinterest.png" alt="Pinterest"></a>
-              <a href=""><img src="/assets/img/icon_tiktok.png" alt="TikTok"></a>
+              <a href="https://www.youtube.com/@user-ue2dx8fx7g" target="_blank"><img src="/assets/img/icon_youtube.png" alt="YouYube"></a>
+              <a href="https://www.facebook.com/furusatokikaku.jp/" target="_blank"><img src="/assets/img/icon_facebook.png" alt="Facebook"></a>
+              <a href="https://www.instagram.com/furursato/" target="_blank"><img src="/assets/img/icon_instagram.png" alt="Instagram"></a>
+              <a href="https://www.pinterest.jp/furusatokikaku/" target="_blank"><img src="/assets/img/icon_pinterest.png" alt="Pinterest"></a>
+              <a href="https://www.tiktok.com/@furusatokikaku" target="_blank"><img src="/assets/img/icon_tiktok.png" alt="TikTok"></a>
             </div>
           </div>
         </div>
@@ -215,7 +555,7 @@
         </div>
       </div>
     </footer>
-    <a class="o-floatBtn js-returnTop" href="#top"></a>
+    <a class="o-floatBtn js-returnTop" href="#top" aria-label="TOPへ戻る"></a>
   </div>
 </body>
 </html>

@@ -2,9 +2,7 @@
 
 .header {
   position: fixed;
-  height: g.calcPx(60px, 120px);
-  min-height: 60px;
-  max-height: 120px;
+  height: g.pxClamp(60px, 120px);
   top: 0;
   left: 0;
   width: 100%;
@@ -24,9 +22,7 @@
 
   .header__logo {
     align-self: center;
-    width: g.calcPx(150px, 280px);
-    min-width: 150px;
-    max-width: 280px;
+    width: g.pxClamp(150px, 280px);
     transition: opacity .25s;
     @include g.hover() {
       opacity: .6;
@@ -39,6 +35,7 @@
   .header__logo a::after {
     position: absolute;
     content: '';
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -69,7 +66,7 @@
     padding: 4px 32px 4px 8px;
     border: 1px solid g.colors(base-black);
     color: g.colors(base-black);
-    font-size: g.rem(12px);
+    font-size: 12px;
     text-transform: uppercase;
     transition: background-color .25s, color .25s, opacity .25s;
     &::after {
@@ -104,31 +101,20 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    height: g.calcPx(60px, 120px);
-    min-height: 60px;
-    max-height: 120px;
+    height: g.pxClamp(60px, 120px);
   }
 
   .header__navItem {
     height: 60%;
-    margin-right: 25px;
-    @include g.mq(xl) {
-      margin-right: 30px;
-    }
+    margin-right: g.pxClamp(25px, 30px, $minViewport: 1024px);
   }
 
   .header__navItem > a {
     display: flex;
     height: 100%;
     color: g.colors(base-black);
-    font-size: g.rem(14px);
+    font-size: g.remClamp(14px, 18px, $minViewport: 1024px);
     transition: color .25s, opacity .25s;
-    @include g.mq(xl) {
-      font-size: g.rem(16px);
-    }
-    @include g.mq(xxl) {
-      font-size: g.rem(18px);
-    }
     & > span {
       position: relative;
       display: inline-block;
@@ -165,7 +151,7 @@
     top: auto;
     left: 0;
     width: 100vw;
-    background-image: url(../img/back.png);
+    background-image: url(../img/bg_main.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -194,23 +180,19 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: g.calcPx(160px, 180px, 1024px, 1440px);
+    width: g.pxClamp(160px, 180px, $minViewport: 1024px);
     max-width: 180px;
-    margin-right: g.calcPx(20px, 40px, 1024px, 1440px);
+    margin-right: g.pxClamp(20px, 40px, $minViewport: 1024px);
     padding: 10px 0;
     text-align: center;
     & img {
       display: inline-block;
-      width: g.calcPx(30px, 46px, 1024px, 1440px);
+      width: g.pxClamp(40px, 46px, $minViewport: 1024px);
     }
     & span {
       display: inline-block;
       color: g.colors(base-black);
-      font-size: g.rem(14px);
-
-      @include g.mq(xxl) {
-        font-size: g.rem(16px);
-      }
+      font-size: g.remClamp(14px, 16px, $minViewport: 1024px);
     }
   }
 
@@ -219,11 +201,9 @@
   }
   .header__navChildList li {
     position: relative;
-    width: g.calcPx(160px, 200px, 1024px, 1440px);
-    max-width: 200px;
-    height: g.calcPx(80px, 100px, 1024px, 1440px);
-    max-height: 100px;
-    margin-right: g.calcPx(20px, 30px, 1024px, 1440px);
+    width: g.pxClamp(160px, 200px, $minViewport: 1024px);
+    height: g.pxClamp(80px, 100px, $minViewport: 1024px);
+    margin-right: g.pxClamp(20px, 30px, $minViewport: 1024px);
     overflow: hidden;
     z-index: 100;
 
@@ -279,14 +259,7 @@
     bottom: 10px;
     left: 10px;
     color: g.colors(base-white);
-    font-size: 12px;
-
-    @include g.mq(xl) {
-      font-size: 14px;
-    }
-    @include g.mq(xl) {
-      font-size: 16px;
-    }
+    font-size: g.pxClamp(12px, 16px, $minViewport: 1024px);
   }
 
   .header__navChildList li {
@@ -302,31 +275,22 @@
 
 
   .header__navBtns {
-    height: g.calcPx(60px, 120px);
-    min-height: 60px;
-    max-height: 120px;
+    height: g.pxClamp(60px, 120px);
     display: flex;
   }
 
   .header__navContact {
     position: relative;
     display: inline-block;
-    width: g.calcPx(100px, 180px);
-    max-width: 180px;
+    width: g.pxClamp(100px, 180px);
     height: 100%;
     background-color: g.colors(main);
     color: g.colors(base-white);
-    font-size: 10px;
+    font-size: g.pxClamp(10px, 14px, $maxViewport: 1024px);
     text-align: center;
     transition: opacity .25s;
-    @include g.mq(md) {
-      font-size: 14px;
-    }
-    @include g.mq(xl) {
-      font-size: 16px;
-    }
-    @include g.mq(xxl) {
-      font-size: 18px;
+    @include g.mq(lg) {
+      font-size: g.pxClamp(14px, 18px, $minViewport: 1024px);
     }
 
     &::before {
@@ -334,17 +298,12 @@
       content: '';
       top: 20%;
       left: 50%;
-      width: g.calcPx(23px, 42px);
-      height: g.calcPx(20px, 36px);
+      width: g.pxClamp(23px, 42px);
+      height: g.pxClamp(20px, 36px);
       background-image: url(../img/contact_icon.png);
       background-repeat: no-repeat;
       background-size: contain;
       transform: translateX(-50%);
-
-      @include g.mq(xl) {
-        width: 42px;
-        height: 36px;
-      }
     }
     @include g.hover() {
       opacity: .6;
@@ -363,17 +322,12 @@
   .header__navMenuBtn {
     position: relative;
     display: inline-block;
-    width: 60px;
+    width: g.pxClamp(60px, 100px);
     height: 100%;
-    padding: 0 10px;
-    font-size: 10px;
+    padding: 0 g.pxClamp(10px, 15px, $maxViewport: 1024px);
+    font-size: g.pxClamp(10px, 14px, $maxViewport: 1024px);
     text-align: center;
     overflow: hidden;
-    @include g.mq(md) {
-      width: 90px;
-      padding: 0 15px;
-      font-size: 14px;
-    }
     @include g.mq(lg) {
       display: none;
     }

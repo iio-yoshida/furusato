@@ -1,6 +1,7 @@
-@forward "strip-unit";
+@forward "stripUnit";
 @forward "rem";
 @forward "vw";
-@forward "clamp";
+@forward "remClamp";
+@forward "pxClamp";
 @forward "calc";
 @forward "colors";

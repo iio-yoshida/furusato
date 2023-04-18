@@ -1,11 +1,13 @@
 import ViewportChange from "./snipet/viewportChange.js";
+import TouchDeviceJudge from "./snipet/touchDeviceJudge.js";
 import MobileMenu from "./snipet/mobileMenu.js";
 import SmoothScroll from "./snipet/smoothScroll.js";
 import ScrollObserver from "./snipet/scrollObserver.js";
 
 // ブラウザ幅が360px未満の場合、viewportをwidth=360に固定
-// vwベースで組んでいる場合はViewportChange()は必要なし
 new ViewportChange();
+// タッチデバイス判定
+new TouchDeviceJudge();
 
 document.addEventListener('DOMContentLoaded', function() {
   // モバイルメニューボタンの動作

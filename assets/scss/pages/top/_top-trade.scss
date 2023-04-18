@@ -1,0 +1,86 @@
+@use "../../global/" as g;
+
+.top-trade {
+  color: g.colors(base-white);
+}
+
+.top-trade__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include g.mq(md) {
+    flex-direction: row;
+  }
+}
+
+.top-trade__head {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  padding: 30px 0;
+  border-top: 1px solid g.colors(base-white);
+  border-bottom: 1px solid g.colors(base-white);
+
+  @include g.mq(md) {
+    justify-content: flex-start;
+    width: auto;
+    border-top: none;
+    border-bottom: none;
+    border-right: 1px solid g.colors(base-white);
+  }
+}
+.top-trade__catch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: g.pxClamp(16px, 50px);
+  width: g.pxClamp(80px, 180px);
+  height: g.pxClamp(80px, 180px);
+  border: g.pxClamp(1px, 2px) solid g.colors(base-white);
+  border-radius: 50%;
+  font-size: g.pxClamp(24px, 40px);
+  line-height: 1.2;
+}
+.top-trade__copy {
+  font-size: g.pxClamp(28px, 56px);
+  @include g.mq(md) {
+    font-size: g.pxClamp(28px, 56px, $minViewport: 768px);
+  }
+  & > span {
+    display: block;
+  }
+}
+
+.top-trade__body {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+
+  @include g.mq(md) {
+    padding-top: 0;
+    margin-left: g.pxClamp(16px, 50px, $minViewport: 768px);
+  }
+}
+.top-trade__text {
+  margin-bottom: 30px;
+  font-size: g.pxClamp(16px, 18px);
+  line-height: 2;
+}
+.top-trade__area {
+  padding: 20px;
+  border: 1px solid g.colors(base-white);
+  border-radius: 10px;
+
+  & span {
+    display: inline-block;
+  }
+}
+
+.top-trade__link {
+  margin-top: 60px;
+  text-align: center;
+}

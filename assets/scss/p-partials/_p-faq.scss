@@ -1,0 +1,87 @@
+@use "../global/" as g;
+
+.p-faq__inner {
+  width: g.pxClamp(320px, 1160px);
+  margin-inline: auto;
+}
+
+.p-faq__item {
+  padding: g.pxClamp(10px, 20px);
+  background-color: g.colors(base-white);
+  color: g.colors(base-black);
+  font-size: g.pxClamp(16px, 24px);
+}
+
+.p-faq__item summary {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.p-faq__item div {
+  overflow: hidden;
+}
+.p-faq__item p {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: g.pxClamp(10px, 20px);
+  padding-top: g.pxClamp(10px, 20px);
+  border-top: 2px solid #f8f9fa;
+}
+
+.p-faq__q, .p-faq__a {
+  flex-shrink: 0;
+  display: block;
+  width: g.pxClamp(30px ,40px);
+  height: g.pxClamp(30px ,40px);
+  margin-right: g.pxClamp(10px, 20px);
+  color: g.colors(base-white);
+  font-size: g.pxClamp(16px, 24px);
+  text-align: center;
+}
+.p-faq__q {
+  background-color: g.colors(base-black);
+}
+.p-faq__a {
+  background-color: g.colors(main);
+}
+.p-faq__text {
+  flex-grow: 1;
+}
+
+.p-faq__icon {
+  position: relative;
+  flex-shrink: 0;
+  display: block;
+  width: 24px;
+  margin-left: g.pxClamp(10px, 20px);
+  transform-origin: center;
+  transition: transform .4s;
+}
+.p-faq__item[open] .p-faq__icon {
+  transform: rotate(180deg);
+}
+
+.p-faq__icon::before,
+.p-faq__icon::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 1px;
+  background-color: g.colors(base-black);
+}
+.p-faq__icon::before {
+  left: -1px;
+  transform: rotate(60deg);
+}
+
+.p-faq__icon::after {
+  right: -1px;
+  transform: rotate(-60deg);
+}
+
+.p-faq__link {
+  margin: 60px 0;
+  text-align: center;
+}

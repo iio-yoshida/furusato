@@ -16,5 +16,4 @@ export default class ViewportChange {
   _addEvent() {
     addEventListener('resize', this._switchViewport, false);
   }
-
 }
