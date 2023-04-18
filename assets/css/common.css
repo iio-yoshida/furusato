@@ -830,13 +830,11 @@ summary::-webkit-detais-marker {
 .footer::before {
   position: absolute;
   content: "";
-  top: calc(-29px + (-49 - -29) * ((100vw - 360px) / (1440 - 360)));
+  top: calc(-29px + (-50 - -29) * ((100vw - 360px) / (1440 - 360)));
   right: 0;
   width: 100%;
   max-width: 658px;
-  height: calc(30px + (50 - 30) * ((100vw - 360px) / (1440 - 360)));
-  min-height: 30px;
-  max-height: 50px;
+  height: clamp(30px, 23.333px + 1.85vw, 50px);
   background-image: url(../img/footer_illust.png);
   background-repeat: no-repeat;
   background-position: right;
@@ -845,11 +843,6 @@ summary::-webkit-detais-marker {
 @media screen and (min-width: 768px) {
   .footer::before {
     right: 5%;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .footer::before {
-    top: -50px;
   }
 }
 
@@ -901,19 +894,12 @@ summary::-webkit-detais-marker {
 
 .footer__logo {
   display: inline-block;
-  width: calc(250px + (320 - 250) * ((100vw - 360px) / (1440 - 360)));
-  min-width: 250px;
-  max-width: 320px;
+  width: clamp(250px, 226.667px + 6.48vw, 320px);
 }
 
 .footer__address {
-  margin-top: calc(30px + (50 - 30) * ((100vw - 360px) / (1440 - 360)));
+  margin-top: clamp(30px, 23.333px + 1.85vw, 50px);
   font-size: 0.875rem;
-}
-@media screen and (min-width: 1440px) {
-  .footer__address {
-    margin-top: 50px;
-  }
 }
 .footer__address > span {
   display: block;
@@ -925,26 +911,16 @@ summary::-webkit-detais-marker {
 }
 
 .footer__cta {
-  margin-top: calc(30px + (50 - 30) * ((100vw - 360px) / (1440 - 360)));
+  margin-top: clamp(30px, 23.333px + 1.85vw, 50px);
   font-size: 1.125rem;
   line-height: 1.8;
-}
-@media screen and (min-width: 1440px) {
-  .footer__cta {
-    margin-top: 50px;
-  }
 }
 .footer__cta span {
   display: inline-block;
 }
 
 .footer__btn {
-  margin-top: calc(30px + (50 - 30) * ((100vw - 360px) / (1440 - 360)));
-}
-@media screen and (min-width: 1440px) {
-  .footer__btn {
-    margin-top: 50px;
-  }
+  margin-top: clamp(30px, 23.333px + 1.85vw, 50px);
 }
 
 .footer__links {
@@ -953,12 +929,7 @@ summary::-webkit-detais-marker {
 @media screen and (min-width: 768px) {
   .footer__links {
     width: 45%;
-    margin-left: calc(10px + (60 - 10) * ((100vw - 360px) / (1440 - 360)));
-  }
-}
-@media screen and (min-width: 1440px) {
-  .footer__links {
-    margin-left: 60px;
+    margin-left: clamp(30px, -4.286px + 4.46vw, 60px);
   }
 }
 
@@ -1097,15 +1068,10 @@ summary::-webkit-detais-marker {
 }
 @media screen and (min-width: 768px) {
   .footer__sns a {
-    margin-right: calc(20px + (40 - 20) * ((100vw - 360px) / (1440 - 360)));
+    margin-right: clamp(20px, 13.333px + 1.85vw, 40px);
   }
   .footer__sns a:last-child {
     margin-right: 0;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .footer__sns a {
-    margin-right: 40px;
   }
 }
 .footer__sns a:focus {
@@ -1136,7 +1102,7 @@ summary::-webkit-detais-marker {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: calc(40px + (60 - 40) * ((100vw - 360px) / (1440 - 360)));
+  margin-bottom: clamp(40px, 33.333px + 1.85vw, 60px);
 }
 @media screen and (min-width: 768px) {
   .footer__navSecondary ul {
@@ -1156,11 +1122,11 @@ summary::-webkit-detais-marker {
 @media screen and (min-width: 768px) {
   .footer__navSecondary ul li {
     width: auto;
-    margin-right: calc(30px + (70 - 30) * ((100vw - 360px) / (1440 - 360)));
+    margin-right: clamp(30px, 16.667px + 3.7vw, 70px);
     margin-bottom: 0;
   }
   .footer__navSecondary ul li:nth-child(2n) {
-    margin-right: calc(30px + (70 - 30) * ((100vw - 360px) / (1440 - 360)));
+    margin-right: clamp(30px, 16.667px + 3.7vw, 70px);
   }
 }
 
@@ -1220,7 +1186,7 @@ body.is-active {
   width: 100vw;
   height: 100svh;
   overflow: scroll;
-  padding: calc(80px + (160 - 80) * ((100vw - 360px) / (1440 - 360))) calc(20px + (80 - 20) * ((100vw - 360px) / (1440 - 360))) calc(20px + (80 - 20) * ((100vw - 360px) / (1440 - 360)));
+  padding: clamp(80px, 53.333px + 7.41vw, 160px) clamp(20px, 0px + 5.56vw, 80px) clamp(20px, 0px + 5.56vw, 80px);
   background-color: rgba(34, 34, 34, 0.98);
   transform: translateX(100%);
   transform-origin: top;
@@ -1377,9 +1343,7 @@ body.is-active {
 
 .mobileMenu__logo {
   display: inline-block;
-  width: calc(200px + (280 - 200) * ((100vw - 360px) / (1440 - 360)));
-  min-width: 200px;
-  max-width: 280px;
+  width: clamp(200px, 173.333px + 7.41vw, 280px);
 }
 
 .mobileMenu__address {

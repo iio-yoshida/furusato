@@ -13,7 +13,7 @@ body.is-active {
   width: 100vw;
   height: 100svh;
   overflow: scroll;
-  padding: g.calcPx(80px, 160px) g.calcPx(20px, 80px) g.calcPx(20px, 80px);
+  padding: g.pxClamp(80px, 160px) g.pxClamp(20px, 80px) g.pxClamp(20px, 80px);
   background-color: rgba(g.colors(base-black), .98);
   transform: translateX(100%);
   transform-origin: top;
@@ -155,9 +155,7 @@ body.is-active {
 
 .mobileMenu__logo {
   display: inline-block;
-  width: g.calcPx(200px, 280px);
-  min-width: 200px;
-  max-width: 280px;
+  width: g.pxClamp(200px, 280px);
 }
 .mobileMenu__address {
   margin-top: 20px;
