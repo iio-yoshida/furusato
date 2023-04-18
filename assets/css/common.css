@@ -352,9 +352,7 @@ button {
 
 .header {
   position: fixed;
-  height: calc(60px + (120 - 60) * ((100vw - 360px) / (1440 - 360)));
-  min-height: 60px;
-  max-height: 120px;
+  height: clamp(60px, 40px + 5.56vw, 120px);
   top: 0;
   left: 0;
   width: 100%;
@@ -373,9 +371,7 @@ button {
 }
 .header .header__logo {
   align-self: center;
-  width: calc(150px + (280 - 150) * ((100vw - 360px) / (1440 - 360)));
-  min-width: 150px;
-  max-width: 280px;
+  width: clamp(150px, 106.667px + 12.04vw, 280px);
   transition: opacity 0.25s;
 }
 .header .header__logo:focus {
@@ -393,6 +389,7 @@ button {
 .header .header__logo a::after {
   position: absolute;
   content: "";
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -423,7 +420,7 @@ button {
   padding: 4px 32px 4px 8px;
   border: 1px solid #222;
   color: #222;
-  font-size: 0.75rem;
+  font-size: 12px;
   text-transform: uppercase;
   transition: background-color 0.25s, color 0.25s, opacity 0.25s;
 }
@@ -467,35 +464,18 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  height: calc(60px + (120 - 60) * ((100vw - 360px) / (1440 - 360)));
-  min-height: 60px;
-  max-height: 120px;
+  height: clamp(60px, 40px + 5.56vw, 120px);
 }
 .header .header__navItem {
   height: 60%;
-  margin-right: 25px;
-}
-@media screen and (min-width: 1280px) {
-  .header .header__navItem {
-    margin-right: 30px;
-  }
+  margin-right: clamp(25px, 12.692px + 1.2vw, 30px);
 }
 .header .header__navItem > a {
   display: flex;
   height: 100%;
   color: #222;
-  font-size: 0.875rem;
+  font-size: clamp(0.875rem, 0.26rem + 0.96vw, 1.125rem);
   transition: color 0.25s, opacity 0.25s;
-}
-@media screen and (min-width: 1280px) {
-  .header .header__navItem > a {
-    font-size: 1rem;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .header .header__navItem > a {
-    font-size: 1.125rem;
-  }
 }
 .header .header__navItem > a > span {
   position: relative;
@@ -565,36 +545,29 @@ button {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: calc(160px + (180 - 160) * ((100vw - 1024px) / (1440 - 1024)));
+  width: clamp(160px, 110.769px + 4.81vw, 180px);
   max-width: 180px;
-  margin-right: calc(20px + (40 - 20) * ((100vw - 1024px) / (1440 - 1024)));
+  margin-right: clamp(20px, -29.231px + 4.81vw, 40px);
   padding: 10px 0;
   text-align: center;
 }
 .header .header__navChildTitle img {
   display: inline-block;
-  width: calc(30px + (46 - 30) * ((100vw - 1024px) / (1440 - 1024)));
+  width: clamp(40px, 25.231px + 1.44vw, 46px);
 }
 .header .header__navChildTitle span {
   display: inline-block;
   color: #222;
-  font-size: 0.875rem;
-}
-@media screen and (min-width: 1440px) {
-  .header .header__navChildTitle span {
-    font-size: 1rem;
-  }
+  font-size: clamp(0.875rem, 0.567rem + 0.48vw, 1rem);
 }
 .header .header__navChildList {
   display: flex;
 }
 .header .header__navChildList li {
   position: relative;
-  width: calc(160px + (200 - 160) * ((100vw - 1024px) / (1440 - 1024)));
-  max-width: 200px;
-  height: calc(80px + (100 - 80) * ((100vw - 1024px) / (1440 - 1024)));
-  max-height: 100px;
-  margin-right: calc(20px + (30 - 20) * ((100vw - 1024px) / (1440 - 1024)));
+  width: clamp(160px, 61.538px + 9.62vw, 200px);
+  height: clamp(80px, 30.769px + 4.81vw, 100px);
+  margin-right: clamp(20px, -4.615px + 2.4vw, 30px);
   overflow: hidden;
   z-index: 100;
 }
@@ -648,17 +621,7 @@ button {
   bottom: 10px;
   left: 10px;
   color: #fcfcfc;
-  font-size: 12px;
-}
-@media screen and (min-width: 1280px) {
-  .header .header__navChildList li a span {
-    font-size: 14px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .header .header__navChildList li a span {
-    font-size: 16px;
-  }
+  font-size: clamp(12px, 2.154px + 0.96vw, 16px);
 }
 .header .header__navChildList li:focus-within::before {
   opacity: 0.5;
@@ -675,36 +638,23 @@ button {
   }
 }
 .header .header__navBtns {
-  height: calc(60px + (120 - 60) * ((100vw - 360px) / (1440 - 360)));
-  min-height: 60px;
-  max-height: 120px;
+  height: clamp(60px, 40px + 5.56vw, 120px);
   display: flex;
 }
 .header .header__navContact {
   position: relative;
   display: inline-block;
-  width: calc(100px + (180 - 100) * ((100vw - 360px) / (1440 - 360)));
-  max-width: 180px;
+  width: clamp(100px, 73.333px + 7.41vw, 180px);
   height: 100%;
   background-color: #c24524;
   color: #fcfcfc;
-  font-size: 10px;
+  font-size: clamp(10px, 7.831px + 0.6vw, 14px);
   text-align: center;
   transition: opacity 0.25s;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .header .header__navContact {
-    font-size: 14px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .header .header__navContact {
-    font-size: 16px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .header .header__navContact {
-    font-size: 18px;
+    font-size: clamp(14px, 4.154px + 0.96vw, 18px);
   }
 }
 .header .header__navContact::before {
@@ -712,18 +662,12 @@ button {
   content: "";
   top: 20%;
   left: 50%;
-  width: calc(23px + (42 - 23) * ((100vw - 360px) / (1440 - 360)));
-  height: calc(20px + (36 - 20) * ((100vw - 360px) / (1440 - 360)));
+  width: clamp(23px, 16.667px + 1.76vw, 42px);
+  height: clamp(20px, 14.667px + 1.48vw, 36px);
   background-image: url(../img/contact_icon.png);
   background-repeat: no-repeat;
   background-size: contain;
   transform: translateX(-50%);
-}
-@media screen and (min-width: 1280px) {
-  .header .header__navContact::before {
-    width: 42px;
-    height: 36px;
-  }
 }
 .header .header__navContact:focus {
   opacity: 0.6;
@@ -744,19 +688,12 @@ button {
 .header .header__navMenuBtn {
   position: relative;
   display: inline-block;
-  width: 60px;
+  width: clamp(60px, 46.667px + 3.7vw, 100px);
   height: 100%;
-  padding: 0 10px;
-  font-size: 10px;
+  padding: 0 clamp(10px, 7.289px + 0.75vw, 15px);
+  font-size: clamp(10px, 7.831px + 0.6vw, 14px);
   text-align: center;
   overflow: hidden;
-}
-@media screen and (min-width: 768px) {
-  .header .header__navMenuBtn {
-    width: 90px;
-    padding: 0 15px;
-    font-size: 14px;
-  }
 }
 @media screen and (min-width: 1024px) {
   .header .header__navMenuBtn {
