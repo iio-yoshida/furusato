@@ -13,9 +13,22 @@
   transition: bottom .25s, opacity .25s, visibility .25s;
   z-index: 999;
 
+  &::before,
   &::after {
     position: absolute;
     content: '';
+    top: 48%;
+    width: 24px;
+    height: 2px;
+    background-color: g.colors(base-white);
+  }
+  &::before {
+    left: 12px;
+    transform: rotate(-60deg);
+  }
+  &::after {
+    right: 12px;
+    transform: rotate(60deg);
   }
 }
 

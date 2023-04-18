@@ -10,8 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/common.css">
   <link rel="stylesheet" href="/assets/css/top.css">
-  <script src="/assets/js/common.js" type="module"></script>
-  <script src="/assets/js/top.js" type="module"></script>
+  <script src="/assets/js/common.js" type="module" defer></script>
+  <script src="/assets/js/top.js" type="module" defer></script>
 </head>
 <body id="top">
   <div class="l-siteWrapper">
@@ -34,7 +34,7 @@
             <li class="mobileMenu__navItem"><a href="/faq/">よくある質問</a></li>
           </ul>
           <div class="mobileMenu__btn">
-            <a class="o-btn o-btn--accent" href=""><span>お問い合わせ</span></a>
+            <a class="o-btn o-btn--accent" href="/contact/"><span>お問い合わせ</span></a>
           </div>
         </nav>
         <div class="mobileMenu__info">
@@ -76,14 +76,14 @@
         <nav class="header__nav">
           <div class="header__navMenu">
             <div class="header__navBtn">
-              <a href="/english">English</a>
+              <a href="/english/">English</a>
             </div>
             <ul class="header__navList">
               <li class="header__navItem">
                 <a href="/properties/"><span>物件一覧</span></a>
               </li>
               <li class="header__navItem">
-                <a href="/trade"><span>買取・売却</span></a>
+                <a href="/trade/"><span>買取・売却</span></a>
               </li>
               <li class="header__navItem">
                 <a href="/merit/"><span>選ばれる理由</span></a>
@@ -113,7 +113,7 @@
             </ul>
           </div>
           <div class="header__navBtns">
-            <a href="" class="header__navContact">
+            <a href="/contact/" class="header__navContact">
               <span>お問い合わせ</span>
             </a>
             <button class="header__navMenuBtn js-menuBtn">
@@ -128,22 +128,22 @@
     </header>
     <main class="l-main">
       <section class="top-kv js-firstView js-trigger">
+        <div class="top-kv__mask"></div>
         <div class="top-kv__main">
-
           <div class="top-kv__slide">
             <div class="top-kv__slideContents js-slider">
               <div class="top-kv__slideSwitch js-slide">
                 <h2 class="top-kv__title">心地よい古民家で、<br>あたらしい暮らし。</h2>
                 <p class="top-kv__copy">ふるさと企画では、京都の古民家を<br>独自技術で再生（リフォーム）、<br>心地よさにこだわり生まれ変わった<br>古民家物件を販売しています。</p>
                 <div class="top-kv__btn">
-                  <a href="" class="o-btn o-btn--kv"><span>物件一覧</span></a>
+                  <a href="/properties/" class="o-btn o-btn--kv"><span>物件一覧</span></a>
                 </div>
               </div>
               <div class="top-kv__slideSwitch is-standby js-slide">
-                <h2 class="top-kv__title">2枚目の<br>スライド</h2>
-                <p class="top-kv__copy">2枚目のスライドの<br>テキストです。<br>2枚目の<br>スライドのテキストです。</p>
+                <h2 class="top-kv__title">田舎家、<br>買い取ります。</h2>
+                <p class="top-kv__copy">売却をお考えの物件があれば、<br>ぜひご相談ください。<br>空き家で改修が必要な<br>物件でも買取可能です。</p>
                 <div class="top-kv__btn">
-                  <a href="" class="o-btn o-btn--kv"><span>物件一覧</span></a>
+                  <a href="/trade/" class="o-btn o-btn--kv"><span>詳しくはこちら</span></a>
                 </div>
               </div>
             </div>
@@ -302,7 +302,7 @@
                 <h3 class="top-trade__copy"><span>田舎家、</span><span>買い取ります。</span></h3>
               </div>
               <div class="top-trade__body">
-                <p class="top-trade__text">空き家で回収が必要な住宅でも大丈夫。<br>キレイにリフォームして販売します。</p>
+                <p class="top-trade__text">空き家で改修が必要な住宅でも大丈夫。<br>キレイにリフォームして販売します。</p>
                 <p class="top-trade__area">
                   <span>エリア：</span>
                   <span>京丹波町・南丹市・福知山市</span>
@@ -439,26 +439,53 @@
           </div>
           <div class="top-sns">
             <div class="top-sns__inner">
-              <a href="" class="top-sns__item">
+              <a class="top-sns__item" href="https://www.youtube.com/@user-ue2dx8fx7g" target="_blank">
                 <img src="/assets/img/icon_sns_yt.svg" alt="">
                 <span>Youtube</span>
               </a>
-              <a href="" class="top-sns__item">
+              <a class="top-sns__item" href="https://www.facebook.com/furusatokikaku.jp/" target="_blank">
                 <img src="/assets/img/icon_sns_fb.svg" alt="">
                 <span>Facebook</span>
               </a>
-              <a href="" class="top-sns__item">
+              <a class="top-sns__item" href="https://www.instagram.com/furursato/" target="_blank">
                 <img src="/assets/img/icon_sns_ig.svg" alt="">
                 <span>Instagram</span>
               </a>
-              <a href="" class="top-sns__item">
+              <a class="top-sns__item" href="https://www.pinterest.jp/furusatokikaku/" target="_blank">
                 <img src="/assets/img/icon_sns_pi.svg" alt="">
                 <span>Pinterest</span>
               </a>
-              <a href="" class="top-sns__item">
+              <a class="top-sns__item" href="https://www.tiktok.com/@furusatokikaku" target="_blank">
                 <img src="/assets/img/icon_sns_tk.svg" alt="">
                 <span>TikTok</span>
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="l-section bg--main">
+        <div class="l-section__inner">
+          <div class="p-content__head">
+            <img src="/assets/img/icon_faq.png" alt="icon">
+            <h2 class="p-content__title">よくある質問</h2>
+          </div>
+          <div class="p-faq">
+            <div class="p-faq__inner">
+              <details class="p-faq__item js-details">
+                <summary class="js-summary">
+                  <span class="p-faq__q">Q</span>
+                  <span class="p-faq__text">ここに質問テキストが入ります。</span>
+                  <span class="p-faq__icon"></span></summary>
+                <div class="js-content">
+                  <p>
+                    <span class="p-faq__a">A</span>
+                    <span class="p-faq__text">ここに回答テキストが入ります。</span>
+                  </p>
+                </div>
+              </details>
+            </div>
+            <div class="p-faq__link">
+              <a href="/faq/" class="o-btn o-btn--black"><span>すべての質問へ</span></a>
             </div>
           </div>
         </div>
@@ -485,7 +512,7 @@
               <span>「ふるさと企画」にお任せください。</span>
             </p>
             <div class="footer__btn">
-              <a class="o-btn" href=""><span>お問い合わせ</span></a>
+              <a class="o-btn" href="/contact/"><span>お問い合わせ</span></a>
             </div>
           </div>
           <div class="footer__links">
@@ -507,11 +534,11 @@
               </ul>
             </nav>
             <div class="footer__sns">
-              <a href=""><img src="/assets/img/icon_youtube.png" alt="YouYube"></a>
-              <a href=""><img src="/assets/img/icon_facebook.png" alt="Facebook"></a>
-              <a href=""><img src="/assets/img/icon_instagram.png" alt="Instagram"></a>
-              <a href=""><img src="/assets/img/icon_pinterest.png" alt="Pinterest"></a>
-              <a href=""><img src="/assets/img/icon_tiktok.png" alt="TikTok"></a>
+              <a href="https://www.youtube.com/@user-ue2dx8fx7g" target="_blank"><img src="/assets/img/icon_youtube.png" alt="YouYube"></a>
+              <a href="https://www.facebook.com/furusatokikaku.jp/" target="_blank"><img src="/assets/img/icon_facebook.png" alt="Facebook"></a>
+              <a href="https://www.instagram.com/furursato/" target="_blank"><img src="/assets/img/icon_instagram.png" alt="Instagram"></a>
+              <a href="https://www.pinterest.jp/furusatokikaku/" target="_blank"><img src="/assets/img/icon_pinterest.png" alt="Pinterest"></a>
+              <a href="https://www.tiktok.com/@furusatokikaku" target="_blank"><img src="/assets/img/icon_tiktok.png" alt="TikTok"></a>
             </div>
           </div>
         </div>

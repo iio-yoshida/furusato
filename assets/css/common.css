@@ -136,6 +136,14 @@ button {
   cursor: pointer;
 }
 
+summary {
+  display: block;
+}
+
+summary::-webkit-detais-marker {
+  display: none;
+}
+
 .l-siteWrapper {
   position: relative;
   display: flex;
@@ -314,9 +322,21 @@ button {
   transition: bottom 0.25s, opacity 0.25s, visibility 0.25s;
   z-index: 999;
 }
-.o-floatBtn::after {
+.o-floatBtn::before, .o-floatBtn::after {
   position: absolute;
   content: "";
+  top: 48%;
+  width: 24px;
+  height: 2px;
+  background-color: #fcfcfc;
+}
+.o-floatBtn::before {
+  left: 12px;
+  transform: rotate(-60deg);
+}
+.o-floatBtn::after {
+  right: 12px;
+  transform: rotate(60deg);
 }
 
 .o-floatBtn.is-shown {
