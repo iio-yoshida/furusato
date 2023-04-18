@@ -10,8 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/common.css">
   <link rel="stylesheet" href="/assets/css/top.css">
-  <script src="/assets/js/common.js" type="module" defer></script>
-  <script src="/assets/js/top.js" type="module" defer></script>
+  <script src="/assets/js/common.js" type="module"></script>
+  <script src="/assets/js/top.js" type="module"></script>
 </head>
 <body id="top">
   <div class="l-siteWrapper">
@@ -129,19 +129,27 @@
     <main class="l-main">
       <section class="top-kv js-firstView js-trigger">
         <div class="top-kv__main">
+
           <div class="top-kv__slide">
-            <div class="top-kv__slideContents">
-              <div class="top-kv__slideSwitch">
+            <div class="top-kv__slideContents js-slider">
+              <div class="top-kv__slideSwitch js-slide">
                 <h2 class="top-kv__title">心地よい古民家で、<br>あたらしい暮らし。</h2>
                 <p class="top-kv__copy">ふるさと企画では、京都の古民家を<br>独自技術で再生（リフォーム）、<br>心地よさにこだわり生まれ変わった<br>古民家物件を販売しています。</p>
                 <div class="top-kv__btn">
                   <a href="" class="o-btn o-btn--kv"><span>物件一覧</span></a>
                 </div>
               </div>
+              <div class="top-kv__slideSwitch is-standby js-slide">
+                <h2 class="top-kv__title">2枚目の<br>スライド</h2>
+                <p class="top-kv__copy">2枚目のスライドの<br>テキストです。<br>2枚目の<br>スライドのテキストです。</p>
+                <div class="top-kv__btn">
+                  <a href="" class="o-btn o-btn--kv"><span>物件一覧</span></a>
+                </div>
+              </div>
             </div>
             <div class="top-kv__slideBtns">
-              <button aria-label="前のスライドへ"></button>
-              <button aria-label="次のスライドへ"></button>
+              <button aria-label="前のスライドへ" class="js-prev"></button>
+              <button aria-label="次のスライドへ" class="js-next"></button>
             </div>
           </div>
         </div>

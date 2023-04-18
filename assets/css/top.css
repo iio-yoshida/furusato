@@ -182,7 +182,7 @@
 
 .top-kv {
   position: relative;
-  height: clamp(550px, 506.667px + 12.04vw, 680px);
+  height: clamp(560px, 520px + 11.11vw, 680px);
   overflow: hidden;
 }
 
@@ -213,50 +213,113 @@
 }
 
 .top-kv__slide {
+  position: relative;
   width: clamp(320px, 40px + 77.78vw, 1160px);
-  max-width: 1160px;
+  height: 100%;
+  padding-top: clamp(40px, 33.333px + 1.85vw, 60px);
   margin-inline: auto;
 }
-
-.top-kv__slideContents {
-  z-index: 110;
-}
-@media screen and (min-width: 768px) {
-  .top-kv__slideContents {
-    width: fit-content;
+@media screen and (min-width: 640px) {
+  .top-kv__slide {
+    padding-top: 0;
   }
 }
 
+.top-kv__slideContents {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+@media screen and (min-width: 640px) {
+  .top-kv__slideContents {
+    width: clamp(320px, 266.667px + 14.81vw, 480px);
+  }
+}
+
+.top-kv__slideSwitch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.25s;
+}
+
+.top-kv__slideSwitch.is-standby {
+  transform: translateX(-100%);
+}
+
+.top-kv__slideSwitch.is-active {
+  transform: translateX(0);
+  opacity: 1;
+  animation: slideShow 0.8s ease-in-out;
+}
+
+.top-kv__slideSwitch.is-hidden {
+  transform: translateX(-100%);
+  animation: slideHide 0.8s ease-in-out;
+}
+
+@keyframes slideShow {
+  0% {
+    opacity: 1;
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideHide {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
 .top-kv__title {
   margin-bottom: clamp(28px, 26.667px + 0.37vw, 32px);
   color: #fcfcfc;
-  font-size: clamp(2rem, 1.667rem + 1.48vw, 3rem);
+  font-size: clamp(32px, 26.667px + 1.48vw, 48px);
 }
 
 .top-kv__copy {
   margin-bottom: clamp(24px, 22px + 0.56vw, 30px);
   color: #fcfcfc;
-  font-size: clamp(1rem, 0.917rem + 0.37vw, 1.25rem);
+  font-size: clamp(16px, 14.667px + 0.37vw, 20px);
   line-height: 1.75;
 }
 
 .top-kv__btn {
   text-align: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 640px) {
   .top-kv__btn {
     text-align: left;
   }
 }
 
 .top-kv__slideBtns {
-  margin-top: clamp(20px, 18.333px + 0.46vw, 25px);
-  text-align: center;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 110;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 640px) {
   .top-kv__slideBtns {
-    text-align: left;
+    bottom: 0;
+    left: 0;
+    transform: translateX(0);
   }
 }
 
