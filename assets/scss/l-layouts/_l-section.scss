@@ -1,0 +1,17 @@
+@use "../global/" as g;
+
+.l-section {
+  width: 100%;
+  padding: g.pxClamp(50px, 60px) 0 g.pxClamp(80px, 100px);
+}
+
+.l-section__inner {
+  width: 100%;
+  max-width: 1360px;
+  margin-inline: auto;
+  padding: 0 g.pxClamp(20px, 40px, $maxViewport: 768px);
+
+  @include g.mq(md) {
+    padding: 0 g.pxClamp(20px, 40px, $minViewport: 768px);
+  }
+}

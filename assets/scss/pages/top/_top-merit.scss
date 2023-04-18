@@ -1,0 +1,86 @@
+@use "../../global/" as g;
+
+.top-merit__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include g.mq(md) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.top-merit__topic {
+  width: 320px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px 0;
+  border-top: 1px solid g.colors(base-white);
+
+  @include g.mq(md) {
+    width: g.pxClamp(236px, 320px, $minViewport: 768px);
+    margin-left: g.pxClamp(15px, 30px, $minViewport: 768px);
+    padding: 15px 0;
+    border-top: 0;
+    border-right: 1px solid g.colors(base-white);
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+}
+
+.top-merit__imgWrapper {
+  flex-basis: 110px;
+  margin-right: g.pxClamp(20px, 40px, $maxViewport: 768px);
+  text-align: center;
+
+  @include g.mq(md) {
+    flex-basis: g.pxClamp(70px, 110px, $minViewport: 768px);
+    margin-right: g.pxClamp(20px, 40px, $minViewport: 768px);
+  }
+}
+
+.top-merit__text {
+  position: relative;
+  color: g.colors(base-white);
+  & span {
+    display: inline-block;
+    font-size: 28px;
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+  & span.top-merit__item {
+    display: block;
+    font-size: 18px;
+  }
+  & span.top-merit__nums {
+    font-size: 56px;
+    letter-spacing: 2px;
+  }
+  & img {
+    position: absolute;
+    top: -25%;
+    right: -25%;
+    width: 75%;
+  }
+  @include g.mq(md) {
+    & span {
+      font-size: g.pxClamp(20px, 28px, $minViewport:768px);
+    }
+    & span.top-merit__item {
+      font-size: g.pxClamp(16px, 18px, $minViewport: 768px);
+    }
+    & span.top-merit__nums {
+      font-size: g.pxClamp(40px, 56px, $minViewport: 768px);
+    }
+  }
+}
+
+
+.top-merit__link {
+  margin-top: 60px;
+  text-align: center;
+}

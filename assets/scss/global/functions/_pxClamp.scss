@@ -1,0 +1,17 @@
+@use "sass:math";
+@use "stripUnit" as su;
+
+@function pxClamp($minPx, $maxPx, $minViewport: 360px, $maxViewport: 1440px) {
+  $minVal: su.stripUnit($minPx);
+  $maxVal: su.stripUnit($maxPx);
+  $minViewportVal: su.stripUnit($minViewport);
+  $maxViewportVal: su.stripUnit($maxViewport);
+
+  $variable: math.div(($maxVal - $minVal), ($maxViewportVal - $minViewportVal));
+  $constant: ($maxVal - ($maxViewportVal * $variable));
+
+  $variableVw: math.div(math.round($variable * 100 * 100), 100) * 1vw;
+  $constantPx: math.div(math.round($constant * 1000), 1000) * 1px;
+
+  @return clamp(#{$minPx}, #{$constantPx} + #{$variableVw}, #{$maxPx});
+}
