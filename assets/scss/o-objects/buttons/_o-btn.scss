@@ -23,7 +23,7 @@
       right: -1.5em;
       width: .8em;
       height: .8em;
-      background-image: url(../img/btn_arrow_black.png);
+      background-image: url(../img/common/btn_arrow_black.png);
       background-repeat: no-repeat;
       background-size: contain;
       transform: translateY(-50%);
@@ -34,7 +34,7 @@
     background-color: g.colors(main);
     color: g.colors(base-white);
     & > span::after {
-      background-image: url(../img/btn_arrow_white.png);
+      background-image: url(../img/common/btn_arrow_white.png);
     }
   }
 }
@@ -44,7 +44,7 @@
     background-color: g.colors(base-black);
     color: g.colors(base-white);
     & > span::after {
-      background-image: url(../img/btn_arrow_white.png);
+      background-image: url(../img/common/btn_arrow_white.png);
     }
   }
 }
@@ -53,7 +53,7 @@
   background-color: g.colors(base-black);
   color: g.colors(base-white);
   & > span::after {
-    background-image: url(../img/btn_arrow_white.png);
+    background-image: url(../img/common/btn_arrow_white.png);
   }
   @include g.hover() {
     background-color: g.colors(main);
@@ -65,13 +65,13 @@
   border-color: g.colors(main);
   color: g.colors(base-white);
   & > span::after {
-    background-image: url(../img/btn_arrow_white.png);
+    background-image: url(../img/common/btn_arrow_white.png);
   }
   @include g.hover() {
     background-color: g.colors(base-white);
     color: g.colors(base-black);
     & > span::after {
-      background-image: url(../img/btn_arrow_black.png);
+      background-image: url(../img/common/btn_arrow_black.png);
     }
   }
 }
@@ -82,14 +82,14 @@
   color: g.colors(base-white);
   transition: background-color .25s, color .25s;
   & span::after {
-    background-image: url(../img/btn_arrow_white.png);
+    background-image: url(../img/common/btn_arrow_white.png);
   }
 
   @include g.hover() {
     background-color: g.colors(base-white);
     color: g.colors(base-black);
     & span::after {
-      background-image: url(../img/btn_arrow_black.png);
+      background-image: url(../img/common/btn_arrow_black.png);
     }
   }
 }

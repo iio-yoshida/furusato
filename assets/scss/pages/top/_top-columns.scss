@@ -116,7 +116,7 @@
       right: 0;
       width: .8em;
       height: .8em;
-      background-image: url(../img/btn_arrow_black.png);
+      background-image: url(../img/common/btn_arrow_black.png);
       background-repeat: no-repeat;
       background-size: contain;
       transform: translateY(-50%);
@@ -137,7 +137,7 @@
       transform-origin: left;
     }
     .top-columns__cta span::after {
-      background-image: url(../img/btn_arrow_main.png);
+      background-image: url(../img/common/btn_arrow_main.png);
     }
   }
 }

@@ -11,7 +11,7 @@
     border-color: g.colors(base-white);
     color: g.colors(base-white);
     &::after {
-      background-image: url(../img/btn_arrow_white.png);
+      background-image: url(../img/common/btn_arrow_white.png);
     }
     @include g.hover() {
       opacity: .6;

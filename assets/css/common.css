@@ -203,7 +203,7 @@ summary::-webkit-detais-marker {
   right: -1.5em;
   width: 0.8em;
   height: 0.8em;
-  background-image: url(../img/btn_arrow_black.png);
+  background-image: url(../img/common/btn_arrow_black.png);
   background-repeat: no-repeat;
   background-size: contain;
   transform: translateY(-50%);
@@ -213,7 +213,7 @@ summary::-webkit-detais-marker {
   color: #fcfcfc;
 }
 .o-btn:focus > span::after {
-  background-image: url(../img/btn_arrow_white.png);
+  background-image: url(../img/common/btn_arrow_white.png);
 }
 @media (hover: hover) and (pointer: fine) {
   .o-btn:hover {
@@ -221,7 +221,7 @@ summary::-webkit-detais-marker {
     color: #fcfcfc;
   }
   .o-btn:hover > span::after {
-    background-image: url(../img/btn_arrow_white.png);
+    background-image: url(../img/common/btn_arrow_white.png);
   }
 }
 
@@ -230,7 +230,7 @@ summary::-webkit-detais-marker {
   color: #fcfcfc;
 }
 .o-btn.o-btn--rev:focus > span::after {
-  background-image: url(../img/btn_arrow_white.png);
+  background-image: url(../img/common/btn_arrow_white.png);
 }
 @media (hover: hover) and (pointer: fine) {
   .o-btn.o-btn--rev:hover {
@@ -238,7 +238,7 @@ summary::-webkit-detais-marker {
     color: #fcfcfc;
   }
   .o-btn.o-btn--rev:hover > span::after {
-    background-image: url(../img/btn_arrow_white.png);
+    background-image: url(../img/common/btn_arrow_white.png);
   }
 }
 
@@ -247,7 +247,7 @@ summary::-webkit-detais-marker {
   color: #fcfcfc;
 }
 .o-btn.o-btn--black > span::after {
-  background-image: url(../img/btn_arrow_white.png);
+  background-image: url(../img/common/btn_arrow_white.png);
 }
 .o-btn.o-btn--black:focus {
   background-color: #c24524;
@@ -264,14 +264,14 @@ summary::-webkit-detais-marker {
   color: #fcfcfc;
 }
 .o-btn.o-btn--accent > span::after {
-  background-image: url(../img/btn_arrow_white.png);
+  background-image: url(../img/common/btn_arrow_white.png);
 }
 .o-btn.o-btn--accent:focus {
   background-color: #fcfcfc;
   color: #222;
 }
 .o-btn.o-btn--accent:focus > span::after {
-  background-image: url(../img/btn_arrow_black.png);
+  background-image: url(../img/common/btn_arrow_black.png);
 }
 @media (hover: hover) and (pointer: fine) {
   .o-btn.o-btn--accent:hover {
@@ -279,7 +279,7 @@ summary::-webkit-detais-marker {
     color: #222;
   }
   .o-btn.o-btn--accent:hover > span::after {
-    background-image: url(../img/btn_arrow_black.png);
+    background-image: url(../img/common/btn_arrow_black.png);
   }
 }
 
@@ -290,14 +290,14 @@ summary::-webkit-detais-marker {
   transition: background-color 0.25s, color 0.25s;
 }
 .o-btn.o-btn--kv span::after {
-  background-image: url(../img/btn_arrow_white.png);
+  background-image: url(../img/common/btn_arrow_white.png);
 }
 .o-btn.o-btn--kv:focus {
   background-color: #fcfcfc;
   color: #222;
 }
 .o-btn.o-btn--kv:focus span::after {
-  background-image: url(../img/btn_arrow_black.png);
+  background-image: url(../img/common/btn_arrow_black.png);
 }
 @media (hover: hover) and (pointer: fine) {
   .o-btn.o-btn--kv:hover {
@@ -305,7 +305,7 @@ summary::-webkit-detais-marker {
     color: #222;
   }
   .o-btn.o-btn--kv:hover span::after {
-    background-image: url(../img/btn_arrow_black.png);
+    background-image: url(../img/common/btn_arrow_black.png);
   }
 }
 
@@ -413,7 +413,7 @@ summary::-webkit-detais-marker {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../img/logo_white.svg);
+  background-image: url(../img/common/logo_white.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 0 0;
@@ -451,7 +451,7 @@ summary::-webkit-detais-marker {
   right: 1em;
   width: 1em;
   height: 1em;
-  background-image: url(../img/btn_arrow_black.png);
+  background-image: url(../img/common/btn_arrow_black.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -460,7 +460,7 @@ summary::-webkit-detais-marker {
   color: #fcfcfc;
 }
 .header .header__navBtn a:focus::after {
-  background-image: url(../img/btn_arrow_white.png);
+  background-image: url(../img/common/btn_arrow_white.png);
 }
 @media (hover: hover) and (pointer: fine) {
   .header .header__navBtn a:hover {
@@ -468,7 +468,7 @@ summary::-webkit-detais-marker {
     color: #fcfcfc;
   }
   .header .header__navBtn a:hover::after {
-    background-image: url(../img/btn_arrow_white.png);
+    background-image: url(../img/common/btn_arrow_white.png);
   }
 }
 .header .header__navMenu {
@@ -534,7 +534,7 @@ summary::-webkit-detais-marker {
   top: auto;
   left: 0;
   width: 100vw;
-  background-image: url(../img/bg_main.png);
+  background-image: url(../img/common/bg_main.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -616,16 +616,16 @@ summary::-webkit-detais-marker {
   z-index: 1;
 }
 .header .header__navChildList li:nth-child(1)::after {
-  background-image: url(../img/thumb_column.jpg);
+  background-image: url(../img/common/thumb_column.jpg);
 }
 .header .header__navChildList li:nth-child(2)::after {
-  background-image: url(../img/thumb_intro.jpg);
+  background-image: url(../img/common/thumb_intro.jpg);
 }
 .header .header__navChildList li:nth-child(3)::after {
-  background-image: url(../img/thumb_advice.jpg);
+  background-image: url(../img/common/thumb_advice.jpg);
 }
 .header .header__navChildList li:nth-child(4)::after {
-  background-image: url(../img/thumb_lifecolumn.jpg);
+  background-image: url(../img/common/thumb_lifecolumn.jpg);
 }
 .header .header__navChildList li a {
   position: absolute;
@@ -684,7 +684,7 @@ summary::-webkit-detais-marker {
   left: 50%;
   width: clamp(23px, 16.667px + 1.76vw, 42px);
   height: clamp(20px, 14.667px + 1.48vw, 36px);
-  background-image: url(../img/contact_icon.png);
+  background-image: url(../img/common/contact_icon.png);
   background-repeat: no-repeat;
   background-size: contain;
   transform: translateX(-50%);
@@ -796,7 +796,7 @@ summary::-webkit-detais-marker {
   color: #fcfcfc;
 }
 .header.is-active .header__navBtn a::after {
-  background-image: url(../img/btn_arrow_white.png);
+  background-image: url(../img/common/btn_arrow_white.png);
 }
 .header.is-active .header__navBtn a:focus {
   opacity: 0.6;
@@ -835,7 +835,7 @@ summary::-webkit-detais-marker {
   width: 100%;
   max-width: 658px;
   height: clamp(30px, 23.333px + 1.85vw, 50px);
-  background-image: url(../img/footer_illust.png);
+  background-image: url(../img/common/footer_illust.png);
   background-repeat: no-repeat;
   background-position: right;
   background-size: cover;
@@ -1452,21 +1452,21 @@ body.is-active {
 }
 
 .bg--main {
-  background-image: url(../img/bg_main.png);
+  background-image: url(../img/common/bg_main.png);
   background-size: cover;
   background-position: center;
 }
 
 .bg--photo01 {
   position: relative;
-  background-image: url(../img/bg_photo01.png);
+  background-image: url(../img/common/bg_photo01.png);
   background-size: cover;
   background-position: center;
 }
 
 .bg--photo02 {
   position: relative;
-  background-image: url(../img/bg_photo02.png);
+  background-image: url(../img/common/bg_photo02.png);
   background-size: cover;
   background-position: center;
 }
