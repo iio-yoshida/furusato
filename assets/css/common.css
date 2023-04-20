@@ -410,7 +410,7 @@ summary::-webkit-detais-marker {
   letter-spacing: 8px;
 }
 
-.p-content__title._rev {
+.p-content__title.--rev {
   color: #fcfcfc;
 }
 
