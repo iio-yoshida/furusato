@@ -75,6 +75,17 @@
     }
   }
 }
+.o-btn.o-btn--accentRev {
+  background-color: g.colors(main);
+  border-color: g.colors(main);
+  color: g.colors(base-white);
+  & > span::after {
+    background-image: url(../img/common/btn_arrow_white.png);
+  }
+  @include g.hover() {
+    background-color: g.colors(base-black);
+  }
+}
 
 .o-btn.o-btn--kv {
   background-color: rgba(g.colors(base-white), .2);

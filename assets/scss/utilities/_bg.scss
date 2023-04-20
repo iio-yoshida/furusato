@@ -6,6 +6,9 @@
 .bg--colorMain {
   background-color: g.colors(main);
 }
+.bg--colorSub {
+  background-color: g.colors(dif);
+}
 .bg--main {
   background-image: url(../img/common/bg_main.png);
   background-size: cover;

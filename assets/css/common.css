@@ -112,6 +112,10 @@ body {
   line-height: 1.5;
 }
 
+ul {
+  list-style: none;
+}
+
 img, svg {
   max-width: 100%;
   vertical-align: middle;
@@ -172,6 +176,27 @@ summary::-webkit-detais-marker {
   .l-section__inner {
     padding: 0 clamp(20px, -2.857px + 2.98vw, 40px);
   }
+}
+
+.o-title {
+  position: relative;
+  margin-bottom: clamp(40px, 36.667px + 0.93vw, 50px);
+  color: #222;
+  font-size: clamp(1.25rem, 1.167rem + 0.37vw, 1.5rem);
+  text-align: center;
+}
+.o-title > span {
+  display: inline-block;
+}
+.o-title::after {
+  position: absolute;
+  content: "";
+  bottom: -10px;
+  left: 50%;
+  width: clamp(50px, 46.667px + 0.93vw, 60px);
+  height: 1px;
+  background-color: #222;
+  transform: translateX(-50%);
 }
 
 .o-copyright {
@@ -283,6 +308,23 @@ summary::-webkit-detais-marker {
   }
 }
 
+.o-btn.o-btn--accentRev {
+  background-color: #c24524;
+  border-color: #c24524;
+  color: #fcfcfc;
+}
+.o-btn.o-btn--accentRev > span::after {
+  background-image: url(../img/common/btn_arrow_white.png);
+}
+.o-btn.o-btn--accentRev:focus {
+  background-color: #222;
+}
+@media (hover: hover) and (pointer: fine) {
+  .o-btn.o-btn--accentRev:hover {
+    background-color: #222;
+  }
+}
+
 .o-btn.o-btn--kv {
   background-color: rgba(252, 252, 252, 0.2);
   border-color: #fcfcfc;
@@ -368,6 +410,11 @@ summary::-webkit-detais-marker {
 
 .p-content__title._rev {
   color: #fcfcfc;
+}
+
+.p-btnWrapper {
+  margin-top: 60px;
+  text-align: center;
 }
 
 .header {
@@ -1455,6 +1502,10 @@ body.is-active {
 
 .bg--colorMain {
   background-color: #c24524;
+}
+
+.bg--colorSub {
+  background-color: #f6f6f2;
 }
 
 .bg--main {

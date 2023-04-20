@@ -403,13 +403,13 @@
 
 .top-news__link {
   position: absolute;
-  bottom: -50px;
+  bottom: -3.125rem;
   right: 0;
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .top-news__link {
-    top: -50px;
+    top: -3.125rem;
     bottom: auto;
   }
 }
@@ -419,7 +419,7 @@
   display: inline-block;
   padding: 0.875em 2em 0.875em 0;
   color: #222;
-  font-size: clamp(12px, 10.667px + 0.37vw, 16px);
+  font-size: clamp(0.875rem, 0.833rem + 0.19vw, 1rem);
   letter-spacing: 2px;
   transition: opacity 0.25s;
 }
@@ -483,7 +483,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  margin-bottom: clamp(1.875rem, 1.667rem + 0.93vw, 2.5rem);
   padding-bottom: 20px;
   border-bottom: 1px solid #222;
 }
@@ -491,13 +491,14 @@
   .top-news__unit {
     justify-content: flex-start;
     flex-wrap: nowrap;
-    margin-bottom: 20px;
+    margin-bottom: clamp(1.25rem, 1.042rem + 0.93vw, 1.875rem);
     padding-bottom: 0px;
     border-bottom: none;
   }
 }
 
 .top-news__date {
+  flex-shrink: 0;
   color: #222;
   font-size: clamp(1rem, 0.958rem + 0.19vw, 1.125rem);
   letter-spacing: 2px;
@@ -509,10 +510,9 @@
 }
 
 .top-news__tag {
+  flex-shrink: 0;
+  flex-basis: clamp(140px, 104.706px + 9.8vw, 180px);
   display: inline-block;
-  width: 120px;
-  min-width: 120px;
-  max-width: 180px;
   padding: 0 16px;
   background-color: #fcfcfc;
   border: 1px solid #c24524;
@@ -521,15 +521,15 @@
   letter-spacing: 1px;
   text-align: center;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .top-news__tag {
-    width: clamp(120px, -27.692px + 14.42vw, 180px);
+    flex-basis: clamp(140px, 94.286px + 5.95vw, 180px);
   }
 }
 
 .top-news__text {
   width: 100%;
-  margin-top: 10px;
+  margin-top: clamp(0.625rem, 0.417rem + 0.93vw, 1.25rem);
   color: #222;
   font-size: clamp(1rem, 0.958rem + 0.19vw, 1.125rem);
   letter-spacing: 1px;
@@ -1260,8 +1260,13 @@
   }
 }
 
+.p-property__summary dl span {
+  display: inline-block;
+}
+
 .p-property__location dt {
   border-bottom: 1px solid #222;
+  font-weight: 700;
   transition: border-color 0.4s;
   will-change: border-color;
 }
@@ -1279,7 +1284,9 @@
 .p-property__summary dl:not(.p-property__location) dt {
   display: inline-block;
   flex-basis: 96px;
+  flex-shrink: 0;
   border-right: 1px solid #222;
+  font-weight: 700;
   transition: border-color 0.4s;
 }
 @media screen and (min-width: 768px) {
