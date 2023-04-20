@@ -12,7 +12,7 @@
   font-size: g.rem(18px);
   letter-spacing: 2px;
   text-align: center;
-  transition: background-color .25s, color .25s;
+  transition: background-color .25s, border-color .25s, color .25s;
 
   & > span {
     position: relative;
@@ -84,6 +84,7 @@
   }
   @include g.hover() {
     background-color: g.colors(base-black);
+    border-color: g.colors(base-black);
   }
 }
 

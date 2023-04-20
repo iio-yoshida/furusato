@@ -24,6 +24,7 @@
   align-items: center;
   color: #222;
   font-size: clamp(1.125rem, 1rem + 0.56vw, 1.5rem);
+  letter-spacing: 2px;
 }
 
 .p-pageHeader__title span {
@@ -170,13 +171,13 @@
 
 .company-access__text {
   margin-inline: auto;
-  padding: clamp(30px, 26.667px + 0.93vw, 40px) 0;
+  padding: clamp(10px, 6.667px + 0.93vw, 20px) 0;
   color: #222;
   font-size: 1.125rem;
 }
 @media screen and (min-width: 1024px) {
   .company-access__text {
-    padding: clamp(30px, 26.667px + 0.93vw, 40px) clamp(20px, -324.615px + 33.65vw, 160px);
+    padding: clamp(10px, 6.667px + 0.93vw, 20px) clamp(20px, -324.615px + 33.65vw, 160px);
   }
 }
 

@@ -34,12 +34,12 @@
 
 .company-access__text {
   margin-inline: auto;
-  padding: g.pxClamp(30px, 40px) 0;
+  padding: g.pxClamp(10px, 20px) 0;
   color: g.colors(base-black);
   font-size: g.rem(18px);
 
   @include g.mq(lg) {
-    padding: g.pxClamp(30px, 40px) g.pxClamp(20px, 160px, $minViewport: 1024px);
+    padding: g.pxClamp(10px, 20px) g.pxClamp(20px, 160px, $minViewport: 1024px);
   }
 }
 

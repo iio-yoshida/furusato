@@ -216,7 +216,7 @@ summary::-webkit-detais-marker {
   font-size: 1.125rem;
   letter-spacing: 2px;
   text-align: center;
-  transition: background-color 0.25s, color 0.25s;
+  transition: background-color 0.25s, border-color 0.25s, color 0.25s;
 }
 .o-btn > span {
   position: relative;
@@ -318,10 +318,12 @@ summary::-webkit-detais-marker {
 }
 .o-btn.o-btn--accentRev:focus {
   background-color: #222;
+  border-color: #222;
 }
 @media (hover: hover) and (pointer: fine) {
   .o-btn.o-btn--accentRev:hover {
     background-color: #222;
+    border-color: #222;
   }
 }
 
@@ -1228,17 +1230,20 @@ body.is-active {
   overflow: hidden;
 }
 
+.ua-pc .mobileMenu {
+  display: none;
+}
+
 .mobileMenu {
   position: fixed;
   z-index: 1000;
   top: 0;
-  left: 0;
+  left: 100%;
   width: 100vw;
   height: 100svh;
   overflow: scroll;
   padding: clamp(80px, 53.333px + 7.41vw, 160px) clamp(20px, 0px + 5.56vw, 80px) clamp(20px, 0px + 5.56vw, 80px);
   background-color: rgba(34, 34, 34, 0.98);
-  transform: translateX(100%);
   transform-origin: top;
   transition: transform 0.4s;
 }
@@ -1248,7 +1253,7 @@ body.is-active {
   }
 }
 .mobileMenu.is-active {
-  transform: translateX(0);
+  transform: translateX(-100%);
 }
 
 .mobileMenu__inner {

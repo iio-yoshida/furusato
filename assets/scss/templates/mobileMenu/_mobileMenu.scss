@@ -5,17 +5,20 @@ body.is-active {
   overflow: hidden;
 }
 
+.ua-pc .mobileMenu {
+  display: none;
+}
+
 .mobileMenu {
   position: fixed;
   z-index: 1000;
   top: 0;
-  left: 0;
+  left: 100%;
   width: 100vw;
   height: 100svh;
   overflow: scroll;
   padding: g.pxClamp(80px, 160px) g.pxClamp(20px, 80px) g.pxClamp(20px, 80px);
   background-color: rgba(g.colors(base-black), .98);
-  transform: translateX(100%);
   transform-origin: top;
   transition: transform .4s;
 
@@ -24,7 +27,7 @@ body.is-active {
   }
 
   &.is-active {
-    transform: translateX(0);
+    transform: translateX(-100%);
   }
 }
 .mobileMenu__inner {
