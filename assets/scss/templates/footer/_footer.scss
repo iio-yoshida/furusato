@@ -9,7 +9,7 @@
   &::before {
     position: absolute;
     content: '';
-    top: g.calcPx(-29px, -50px);
+    top: 0;
     right: 0;
     width: 100%;
     max-width: 658px;
@@ -17,7 +17,8 @@
     background-image: url(../img/common/footer_illust.png);
     background-repeat: no-repeat;
     background-position: right;
-    background-size: cover;
+    background-size: contain;
+    transform: translateY(-96%);
 
     @include g.mq(md) {
       right: 5%;
@@ -122,6 +123,7 @@
   width: 46%;
   margin-right: 8%;
   margin-bottom: 40px;
+  text-transform: uppercase;
   line-height: 1;
 
   &:nth-child(2n) {
@@ -136,7 +138,6 @@
   padding-bottom: 0.2em;
   color: g.colors(base-white);
   font-size: g.rem(14px);
-  text-transform: uppercase;
   transition: opacity .25s;
 }
 .footer__navItem > a {
@@ -167,6 +168,7 @@
 
 .footer__navChild li {
   line-height: 1.5;
+  text-transform: uppercase;
 }
 
 .footer__navChild li a {
@@ -261,6 +263,7 @@
   width: 46%;
   margin-right: 8%;
   margin-bottom: 20px;
+  text-transform: uppercase;
 
   &:nth-child(2n) {
     margin-right: 0;

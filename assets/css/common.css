@@ -830,7 +830,7 @@ summary::-webkit-detais-marker {
 .footer::before {
   position: absolute;
   content: "";
-  top: calc(-29px + (-50 - -29) * ((100vw - 360px) / (1440 - 360)));
+  top: 0;
   right: 0;
   width: 100%;
   max-width: 658px;
@@ -838,7 +838,8 @@ summary::-webkit-detais-marker {
   background-image: url(../img/common/footer_illust.png);
   background-repeat: no-repeat;
   background-position: right;
-  background-size: cover;
+  background-size: contain;
+  transform: translateY(-96%);
 }
 @media screen and (min-width: 768px) {
   .footer::before {
@@ -950,6 +951,7 @@ summary::-webkit-detais-marker {
   width: 46%;
   margin-right: 8%;
   margin-bottom: 40px;
+  text-transform: uppercase;
   line-height: 1;
 }
 .footer__navItem:nth-child(2n) {
@@ -963,7 +965,6 @@ summary::-webkit-detais-marker {
   padding-bottom: 0.2em;
   color: #fcfcfc;
   font-size: 0.875rem;
-  text-transform: uppercase;
   transition: opacity 0.25s;
 }
 
@@ -1002,6 +1003,7 @@ summary::-webkit-detais-marker {
 
 .footer__navChild li {
   line-height: 1.5;
+  text-transform: uppercase;
 }
 
 .footer__navChild li a {
@@ -1115,6 +1117,7 @@ summary::-webkit-detais-marker {
   width: 46%;
   margin-right: 8%;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 .footer__navSecondary ul li:nth-child(2n) {
   margin-right: 0;
@@ -1228,6 +1231,7 @@ body.is-active {
 .mobileMenu__navItem {
   width: 100%;
   margin-bottom: 5px;
+  text-transform: uppercase;
   text-align: left;
 }
 .mobileMenu__navItem:last-child {
@@ -1275,6 +1279,7 @@ body.is-active {
 
 .mobileMenu__navChild li {
   margin-bottom: 15px;
+  text-transform: uppercase;
 }
 .mobileMenu__navChild li:last-child {
   margin-bottom: 0;
@@ -1391,6 +1396,7 @@ body.is-active {
 
 .mobileMenu__navSecondary li {
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 .mobileMenu__navSecondary li:last-child {
   margin-bottom: 0;
