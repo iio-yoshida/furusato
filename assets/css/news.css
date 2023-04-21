@@ -128,7 +128,7 @@
 .p-news__unit {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   margin-bottom: clamp(1.875rem, 1.667rem + 0.93vw, 2.5rem);
   padding-bottom: 20px;
@@ -147,7 +147,7 @@
 .p-news__date {
   flex-shrink: 0;
   color: #222;
-  font-size: clamp(1rem, 0.958rem + 0.19vw, 1.125rem);
+  font-size: 1rem;
   letter-spacing: 2px;
 }
 @media screen and (min-width: 768px) {
@@ -157,6 +157,7 @@
 }
 
 .p-news__tag {
+  align-self: flex-start;
   flex-shrink: 0;
   flex-basis: clamp(140px, 104.706px + 9.8vw, 180px);
   display: inline-block;
@@ -178,7 +179,7 @@
   width: 100%;
   margin-top: clamp(0.625rem, 0.417rem + 0.93vw, 1.25rem);
   color: #222;
-  font-size: clamp(1rem, 0.958rem + 0.19vw, 1.125rem);
+  font-size: 1rem;
   letter-spacing: 1px;
 }
 @media screen and (min-width: 768px) {
@@ -230,6 +231,7 @@
 }
 
 .p-pagenation__btn {
+  position: relative;
   display: inline-block;
   min-width: 140px;
   max-width: 100%;
@@ -242,14 +244,11 @@
   text-align: center;
   transition: background-color 0.25s, border-color 0.25s, color 0.25s;
 }
-.p-pagenation__btn > span {
-  position: relative;
-}
-.p-pagenation__btn > span::after {
+.p-pagenation__btn::after {
   position: absolute;
   content: "";
-  top: 55%;
-  right: -1.5em;
+  top: 52%;
+  right: 1.2em;
   width: 0.8em;
   height: 0.8em;
   background-image: url(../img/common/btn_arrow_black.png);
@@ -261,7 +260,7 @@
   background-color: #222;
   color: #fcfcfc;
 }
-.p-pagenation__btn:focus > span::after {
+.p-pagenation__btn:focus::after {
   background-image: url(../img/common/btn_arrow_white.png);
 }
 @media (hover: hover) and (pointer: fine) {
@@ -269,20 +268,22 @@
     background-color: #222;
     color: #fcfcfc;
   }
-  .p-pagenation__btn:hover > span::after {
+  .p-pagenation__btn:hover::after {
     background-image: url(../img/common/btn_arrow_white.png);
   }
 }
 
 .p-pagenation__btn.--prev {
   padding: 0.5em 1em 0.5em 2.5em;
+  margin-right: auto;
 }
 
 .p-pagenation__btn.--next {
   padding: 0.5em 2.5em 0.5em 1em;
+  margin-left: auto;
 }
 
-.p-pagenation__btn.--prev > span::after {
-  left: -1.5em;
+.p-pagenation__btn.--prev::after {
+  left: 1.2em;
   transform: translateY(-50%) rotate(180deg);
 }

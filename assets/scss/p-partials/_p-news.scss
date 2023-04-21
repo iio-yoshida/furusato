@@ -76,7 +76,7 @@
 .p-news__unit {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   margin-bottom: g.remClamp(30px, 40px);
   padding-bottom: 20px;
@@ -94,7 +94,7 @@
 .p-news__date {
   flex-shrink: 0;
   color: g.colors(base-black);
-  font-size: g.remClamp(16px, 18px);
+  font-size: g.rem(16px);
   letter-spacing: 2px;
 
   @include g.mq(md) {
@@ -102,6 +102,7 @@
   }
 }
 .p-news__tag {
+  align-self: flex-start;
   flex-shrink: 0;
   flex-basis: g.pxClamp(140px, 180px, $maxViewport: 768px);
   display: inline-block;
@@ -120,7 +121,7 @@
   width: 100%;
   margin-top: g.remClamp(10px, 20px);
   color: g.colors(base-black);
-  font-size: g.remClamp(16px, 18px);
+  font-size: g.rem(16px);
   letter-spacing: 1px;
   @include g.mq(md) {
     width: auto;
