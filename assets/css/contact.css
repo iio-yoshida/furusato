@@ -175,6 +175,11 @@
 .p-form__field.--flex > span {
   flex-shrink: 0;
   display: inline-block;
+  margin-left: 0;
+}
+
+.p-form__field.--flex > span.mwform-radio-field + .horizontal-item {
+  margin-left: 0;
 }
 
 .p-form__field.--flex label {
@@ -187,6 +192,7 @@
 
 .p-form__block {
   width: 40%;
+  flex-grow: 1;
 }
 
 .p-form__label {
@@ -211,6 +217,7 @@
 }
 
 .p-form__control.--sm {
+  flex-grow: 0;
   width: 33.33333%;
 }
 
@@ -245,6 +252,16 @@
 
 .p-form__mt {
   margin-top: 60px;
+}
+
+.p-form .o-btn:first-child {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .p-form .o-btn:first-child {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
 }
 
 .contact-pages__nav {
