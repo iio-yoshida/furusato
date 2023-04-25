@@ -44,3 +44,11 @@ summary {
 summary::-webkit-detais-marker {
   display: none;
 }
+
+label {
+  display: inline-block;
+}
+input::placeholder {
+  color: #c0c0c0;
+  font-size: 1em;
+}

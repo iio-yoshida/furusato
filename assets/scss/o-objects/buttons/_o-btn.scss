@@ -87,7 +87,18 @@
     border-color: g.colors(base-black);
   }
 }
-
+.o-btn.o-btn--accentOpa {
+  background-color: g.colors(main);
+  border-color: g.colors(main);
+  color: g.colors(base-white);
+  transition: opacity .25s;
+  & > span::after {
+    background-image: url(../img/common/btn_arrow_white.png);
+  }
+  @include g.hover() {
+    opacity: .6;
+  }
+}
 .o-btn.o-btn--kv {
   background-color: rgba(g.colors(base-white), .2);
   border-color: g.colors(base-white);

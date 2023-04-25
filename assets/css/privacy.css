@@ -48,6 +48,9 @@
   padding-bottom: clamp(60px, 53.333px + 1.85vw, 80px);
   color: #222;
 }
+.p-wideTexts:last-child {
+  padding-bottom: 0;
+}
 
 .p-wideTexts__title {
   margin-bottom: clamp(0.625rem, 0.417rem + 0.93vw, 1.25rem);
@@ -76,6 +79,12 @@
 .p-wideTexts__list li {
   padding-left: 1em;
   text-indent: -1em;
+}
+
+.p-wideTexts__alert {
+  color: #c24524;
+  font-size: 1rem;
+  padding: 0 clamp(10px, -6.667px + 4.63vw, 60px);
 }
 
 .p-wideTexts__mb {

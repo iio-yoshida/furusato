@@ -5,6 +5,10 @@
   margin-inline: auto;
   padding-bottom: g.pxClamp(60px, 80px);
   color: g.colors(base-black);
+
+  &:last-child {
+    padding-bottom: 0;
+  }
 }
 
 .p-wideTexts__title {
@@ -34,7 +38,11 @@
   padding-left: 1em;
   text-indent: -1em;
 }
-
+.p-wideTexts__alert {
+  color: g.colors(main);
+  font-size: g.rem(16px);
+  padding:0 g.pxClamp(10px, 60px);
+}
 .p-wideTexts__mb {
   margin-bottom: g.pxClamp(20px, 30px);
 }
