@@ -1,0 +1,42 @@
+@use "../global/" as g;
+
+.p-pageHeader {
+  width: 100%;
+  padding-top: g.pxClamp(60px, 120px);
+  background-image: url(../img/common/bg_main.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.p-pageHeader__inner {
+  display: flex;
+  align-items: center;
+  width: g.pxClamp(320px, 1160px);
+  height: g.pxClamp(60px, 90px);
+  padding: 0 g.pxClamp(20px, 40px, $maxViewport: 768px);
+
+  @include g.mq(md) {
+    padding: 0 g.pxClamp(20px, 40px, $minViewport: 768px);
+  }
+}
+
+.p-pageHeader__title {
+  display: flex;
+  align-items: center;
+  color: g.colors(base-black);
+  font-size: g.remClamp(18px, 24px);
+  letter-spacing: 2px;
+}
+.p-pageHeader__title span {
+  display: inline-block;
+}
+.p-pageHeader__title span:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: g.pxClamp(40px, 80px);
+  margin-right: .5em;
+  & > img {
+    height: g.pxClamp(20px, 35px);
+  }
+}

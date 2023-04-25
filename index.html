@@ -7,7 +7,7 @@
   <title>ふるさと企画</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/common.css">
   <link rel="stylesheet" href="/assets/css/top.css">
   <script src="/assets/js/common.js" type="module" defer></script>
@@ -19,7 +19,8 @@
       <div class="mobileMenu__inner">
         <nav class="mobileMenu__navPrimary">
           <ul class="mobileMenu__navList">
-            <li class="mobileMenu__navItem"><a href="/properties/">物件一覧</a></li>
+            <li class="mobileMenu__navItem"><a href="#">Top</a></li>
+            <li class="mobileMenu__navItem"><a href="/all/">物件一覧</a></li>
             <li class="mobileMenu__navItem"><a href="/trade/">買取・売却</a></li>
             <li class="mobileMenu__navItem"><a href="/merit/">選ばれる理由</a></li>
             <li class="mobileMenu__navItem">
@@ -80,7 +81,7 @@
             </div>
             <ul class="header__navList">
               <li class="header__navItem">
-                <a href="/properties/"><span>物件一覧</span></a>
+                <a href="/all/"><span>物件一覧</span></a>
               </li>
               <li class="header__navItem">
                 <a href="/trade/"><span>買取・売却</span></a>
@@ -136,7 +137,7 @@
                 <h2 class="top-kv__title">心地よい古民家で、<br>あたらしい暮らし。</h2>
                 <p class="top-kv__copy">ふるさと企画では、京都の古民家を<br>独自技術で再生（リフォーム）、<br>心地よさにこだわり生まれ変わった<br>古民家物件を販売しています。</p>
                 <div class="top-kv__btn">
-                  <a href="/properties/" class="o-btn o-btn--kv"><span>物件一覧</span></a>
+                  <a href="/all/" class="o-btn o-btn--kv"><span>物件一覧</span></a>
                 </div>
               </div>
               <div class="top-kv__slideSwitch is-standby js-slide">
@@ -165,24 +166,24 @@
             <img src="/assets/img/top/icon_news.png" alt="icon">
             <h2 class="p-content__title">新着情報</h2>
           </div>
-          <div class="top-news">
-            <div class="top-news__link">
+          <div class="p-news">
+            <div class="p-news__link">
               <a href="/news/"><span>新着情報一覧</span></a>
             </div>
-            <div class="top-news__unit">
-              <p class="top-news__date">2023.04.30</p>
-              <p class="top-news__tag">お知らせ</p>
-              <p class="top-news__text">ホームページをリニューアルしました。</p>
+            <div class="p-news__unit">
+              <p class="p-news__date">2023.04.30</p>
+              <p class="p-news__tag">お知らせ</p>
+              <p class="p-news__text">ホームページをリニューアルしました。</p>
             </div>
-            <div class="top-news__unit">
-              <p class="top-news__date">2022.12.27</p>
-              <p class="top-news__tag">お知らせ</p>
-              <p class="top-news__text">2022年12月29日〜2023年1月5日の期間はお休みさせていただきます。</p>
+            <div class="p-news__unit">
+              <p class="p-news__date">2022.12.27</p>
+              <p class="p-news__tag">お知らせ</p>
+              <p class="p-news__text">2022年12月29日〜2023年1月5日の期間はお休みさせていただきます。</p>
             </div>
-            <div class="top-news__unit">
-              <p class="top-news__date">2022.10.14</p>
-              <p class="top-news__tag">物件情報</p>
-              <p class="top-news__text">京都府 京丹波町<a href="">「FW-42」</a>売約済み</p>
+            <div class="p-news__unit">
+              <p class="p-news__date">2022.10.14</p>
+              <p class="p-news__tag">物件情報</p>
+              <p class="p-news__text">京都府 京丹波町<a href="">「FW-42」</a>売約済み</p>
             </div>
           </div>
         </div>
@@ -195,7 +196,7 @@
           </div>
           <div class="p-property">
             <div class="p-property__inner">
-              <a class="p-property__unit is-sold" href="">
+              <a class="p-property__unit js-unit is-sold" href="">
                 <div class="p-property__imgWrapper">
                   <img src="/assets/img/property_dummy.png" alt="物件画像">
                   <span>詳細を見る</span>
@@ -203,15 +204,15 @@
                 <div class="p-property__body">
                   <div class="p-property__summary">
                     <dl class="p-property__location">
-                      <dt>所在地</dt>
+                      <dt><span>所在地</span></dt>
                       <dd>京都府船井郡京丹波町</dd>
                     </dl>
                     <dl>
-                      <dt>土地坪数</dt>
+                      <dt><span>土地</span><span>坪数</span></dt>
                       <dd>約1580坪</dd>
                     </dl>
                     <dl>
-                      <dt>母屋坪数</dt>
+                      <dt><span>母屋</span><span>坪数</span></dt>
                       <dd>約57坪</dd>
                     </dl>
                   </div>
@@ -225,7 +226,7 @@
                   </div>
                 </div>
               </a>
-              <a class="p-property__unit" href="">
+              <a class="p-property__unit js-unit" href="">
                 <div class="p-property__imgWrapper">
                   <img src="/assets/img/property_dummy.png" alt="物件画像">
                   <span>詳細を見る</span>
@@ -233,15 +234,15 @@
                 <div class="p-property__body">
                   <div class="p-property__summary">
                     <dl class="p-property__location">
-                      <dt>所在地</dt>
+                      <dt><span>所在地</span></dt>
                       <dd>京都府船井郡京丹波町</dd>
                     </dl>
                     <dl>
-                      <dt>土地坪数</dt>
+                      <dt><span>土地</span><span>坪数</span></dt>
                       <dd>約1580坪</dd>
                     </dl>
                     <dl>
-                      <dt>母屋坪数</dt>
+                      <dt><span>母屋</span><span>坪数</span></dt>
                       <dd>約57坪</dd>
                     </dl>
                   </div>
@@ -255,7 +256,7 @@
                   </div>
                 </div>
               </a>
-              <a class="p-property__unit" href="">
+              <a class="p-property__unit js-unit" href="">
                 <div class="p-property__imgWrapper">
                   <img src="/assets/img/property_dummy.png" alt="物件画像">
                   <span>詳細を見る</span>
@@ -263,15 +264,15 @@
                 <div class="p-property__body">
                   <div class="p-property__summary">
                     <dl class="p-property__location">
-                      <dt>所在地</dt>
+                      <dt><span>所在地</span></dt>
                       <dd>京都府船井郡京丹波町</dd>
                     </dl>
                     <dl>
-                      <dt>土地坪数</dt>
+                      <dt><span>土地</span><span>坪数</span></dt>
                       <dd>約1580坪</dd>
                     </dl>
                     <dl>
-                      <dt>母屋坪数</dt>
+                      <dt><span>母屋</span><span>坪数</span></dt>
                       <dd>約57坪</dd>
                     </dl>
                   </div>
@@ -284,7 +285,7 @@
               </a>
             </div>
             <div class="p-property__link">
-              <a href="/properties/" class="o-btn o-btn--black"><span>物件一覧</span></a>
+              <a href="/all/" class="o-btn o-btn--black"><span>物件一覧</span></a>
             </div>
           </div>
         </div>
@@ -293,7 +294,7 @@
         <div class="l-section__inner">
           <div class="p-content__head">
             <img src="/assets/img/top/icon_trade.png" alt="icon">
-            <h2 class="p-content__title _rev">買取・売却</h2>
+            <h2 class="p-content__title --rev">買取・売却</h2>
           </div>
           <div class="top-trade">
             <div class="top-trade__inner">
@@ -318,7 +319,7 @@
       <section class="l-section bg--colorMain">
         <div class="p-content__head">
           <img src="/assets/img/top/icon_merit.png" alt="icon">
-          <h2 class="p-content__title _rev">選ばれる理由</h2>
+          <h2 class="p-content__title --rev">選ばれる理由</h2>
         </div>
         <div class="l-section__inner">
           <div class="top-merit">
@@ -519,7 +520,7 @@
             <nav class="footer__navPrimary">
               <ul class="footer__navMenu">
                 <li class="footer__navItem"><a href="#top">Top</a></li>
-                <li class="footer__navItem"><a href="/properties/">物件一覧</a></li>
+                <li class="footer__navItem"><a href="/all/">物件一覧</a></li>
                 <li class="footer__navItem"><a href="/trade/">買取・売却</a></li>
                 <li class="footer__navItem"><a href="/merit/">選ばれる理由</a></li>
                 <li class="footer__navItem"><span>田舎暮らし情報</span>

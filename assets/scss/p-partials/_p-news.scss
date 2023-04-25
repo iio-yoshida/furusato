@@ -1,26 +1,26 @@
-@use "../../global/" as g;
+@use "../global/" as g;
 
-.top-news {
+.p-news {
   position: relative;
   width: g.pxClamp(320px, 1160px);
   margin-inline: auto;
 }
-.top-news__link {
+.p-news__link {
   position: absolute;
-  bottom: -50px;
+  bottom: g.rem(-50px);
   right: 0;
   overflow: hidden;
   @include g.mq(md) {
-    top: -50px;
+    top: g.rem(-50px);
     bottom: auto;
   }
 }
-.top-news__link a {
+.p-news__link a {
   position: relative;
   display: inline-block;
   padding: .875em 2em .875em 0;
   color: g.colors(base-black);
-  font-size: g.pxClamp(12px, 16px);
+  font-size: g.remClamp(14px, 16px);
   letter-spacing: 2px;
   transition: opacity .25s;
 
@@ -73,38 +73,39 @@
   }
 }
 
-.top-news__unit {
+.p-news__unit {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  margin-bottom: g.remClamp(30px, 40px);
   padding-bottom: 20px;
   border-bottom: 1px solid g.colors(base-black);
 
   @include g.mq(md) {
     justify-content: flex-start;
     flex-wrap: nowrap;
-    margin-bottom: 20px;
+    margin-bottom: g.remClamp(20px, 30px);
     padding-bottom: 0px;
     border-bottom: none;
   }
 }
 
-.top-news__date {
+.p-news__date {
+  flex-shrink: 0;
   color: g.colors(base-black);
-  font-size: g.remClamp(16px, 18px);
+  font-size: g.rem(16px);
   letter-spacing: 2px;
 
   @include g.mq(md) {
     margin-right: 20px;
   }
 }
-.top-news__tag {
+.p-news__tag {
+  align-self: flex-start;
+  flex-shrink: 0;
+  flex-basis: g.pxClamp(140px, 180px, $maxViewport: 768px);
   display: inline-block;
-  width: 120px;
-  min-width: 120px;
-  max-width: 180px;
   padding: 0 16px;
   background-color: g.colors(base-white);
   border: 1px solid g.colors(main);
@@ -112,15 +113,15 @@
   font-size: g.rem(16px);
   letter-spacing: 1px;
   text-align: center;
-  @include g.mq(lg) {
-    width: g.pxClamp(120px, 180px, $minViewport: 1024px);
+  @include g.mq(md) {
+    flex-basis: g.pxClamp(140px, 180px, $minViewport: 768px);
   }
 }
-.top-news__text {
+.p-news__text {
   width: 100%;
-  margin-top: 10px;
+  margin-top: g.remClamp(10px, 20px);
   color: g.colors(base-black);
-  font-size: g.remClamp(16px, 18px);
+  font-size: g.rem(16px);
   letter-spacing: 1px;
   @include g.mq(md) {
     width: auto;
@@ -128,7 +129,7 @@
     margin-left: g.pxClamp(20px, 50px, $minViewport: 768px);
   }
 }
-.top-news__text a {
+.p-news__text a {
   position: relative;
   color: g.colors(main);
   transition: opacity .25s;

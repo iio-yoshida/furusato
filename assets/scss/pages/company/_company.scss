@@ -1,0 +1,105 @@
+@use "../../global/" as g;
+
+.company-info {
+  padding-bottom: g.pxClamp(80px, 100px);
+}
+
+.company-info__inner {
+  width: g.pxClamp(320px, 1160px);
+  margin-inline: auto;
+  padding: g.pxClamp(60px, 80px) g.pxClamp(20px, 40px, $maxViewport: 768px);
+  background-color: g.colors(dif);
+
+  @include g.mq(md) {
+    padding: g.pxClamp(60px, 80px) g.pxClamp(20px, 180px, $minViewport: 768px);
+  }
+}
+
+.company-access__inner {
+  width: g.pxClamp(320px, 1160px);
+  margin-inline: auto;
+}
+
+.company-access__map {
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+}
+.company-access__map img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.company-access__text {
+  margin-inline: auto;
+  padding: g.pxClamp(10px, 20px) 0;
+  color: g.colors(base-black);
+  font-size: g.rem(18px);
+
+  @include g.mq(lg) {
+    padding: g.pxClamp(10px, 20px) g.pxClamp(20px, 160px, $minViewport: 1024px);
+  }
+}
+
+.company-access__link {
+  text-align: right;
+}
+.company-access__link a {
+  position: relative;
+  display: inline-block;
+  padding: .5em 2em .5em 0;
+  color: g.colors(base-black);
+  font-size: g.remClamp(14px, 16px);
+  letter-spacing: 1px;
+  transition: opacity .25s;
+
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: .4em;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: g.colors(base-black);
+    transform-origin: left;
+    transition: transform .25s;
+  }
+
+  span {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      top: 55%;
+      right: -2em;
+      width: .8em;
+      height: .8em;
+      background-image: url(../img/common/btn_arrow_black.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      transform: translateY(-50%);
+    }
+  }
+  @include g.hover() {
+    opacity: .6;
+    &::after {
+      animation: underlineSlide .5s;
+    }
+  }
+}
+@keyframes underlineSlide {
+  0% {
+    transform: translateX(0) scaleX(1);
+  }
+  50% {
+    transform: translateX(100%) scaleX(0);
+  }
+  51% {
+    transform: translateX(0) scaleX(0);
+  }
+  100% {
+    transform: translateX(0) scaleX(1);
+  }
+}

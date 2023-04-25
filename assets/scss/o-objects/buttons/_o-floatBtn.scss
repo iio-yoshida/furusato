@@ -4,8 +4,8 @@
   position: fixed;
   bottom: -80px;
   right: 5%;
-  width: 60px;
-  height: 60px;
+  width: g.pxClamp(48px, 60px);
+  height: g.pxClamp(48px, 60px);
   background-color: g.colors(main);
   border-radius: 50%;
   opacity: 0;
@@ -18,22 +18,22 @@
     position: absolute;
     content: '';
     top: 48%;
-    width: 24px;
+    width: g.pxClamp(18px, 24px);
     height: 2px;
     background-color: g.colors(base-white);
   }
   &::before {
-    left: 12px;
+    left: g.pxClamp(11px, 12px);
     transform: rotate(-60deg);
   }
   &::after {
-    right: 12px;
+    right: g.pxClamp(11px, 12px);
     transform: rotate(60deg);
   }
 }
 
 .o-floatBtn.is-shown {
-  bottom: 20px;
+  bottom: g.pxClamp(20px, 60px);
   opacity: 1;
   visibility: visible;
 }

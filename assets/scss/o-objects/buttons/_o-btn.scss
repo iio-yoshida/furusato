@@ -12,7 +12,7 @@
   font-size: g.rem(18px);
   letter-spacing: 2px;
   text-align: center;
-  transition: background-color .25s, color .25s;
+  transition: background-color .25s, border-color .25s, color .25s;
 
   & > span {
     position: relative;
@@ -75,7 +75,30 @@
     }
   }
 }
-
+.o-btn.o-btn--accentRev {
+  background-color: g.colors(main);
+  border-color: g.colors(main);
+  color: g.colors(base-white);
+  & > span::after {
+    background-image: url(../img/common/btn_arrow_white.png);
+  }
+  @include g.hover() {
+    background-color: g.colors(base-black);
+    border-color: g.colors(base-black);
+  }
+}
+.o-btn.o-btn--accentOpa {
+  background-color: g.colors(main);
+  border-color: g.colors(main);
+  color: g.colors(base-white);
+  transition: opacity .25s;
+  & > span::after {
+    background-image: url(../img/common/btn_arrow_white.png);
+  }
+  @include g.hover() {
+    opacity: .6;
+  }
+}
 .o-btn.o-btn--kv {
   background-color: rgba(g.colors(base-white), .2);
   border-color: g.colors(base-white);

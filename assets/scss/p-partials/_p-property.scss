@@ -149,8 +149,13 @@
   }
 }
 
+.p-property__summary dl span {
+  display: inline-block;
+}
+
 .p-property__location dt {
   border-bottom: 1px solid g.colors(base-black);
+  font-weight: 700;
   transition: border-color .4s;
   will-change: border-color;
 }
@@ -166,7 +171,9 @@
 .p-property__summary dl:not(.p-property__location) dt {
   display: inline-block;
   flex-basis: 96px;
+  flex-shrink: 0;
   border-right: 1px solid g.colors(base-black);
+  font-weight: 700;
   transition: border-color .4s;
 
   @include g.mq(md) {
