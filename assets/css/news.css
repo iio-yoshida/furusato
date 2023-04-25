@@ -1,0 +1,289 @@
+.p-pageHeader {
+  width: 100%;
+  padding-top: clamp(60px, 40px + 5.56vw, 120px);
+  background-image: url(../img/common/bg_main.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.p-pageHeader__inner {
+  display: flex;
+  align-items: center;
+  width: clamp(320px, 40px + 77.78vw, 1160px);
+  height: clamp(60px, 50px + 2.78vw, 90px);
+  padding: 0 clamp(20px, 2.353px + 4.9vw, 40px);
+}
+@media screen and (min-width: 768px) {
+  .p-pageHeader__inner {
+    padding: 0 clamp(20px, -2.857px + 2.98vw, 40px);
+  }
+}
+
+.p-pageHeader__title {
+  display: flex;
+  align-items: center;
+  color: #222;
+  font-size: clamp(1.125rem, 1rem + 0.56vw, 1.5rem);
+  letter-spacing: 2px;
+}
+
+.p-pageHeader__title span {
+  display: inline-block;
+}
+
+.p-pageHeader__title span:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(40px, 26.667px + 3.7vw, 80px);
+  margin-right: 0.5em;
+}
+.p-pageHeader__title span:first-child > img {
+  height: clamp(20px, 15px + 1.39vw, 35px);
+}
+
+.p-news {
+  position: relative;
+  width: clamp(320px, 40px + 77.78vw, 1160px);
+  margin-inline: auto;
+}
+
+.p-news__link {
+  position: absolute;
+  bottom: -3.125rem;
+  right: 0;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .p-news__link {
+    top: -3.125rem;
+    bottom: auto;
+  }
+}
+
+.p-news__link a {
+  position: relative;
+  display: inline-block;
+  padding: 0.875em 2em 0.875em 0;
+  color: #222;
+  font-size: clamp(0.875rem, 0.833rem + 0.19vw, 1rem);
+  letter-spacing: 2px;
+  transition: opacity 0.25s;
+}
+.p-news__link a::after {
+  position: absolute;
+  content: "";
+  bottom: 0.75em;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #222;
+  transform-origin: left;
+  transition: transform 0.25s;
+}
+.p-news__link a span {
+  position: relative;
+}
+.p-news__link a span::after {
+  position: absolute;
+  content: "";
+  top: 55%;
+  right: -2em;
+  width: 0.8em;
+  height: 0.8em;
+  background-image: url(../img/common/btn_arrow_black.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translateY(-50%);
+}
+.p-news__link a:focus {
+  opacity: 0.6;
+}
+.p-news__link a:focus::after {
+  animation: underlineSlide 0.5s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .p-news__link a:hover {
+    opacity: 0.6;
+  }
+  .p-news__link a:hover::after {
+    animation: underlineSlide 0.5s;
+  }
+}
+
+@keyframes underlineSlide {
+  0% {
+    transform: translateX(0) scaleX(1);
+  }
+  50% {
+    transform: translateX(100%) scaleX(0);
+  }
+  51% {
+    transform: translateX(0) scaleX(0);
+  }
+  100% {
+    transform: translateX(0) scaleX(1);
+  }
+}
+.p-news__unit {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: clamp(1.875rem, 1.667rem + 0.93vw, 2.5rem);
+  padding-bottom: 20px;
+  border-bottom: 1px solid #222;
+}
+@media screen and (min-width: 768px) {
+  .p-news__unit {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    margin-bottom: clamp(1.25rem, 1.042rem + 0.93vw, 1.875rem);
+    padding-bottom: 0px;
+    border-bottom: none;
+  }
+}
+
+.p-news__date {
+  flex-shrink: 0;
+  color: #222;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+@media screen and (min-width: 768px) {
+  .p-news__date {
+    margin-right: 20px;
+  }
+}
+
+.p-news__tag {
+  align-self: flex-start;
+  flex-shrink: 0;
+  flex-basis: clamp(140px, 104.706px + 9.8vw, 180px);
+  display: inline-block;
+  padding: 0 16px;
+  background-color: #fcfcfc;
+  border: 1px solid #c24524;
+  color: #c24524;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .p-news__tag {
+    flex-basis: clamp(140px, 94.286px + 5.95vw, 180px);
+  }
+}
+
+.p-news__text {
+  width: 100%;
+  margin-top: clamp(0.625rem, 0.417rem + 0.93vw, 1.25rem);
+  color: #222;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+@media screen and (min-width: 768px) {
+  .p-news__text {
+    width: auto;
+    margin-top: 0;
+    margin-left: clamp(20px, -14.286px + 4.46vw, 50px);
+  }
+}
+
+.p-news__text a {
+  position: relative;
+  color: #c24524;
+  transition: opacity 0.25s;
+}
+.p-news__text a::after {
+  position: absolute;
+  content: "";
+  bottom: -0.1em;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #c24524;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+.p-news__text a:focus {
+  opacity: 0.8;
+}
+.p-news__text a:focus::after {
+  opacity: 0.8;
+}
+@media (hover: hover) and (pointer: fine) {
+  .p-news__text a:hover {
+    opacity: 0.8;
+  }
+  .p-news__text a:hover::after {
+    opacity: 0.8;
+  }
+}
+
+.p-pagenation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: clamp(320px, 40px + 77.78vw, 1160px);
+  margin-top: 60px;
+  margin-inline: auto;
+}
+
+.p-pagenation__btn {
+  position: relative;
+  display: inline-block;
+  min-width: 140px;
+  max-width: 100%;
+  background-color: #f6f6f2;
+  border: 1px solid transparent;
+  border-radius: 2em;
+  color: #222;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  text-align: center;
+  transition: background-color 0.25s, border-color 0.25s, color 0.25s;
+}
+.p-pagenation__btn::after {
+  position: absolute;
+  content: "";
+  top: 52%;
+  right: 1.2em;
+  width: 0.8em;
+  height: 0.8em;
+  background-image: url(../img/common/btn_arrow_black.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translateY(-50%);
+}
+.p-pagenation__btn:focus {
+  background-color: #222;
+  color: #fcfcfc;
+}
+.p-pagenation__btn:focus::after {
+  background-image: url(../img/common/btn_arrow_white.png);
+}
+@media (hover: hover) and (pointer: fine) {
+  .p-pagenation__btn:hover {
+    background-color: #222;
+    color: #fcfcfc;
+  }
+  .p-pagenation__btn:hover::after {
+    background-image: url(../img/common/btn_arrow_white.png);
+  }
+}
+
+.p-pagenation__btn.--prev {
+  padding: 0.5em 1em 0.5em 2.5em;
+  margin-right: auto;
+}
+
+.p-pagenation__btn.--next {
+  padding: 0.5em 2.5em 0.5em 1em;
+  margin-left: auto;
+}
+
+.p-pagenation__btn.--prev::after {
+  left: 1.2em;
+  transform: translateY(-50%) rotate(180deg);
+}

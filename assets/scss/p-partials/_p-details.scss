@@ -1,0 +1,46 @@
+@use "../global/" as g;
+
+.p-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-details__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: g.remClamp(20px, 30px);
+  padding-bottom: g.remClamp(20px, 30px);
+  border-bottom: 1px solid g.colors(base-black);
+  color: g.colors(base-black);
+  font-size: g.rem(18px);
+
+  @include g.mq(md) {
+    flex-direction: row;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+.p-details__item span {
+  display: inline-block;
+}
+.p-details__item a {
+  color: g.colors(main);
+  text-decoration: underline;
+
+  @include g.hover() {
+    opacity: .6;
+  }
+}
+
+.p-details__item dt {
+  font-weight: 700;
+  margin-bottom: g.remClamp(8px, 16px);
+
+  @include g.mq(md) {
+    flex-basis: g.pxClamp(120px, 140px, $minViewport: 768px);
+    flex-shrink: 0;
+    margin-bottom: 0;
+    margin-right: g.pxClamp(20px, 30px);
+    border-right: 1px solid g.colors(base-black);
+  }
+}

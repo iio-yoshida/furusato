@@ -1,0 +1,24 @@
+@use "../../global/" as g;
+
+.o-title {
+  position: relative;
+  margin-bottom: g.pxClamp(40px, 50px);
+  color: g.colors(base-black);
+  font-size: g.remClamp(20px, 24px);
+  text-align: center;
+
+  & > span {
+    display: inline-block;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: -10px;
+    left: 50%;
+    width: g.pxClamp(50px, 60px);
+    height: 1px;
+    background-color: g.colors(base-black);
+    transform: translateX(-50%);
+  }
+}
