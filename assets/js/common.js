@@ -34,5 +34,4 @@ document.addEventListener('DOMContentLoaded', function() {
       threshold: 0.5,
     }
   );
-
 });

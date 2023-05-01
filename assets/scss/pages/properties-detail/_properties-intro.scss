@@ -1,0 +1,24 @@
+@use "../../global/" as g;
+
+.properties-intro__content {
+  margin: 60px 0;
+  padding: 0 g.pxClamp(0px, 140px);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.properties-intro__title {
+  margin-bottom: g.pxClamp(20px, 30px);
+  font-size: g.remClamp(18px, 24px);
+  font-weight: 700;
+}
+.properties-intro__title > span {
+  padding-bottom: .125em;
+  background: linear-gradient(transparent 96%, g.colors(base-black) 0%);
+  line-height: 1.75;
+}
+.properties-intro__text {
+  font-size: g.remClamp(16px, 18px);
+  line-height: 2;
+}

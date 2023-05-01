@@ -1,0 +1,127 @@
+@use "../../global/" as g;
+
+.properties-graph {
+  width: g.pxClamp(320px, 960px);
+  margin-inline: auto;
+}
+
+.properties-graph__unit {
+  display: flex;
+  align-items: center;
+  height: g.pxClamp(54px, 72px);
+  border: 1px solid g.colors(dif);
+  border-bottom: none;
+
+  &:last-child {
+    border-bottom: 1px solid g.colors(dif);
+  }
+}
+.properties-graph__unit span {
+  display: inline-block;
+}
+
+.properties-graph__item {
+  flex-shrink: 0;
+  flex-basis: g.pxClamp(70px, 200px);
+  padding-left: .5em;
+  font-size: g.pxClamp(14px, 18px);
+  font-weight: 700;
+}
+
+.properties-graph__num {
+  position: relative;
+  flex-shrink: 0;
+  flex-basis: g.pxClamp(20px, 30px);
+  height: 100%;
+  margin: 0 .5em;
+  color: g.colors(main);
+  font-size: g.pxClamp(14px, 18px);
+  font-weight: 700;
+}
+.properties-graph__num > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%) translateY(100%);
+  opacity: 0;
+  transition: transform .4s, opacity .4s ease-in-out;
+}
+.properties-graph__num.is-active > span {
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
+}
+
+.properties-graph__bar {
+  position: relative;
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  border-left: 1px solid g.colors(base-black);
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: g.pxClamp(20px, 30px);
+    background-color: g.colors(main);
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: left;
+    transition: transform .8s ease-in-out;
+  }
+}
+.properties-graph__bar.--10.is-active::after {
+  transform: translateY(-50%) scaleX(1);
+}
+.properties-graph__bar.--9.is-active::after {
+  transform: translateY(-50%) scaleX(.9);
+}
+.properties-graph__bar.--8.is-active::after {
+  transform: translateY(-50%) scaleX(.8);
+}
+.properties-graph__bar.--7.is-active::after {
+  transform: translateY(-50%) scaleX(.7);
+}
+.properties-graph__bar.--6.is-active::after {
+  transform: translateY(-50%) scaleX(.6);
+}
+.properties-graph__bar.--5.is-active::after {
+  transform: translateY(-50%) scaleX(.5);
+}
+.properties-graph__bar.--4.is-active::after {
+  transform: translateY(-50%) scaleX(.4);
+}
+.properties-graph__bar.--3.is-active::after {
+  transform: translateY(-50%) scaleX(.3);
+}
+.properties-graph__bar.--2.is-active::after {
+  transform: translateY(-50%) scaleX(.2);
+}
+.properties-graph__bar.--1.is-active::after {
+  transform: translateY(-50%) scaleX(.1);
+}
+
+.properties-graph__unit:nth-of-type(2) > .properties-graph__num > span,
+.properties-graph__unit:nth-of-type(2) > .properties-graph__bar::after {
+  transition-delay: .25s;
+}
+.properties-graph__unit:nth-of-type(3) > .properties-graph__num > span,
+.properties-graph__unit:nth-of-type(3) > .properties-graph__bar::after  {
+  transition-delay: .5s;
+}
+.properties-graph__unit:nth-of-type(4) > .properties-graph__num > span,
+.properties-graph__unit:nth-of-type(4) > .properties-graph__bar::after  {
+  transition-delay: .75s;
+}
+.properties-graph__unit:nth-of-type(5) > .properties-graph__num > span,
+.properties-graph__unit:nth-of-type(5) > .properties-graph__bar::after  {
+  transition-delay: 1s;
+}
+
+
+.properties-graph__note {
+  font-size: g.pxClamp(12px, 14px);
+  text-align: right;
+}

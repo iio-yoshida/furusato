@@ -1,0 +1,12 @@
+@use "../../global/" as g;
+
+.properties-info__inner {
+  width: g.pxClamp(320px, 1160px);
+  margin-inline: auto;
+  padding: g.pxClamp(60px, 80px) g.pxClamp(20px, 40px, $maxViewport: 768px);
+  background-color: g.colors(dif);
+
+  @include g.mq(md) {
+    padding: g.pxClamp(60px, 80px) g.pxClamp(20px, 180px, $minViewport: 768px);
+  }
+}

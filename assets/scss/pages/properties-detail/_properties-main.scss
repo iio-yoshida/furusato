@@ -1,0 +1,103 @@
+@use "../../global/" as g;
+
+.properties-main {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  padding: 0 g.pxClamp(0px, 60px);
+  color: g.colors(base-black);
+
+  @include g.mq(lg) {
+    flex-direction: row;
+  }
+}
+
+.properties-main__img {
+  flex-shrink: 0;
+  width: 100%;
+
+  @include g.mq(lg) {
+    width: g.pxClamp(480px, 720px, $minViewport: 1024px);
+    height: g.pxClamp(270px, 405px, $minViewport: 1024px);
+  }
+}
+
+.properties-main__img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/9;
+}
+
+.properties-main__body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+
+  @include g.mq(md) {
+    flex-direction: row;
+  }
+  @include g.mq(lg) {
+    flex-direction: column;
+    margin-top: 0;
+    margin-left: g.pxClamp(20px, 40px);
+  }
+}
+
+.properties-main__summary {
+  width: 100%;
+  margin-bottom: 20px;
+  @include g.mq(md) {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+  @include g.mq(lg) {
+    margin-bottom: 20px;
+  }
+}
+
+.properties-main__summary dl {
+  font-size: g.remClamp(16px, 18px);
+  line-height: 1;
+  letter-spacing: 1;
+}
+.properties-main__summary dl span {
+  display: inline-block;
+}
+.properties-main__summary dt {
+  padding-top: 0;
+  padding-bottom: .5em;
+  border-bottom: 1px solid g.colors(base-black);
+  font-weight: 700;
+}
+.properties-main__location dd {
+  padding-top: .5em;
+  padding-bottom: .5em;
+  margin-bottom: 10px;
+}
+.properties-main__summary dl:not(.properties-main__location) {
+  display: flex;
+  align-items: center;
+}
+.properties-main__summary dl:not(.properties-main__location) dt {
+  flex-basis: 120px;
+  flex-shrink: 0;
+  padding-top: .5em;
+  border-right: 1px solid g.colors(base-black);
+  border-bottom: none;
+}
+.properties-main__summary dl:not(.properties-main__location) dd {
+  padding-left: 1em;
+}
+
+.properties-main__tags > span {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: .2em 1em;
+  background-color: g.colors(main);
+  border-radius: 1em;
+  color: g.colors(base-white);
+  font-size: g.remClamp(14px, 16px);
+  text-align: center;
+}

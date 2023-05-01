@@ -1,0 +1,6 @@
+@use "../../global/" as g;
+
+.o-text {
+  font-size: g.remClamp(16px, 18px);
+  text-align: center;
+}

@@ -1,0 +1,20 @@
+@use "../../global/" as g;
+
+.properties-btn {
+  display: inline-block;
+  padding: .5em 1.5em;
+  min-width: 320px;
+  background-color: g.colors(base-black);
+  border-radius: 3em;
+  color: g.colors(base-white);
+  font-size: g.rem(16px);
+  transition: background-color .25s;
+
+  & > span {
+    display: inline-block;
+  }
+
+  @include g.hover() {
+    background-color: g.colors(main);
+  }
+}

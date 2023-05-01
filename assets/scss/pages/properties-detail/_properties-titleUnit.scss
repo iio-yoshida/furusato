@@ -1,0 +1,38 @@
+@use "../../global/" as g;
+
+.properties-titleUnit {
+  width: 100%;
+  margin-inline: auto;
+  margin-bottom: g.pxClamp(20px, 30px);
+  padding: 0 g.pxClamp(0px, 60px) g.pxClamp(10px, 20px);
+  border-bottom: 1px solid g.colors(base-black);
+  color: g.colors(base-black);
+}
+
+.properties-titleUnit__sholder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: g.pxClamp(20px, 30px);
+
+  @include g.mq(md) {
+    justify-content: flex-start;
+  }
+}
+.properties-titleUnit__sholder > span {
+  display: inline-block;
+}
+
+.properties-titleUnit__code {
+  margin-right: 20px;
+  font-size: g.rem(14px);
+}
+.properties-titleUnit__sold {
+  padding: .25em 1em;
+  background-color: g.colors(base-black);
+  color: g.colors(base-white);
+  font-size: g.remClamp(16px, 18px);
+}
+.properties-titleUnit__title {
+  font-size: g.remClamp(20px, 28px);
+}

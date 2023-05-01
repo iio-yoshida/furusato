@@ -114,6 +114,7 @@
     height: 100%;
     color: g.colors(base-black);
     font-size: g.remClamp(14px, 18px, $minViewport: 1024px);
+    letter-spacing: 0;
     transition: color .25s, opacity .25s;
     & > span {
       position: relative;
