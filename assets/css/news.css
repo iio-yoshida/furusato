@@ -20,6 +20,7 @@
 .p-news__link a {
   position: relative;
   display: inline-block;
+  min-width: 140px;
   padding: 0.875em 2em 0.875em 0;
   color: #222;
   font-size: clamp(0.875rem, 0.833rem + 0.19vw, 1rem);

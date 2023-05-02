@@ -118,14 +118,14 @@
   font-size: 1rem;
 }
 
-.p-form__field > span {
-  display: inline-block;
-}
-
 .p-form__field.--flex {
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
+}
+
+.p-form__field > span {
+  display: inline-block;
 }
 
 .p-form__field.--flex > span {
@@ -134,16 +134,18 @@
   margin-left: 0;
 }
 
-.p-form__field.--flex > span.mwform-radio-field + .horizontal-item {
-  margin-left: 0;
-}
-
 .p-form__field.--flex label {
   margin-right: 1em;
+  min-width: 160px;
 }
 
 .p-form__field.--flex input[type=text] {
   padding: 0.375em 0.5em;
+}
+
+.p-form__field.--flex > span.mwform-radio-field + .horizontal-item,
+.p-form__field.--flex > span.mwform-checkbox-field + .horizontal-item {
+  margin-left: 0;
 }
 
 .p-form__block {
@@ -205,7 +207,7 @@
   font-size: 0.75rem;
 }
 
-.p-form__error {
+.error {
   color: #c24524;
   font-size: 1.125rem;
   font-weight: 700;

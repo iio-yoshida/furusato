@@ -18,6 +18,7 @@
 .p-news__link a {
   position: relative;
   display: inline-block;
+  min-width: 140px;
   padding: .875em 2em .875em 0;
   color: g.colors(base-black);
   font-size: g.remClamp(14px, 16px);

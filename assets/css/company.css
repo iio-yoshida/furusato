@@ -100,6 +100,12 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .p-details__item dd {
+    flex-grow: 1;
+  }
+}
+
 .company-info {
   padding-bottom: clamp(80px, 73.333px + 1.85vw, 100px);
 }

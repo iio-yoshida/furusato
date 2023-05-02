@@ -33,12 +33,13 @@
 
 .top-kv__slide {
   position: relative;
-  width: g.pxClamp(320px, 1160px);
+  width: 100%;
   height: 100%;
   padding-top: g.pxClamp(40px, 60px);
-  margin-inline: auto;
 
   @include g.mq(sm) {
+    width: g.pxClamp(320px, 480px);
+    margin-left: g.pxClamp(0px, 100px);
     padding-top: 0;
   }
 }
@@ -61,14 +62,14 @@
   transition: transform .25s;
 }
 .top-kv__slideSwitch.is-standby {
-  transform: translateX(-100%);
+  left: 100%;
 }
 .top-kv__slideSwitch.is-active {
-  transform: translateX(0);
+  left: 0;
   animation: slideShow .8s ease-in-out;
 }
 .top-kv__slideSwitch.is-hidden {
-  transform: translateX(-100%);
+  left: 100%;
   animation: slideHide .8s ease-in-out;
 }
 @keyframes slideShow {
@@ -88,7 +89,7 @@
   }
   50% {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
   100% {
     opacity: 0;
@@ -114,55 +115,60 @@
   }
 }
 
-.top-kv__slideBtns {
+.top-kv__slideBtn {
   position: absolute;
   bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 110;
-  @include g.mq(sm) {
-    bottom: 0;
-    left: 0;
-    transform: translateX(0);
-  }
-}
-
-.top-kv__slideBtns button {
-  position: relative;
   width: g.pxClamp(40px, 50px);
   height: g.pxClamp(40px, 50px);
   background-color: transparent;
   border-radius: g.pxClamp(40px, 50px);
   transition: background-color .25s;
-
-  &::after {
-    position: absolute;
-    content: '';
-    top: 50%;
-    left: 50%;
-    width: g.pxClamp(20px, 25px);;
-    height: g.pxClamp(20px, 25px);;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-  }
+  z-index: 110;
 
   @include g.hover() {
     background-color: rgba(g.colors(base-white), .4);
   }
 }
-.top-kv__slideBtns button:first-child {
-  margin-right: g.pxClamp(40px, 50px);
-  &::after {
-    transform: translate(-60%, -50%);
-    background-image: url(../img/top/slide_btn_l.png);
+.top-kv__slideBtn.--prev {
+  left: 25%;
+  @include g.mq(sm) {
+    left: 0;
   }
 }
-.top-kv__slideBtns button:last-child {
-  &::after {
-    transform: translate(-40%, -50%);
-    background-image: url(../img/top/slide_btn_r.png);
+.top-kv__slideBtn.--next {
+  right: 25%;
+  @include g.mq(sm) {
+    right: 50%;
   }
+}
+
+.top-kv__slideBtn::before,
+.top-kv__slideBtn::after {
+  position: absolute;
+  content: '';
+  width: g.pxClamp(18px, 24px);
+  height: g.pxClamp(1px, 2px);
+  background-color: g.colors(base-white);
+}
+.top-kv__slideBtn.--prev::before {
+  left: 23%;
+  bottom: g.pxClamp(16px, 19px);
+  transform: rotate(30deg);
+}
+.top-kv__slideBtn.--prev::after {
+  left: 23%;
+  top: g.pxClamp(14px, 17px);
+  transform: rotate(-30deg);
+}
+.top-kv__slideBtn.--next::before {
+  right: 23%;
+  bottom: g.pxClamp(16px, 19px);
+  transform: rotate(-30deg);
+}
+.top-kv__slideBtn.--next::after {
+  right: 23%;
+  top: g.pxClamp(14px, 17px);
+  transform: rotate(30deg);
 }
 
 .top-kv__movie {

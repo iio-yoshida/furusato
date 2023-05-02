@@ -44,3 +44,8 @@
     border-right: 1px solid g.colors(base-black);
   }
 }
+.p-details__item dd {
+  @include g.mq(md) {
+    flex-grow: 1;
+  }
+}
