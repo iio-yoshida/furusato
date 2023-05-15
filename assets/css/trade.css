@@ -1,0 +1,94 @@
+.trade-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: auto;
+}
+
+.trade-intro__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .trade-intro__title {
+    justify-content: flex-start;
+    width: auto;
+  }
+}
+
+.trade-intro__catch {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: clamp(16px, 11.333px + 1.3vw, 30px);
+  width: clamp(80px, 73.333px + 1.85vw, 100px);
+  height: clamp(80px, 73.333px + 1.85vw, 100px);
+  border: clamp(1px, 0.667px + 0.09vw, 2px) solid #222;
+  border-radius: 50%;
+  font-size: clamp(20px, 18.667px + 0.37vw, 24px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.trade-intro__copy {
+  flex-grow: 1;
+  font-size: clamp(28px, 18.667px + 2.59vw, 56px);
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .trade-intro__copy {
+    font-size: clamp(48px, 38.857px + 1.19vw, 56px);
+  }
+}
+.trade-intro__copy > span {
+  display: inline-block;
+}
+
+.trade-intro__text {
+  margin-bottom: 30px;
+  font-size: clamp(1rem, 0.958rem + 0.19vw, 1.125rem);
+  line-height: 2;
+  text-align: center;
+}
+
+.trade-intro__area {
+  margin-bottom: 30px;
+  padding: 0.75em 2em;
+  border: 1px solid #222;
+  border-radius: 10px;
+  font-size: clamp(1rem, 0.958rem + 0.19vw, 1.125rem);
+  font-weight: 700;
+  text-align: center;
+}
+.trade-intro__area span {
+  display: inline-block;
+}
+
+.trade-intro__summary {
+  display: flex;
+  justify-content: center;
+  gap: clamp(20px, 13.333px + 1.85vw, 40px);
+}
+
+.trade-intro__summary p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: clamp(100px, 73.333px + 7.41vw, 180px);
+  height: clamp(100px, 73.333px + 7.41vw, 180px);
+  background-color: #c24524;
+  border-radius: 50%;
+  color: #fcfcfc;
+  font-size: clamp(16px, 13.333px + 0.74vw, 24px);
+  font-weight: 700;
+}
+.trade-intro__summary p > span {
+  display: block;
+  text-align: center;
+}

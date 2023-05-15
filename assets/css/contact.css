@@ -19,6 +19,12 @@
   display: inline-block;
 }
 
+.p-wideTexts__sholder {
+  display: block;
+  padding: 0 clamp(0px, -20px + 5.56vw, 60px) clamp(20px, 18.667px + 0.37vw, 24px);
+  font-size: clamp(0.75rem, 0.708rem + 0.19vw, 0.875rem);
+}
+
 .p-wideTexts__text {
   font-size: 1.125rem;
   padding: 0 clamp(10px, -6.667px + 4.63vw, 60px);
@@ -136,6 +142,7 @@
 
 .p-form__field.--flex label {
   margin-right: 1em;
+  width: 50%;
   min-width: 160px;
 }
 

@@ -22,6 +22,11 @@
     display: inline-block;
   }
 }
+.p-wideTexts__sholder {
+  display: block;
+  padding:0 g.pxClamp(0px, 60px) g.pxClamp(20px, 24px);
+  font-size: g.remClamp(12px, 14px);
+}
 
 .p-wideTexts__text {
   font-size: g.rem(18px);
