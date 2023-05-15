@@ -1,0 +1,87 @@
+@use "../global/" as g;
+
+.p-flex {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: g.pxClamp(60px, 100px);
+
+  @include g.mq(md) {
+    flex-direction: row;
+  }
+}
+.p-flex.--rev {
+  @include g.mq(md) {
+    flex-direction: row-reverse;
+  }
+}
+
+.p-flex__head {
+  width: 100%;
+  margin-bottom: g.pxClamp(20px, 30px);
+  @include g.mq(md) {
+    width: auto;
+    margin-bottom: 0;
+    margin-right: g.pxClamp(20px, 60px, $minViewport: 768px);
+    flex-grow: 1;
+  }
+}
+.p-flex.--rev > .p-flex__head {
+  @include g.mq(md) {
+    margin-right: 0;
+    margin-left: g.pxClamp(20px, 60px, $minViewport: 768px);
+  }
+}
+
+
+.p-flex__title {
+  margin-bottom: g.pxClamp(20px, 30px);
+  padding: 0 g.pxClamp(0px, 30px) 1em;
+  border-bottom: 1px solid g.colors(base-black);
+  font-size: g.remClamp(20px, 24px);
+  font-weight: 700;
+}
+
+.p-flex__content {
+  padding: 0 g.pxClamp(0px, 30px);
+  font-size: g.remClamp(16px, 18px);
+}
+
+.p-flex__text.--bold {
+  margin-top: .5em;
+  margin-bottom: .5em;
+  font-weight: 700;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.p-flex__list {
+  margin-top: .25em;
+  margin-bottom: .25em;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.p-flex__list li {
+  position: relative;
+  padding-bottom: .25em;
+  text-indent: -1em;
+  padding-left: 1em;
+}
+
+.p-flex__body {
+  width: 100%;
+
+  @include g.mq(md) {
+    flex-basis: g.pxClamp(360px, 550px, $minViewport: 768px);
+    flex-shrink: 0;
+  }
+}
+
+.p-flex__body img {
+  object-fit: cover;
+  aspect-ratio: 11/6;
+}

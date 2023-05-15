@@ -1,0 +1,199 @@
+.p-pageHeader {
+  width: 100%;
+  padding-top: clamp(60px, 40px + 5.56vw, 120px);
+  background-image: url(../img/common/bg_main.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.p-pageHeader__inner {
+  display: flex;
+  align-items: center;
+  width: clamp(320px, 40px + 77.78vw, 1160px);
+  height: clamp(60px, 50px + 2.78vw, 90px);
+  padding: 0 clamp(20px, 2.353px + 4.9vw, 40px);
+}
+@media screen and (min-width: 768px) {
+  .p-pageHeader__inner {
+    padding: 0 clamp(20px, -2.857px + 2.98vw, 40px);
+  }
+}
+
+.p-pageHeader__title {
+  display: flex;
+  align-items: center;
+  color: #222;
+  font-size: clamp(1.125rem, 1rem + 0.56vw, 1.5rem);
+  letter-spacing: 2px;
+}
+
+.p-pageHeader__title span {
+  display: inline-block;
+}
+
+.p-pageHeader__title span:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(40px, 26.667px + 3.7vw, 80px);
+  margin-right: 0.5em;
+}
+.p-pageHeader__title span:first-child > img {
+  height: clamp(20px, 15px + 1.39vw, 35px);
+}
+
+.p-pagenation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: clamp(320px, 40px + 77.78vw, 1160px);
+  margin: 60px 0;
+  margin-inline: auto;
+}
+
+.p-pagenation__btn {
+  position: relative;
+  display: inline-block;
+  min-width: 140px;
+  max-width: 100%;
+  background-color: #f6f6f2;
+  border: 1px solid transparent;
+  border-radius: 2em;
+  color: #222;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  text-align: center;
+  transition: background-color 0.25s, border-color 0.25s, color 0.25s;
+}
+.p-pagenation__btn::after {
+  position: absolute;
+  content: "";
+  top: 52%;
+  right: 1.2em;
+  width: 0.8em;
+  height: 0.8em;
+  background-image: url(../img/common/btn_arrow_black.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translateY(-50%);
+}
+.p-pagenation__btn:focus {
+  background-color: #222;
+  color: #fcfcfc;
+}
+.p-pagenation__btn:focus::after {
+  background-image: url(../img/common/btn_arrow_white.png);
+}
+@media (hover: hover) and (pointer: fine) {
+  .p-pagenation__btn:hover {
+    background-color: #222;
+    color: #fcfcfc;
+  }
+  .p-pagenation__btn:hover::after {
+    background-image: url(../img/common/btn_arrow_white.png);
+  }
+}
+
+.p-pagenation__btn.--prev {
+  padding: 0.5em 1em 0.5em 2.5em;
+  margin-right: auto;
+}
+
+.p-pagenation__btn.--next {
+  padding: 0.5em 2.5em 0.5em 1em;
+  margin-left: auto;
+}
+
+.p-pagenation__btn.--prev::after {
+  left: 1.2em;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.p-flex {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: clamp(60px, 46.667px + 3.7vw, 100px);
+}
+@media screen and (min-width: 768px) {
+  .p-flex {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .p-flex.--rev {
+    flex-direction: row-reverse;
+  }
+}
+
+.p-flex__head {
+  width: 100%;
+  margin-bottom: clamp(20px, 16.667px + 0.93vw, 30px);
+}
+@media screen and (min-width: 768px) {
+  .p-flex__head {
+    width: auto;
+    margin-bottom: 0;
+    margin-right: clamp(20px, -25.714px + 5.95vw, 60px);
+    flex-grow: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .p-flex.--rev > .p-flex__head {
+    margin-right: 0;
+    margin-left: clamp(20px, -25.714px + 5.95vw, 60px);
+  }
+}
+
+.p-flex__title {
+  margin-bottom: clamp(20px, 16.667px + 0.93vw, 30px);
+  padding: 0 clamp(0px, -10px + 2.78vw, 30px) 1em;
+  border-bottom: 1px solid #222;
+  font-size: clamp(1.25rem, 1.167rem + 0.37vw, 1.5rem);
+  font-weight: 700;
+}
+
+.p-flex__content {
+  padding: 0 clamp(0px, -10px + 2.78vw, 30px);
+  font-size: clamp(1rem, 0.958rem + 0.19vw, 1.125rem);
+}
+
+.p-flex__text.--bold {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+}
+.p-flex__text.--bold:first-child {
+  margin-top: 0;
+}
+
+.p-flex__list {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+.p-flex__list:first-child {
+  margin-top: 0;
+}
+
+.p-flex__list li {
+  position: relative;
+  padding-bottom: 0.25em;
+  text-indent: -1em;
+  padding-left: 1em;
+}
+
+.p-flex__body {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .p-flex__body {
+    flex-basis: clamp(360px, 142.857px + 28.27vw, 550px);
+    flex-shrink: 0;
+  }
+}
+
+.p-flex__body img {
+  object-fit: cover;
+  aspect-ratio: 11/6;
+}
