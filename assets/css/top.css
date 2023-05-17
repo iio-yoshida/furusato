@@ -1433,9 +1433,13 @@
 
 .p-faq__item {
   padding: clamp(10px, 6.667px + 0.93vw, 20px);
+  margin-top: clamp(20px, 16.667px + 0.93vw, 30px);
   background-color: #fcfcfc;
   color: #222;
   font-size: clamp(16px, 13.333px + 0.74vw, 24px);
+}
+.p-faq__item:last-child {
+  margin-bottom: 60px;
 }
 
 .p-faq__item summary {

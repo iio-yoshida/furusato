@@ -2,91 +2,44 @@
 
 .trade-intro {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-inline: auto;
-}
-
-.trade-intro__title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding-bottom: 30px;
+  flex-direction: column-reverse;
+  margin-bottom: g.pxClamp(30px, 50px);
 
   @include g.mq(md) {
-    justify-content: flex-start;
-    width: auto;
+    flex-direction: row;
   }
 }
-.trade-intro__catch {
+
+.trade-intro__head {
   flex-shrink: 0;
+  width: 100%;
+
+  @include g.mq(md) {
+    width: g.pxClamp(340px, 540px, $minViewport: 768px);
+    margin-right: g.pxClamp(20px, 60px, $minViewport: 768px);
+  }
+}
+
+.trade-intro__body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin-right: g.pxClamp(16px, 30px);
-  width: g.pxClamp(80px, 100px);
-  height: g.pxClamp(80px, 100px);
-  border: g.pxClamp(1px, 2px) solid g.colors(base-black);
-  border-radius: 50%;
-  font-size: g.pxClamp(20px, 24px);
-  font-weight: 700;
-  line-height: 1.2;
-}
-.trade-intro__copy {
-  flex-grow: 1;
-  font-size: g.pxClamp(28px, 56px);
-  font-weight: 700;
+  margin-bottom: 30px;
   @include g.mq(md) {
-    font-size: g.pxClamp(48px, 56px, $minViewport: 768px);
-  };
-  & > span {
-    display: inline-block;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+  & > *:last-child {
+    margin-top: auto;
   }
 }
 
 .trade-intro__text {
-  margin-bottom: 30px;
   font-size: g.remClamp(16px, 18px);
-  line-height: 2;
-  text-align: center;
-}
-.trade-intro__area {
-  margin-bottom: 30px;
-  padding: .75em 2em;
-  border: 1px solid g.colors(base-black);
-  border-radius: 10px;
-  font-size: g.remClamp(16px, 18px);
-  font-weight: 700;
-  text-align: center;
-
-  & span {
-    display: inline-block;
-  }
+  margin-bottom: .5em;
 }
 
-.trade-intro__summary {
-  display: flex;
-  justify-content: center;
-  gap: g.pxClamp(20px, 40px);
-}
-
-.trade-intro__summary p {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: g.pxClamp(100px, 180px);
-  height: g.pxClamp(100px, 180px);
-  background-color: g.colors(main);
-  border-radius: 50%;
-  color: g.colors(base-white);
-  font-size: g.pxClamp(16px, 24px);
-  font-weight: 700;
-
-  & > span {
-    display: block;
-    text-align: center;
-  }
+.trade-intro__note {
+  font-size: g.remClamp(12px, 14px);
+  margin-bottom: g.pxClamp(20px, 30px);
 }

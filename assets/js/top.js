@@ -1,6 +1,5 @@
 import "./snipet/headerToggle.js";
 import "./snipet/slider.js";
-import "./snipet/accordion.js";
 
 document.addEventListener('DOMContentLoaded', function() {
 

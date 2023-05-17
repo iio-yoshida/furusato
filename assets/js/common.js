@@ -3,6 +3,7 @@ import TouchDeviceJudge from "./snipet/touchDeviceJudge.js";
 import MobileMenu from "./snipet/mobileMenu.js";
 import SmoothScroll from "./snipet/smoothScroll.js";
 import ScrollObserver from "./snipet/scrollObserver.js";
+import "./snipet/accordion.js";
 
 // ブラウザ幅が360px未満の場合、viewportをwidth=360に固定
 new ViewportChange();

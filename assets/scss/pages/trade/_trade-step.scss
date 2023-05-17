@@ -1,0 +1,50 @@
+@use "../../global/" as g;
+
+.trade-step {
+  width: g.pxClamp(320px, 1160px);
+  margin-inline: auto;
+  padding: g.pxClamp(30px, 50px) 0 0;
+}
+
+.trade-step__list {
+  width: g.pxClamp(320px, 580px, $maxViewport: 1024px);
+  margin-inline: auto;
+}
+
+.trade-step__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: g.pxClamp(20px, 30px);
+  padding-bottom: g.pxClamp(20px, 30px);
+  font-size: g.pxClamp(16px, 18px);
+  @include g.mq(md) {
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 0;
+  }
+}
+
+.trade-step__item > span {
+  display: inline-block;
+  font-weight: 700;
+}
+
+.trade-step__num {
+  flex-shrink: 0;
+  margin-bottom: g.remClamp(8px, 16px);
+  padding: .25em 1.5em;
+  background-color: g.colors(base-black);
+  color: g.colors(base-white);
+  text-align: center;
+
+  @include g.mq(md) {
+    width: g.pxClamp(120px, 160px, $minViewport: 768px);
+    margin-left: g.pxClamp(20px, 60px);
+    margin-bottom: 0;
+    margin-right: g.pxClamp(20px, 30px);
+  }
+}
+
+.trade-step__text {
+  flex-grow: 1;
+}

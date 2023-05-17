@@ -1,0 +1,49 @@
+@use "../../global/" as g;
+
+.trade-details {
+  width: g.pxClamp(320px, 1160px);
+  margin-inline: auto;
+  padding: g.pxClamp(30px, 50px) 0 0;
+}
+
+.trade-details__list {
+  @include g.mq(md) {
+    padding: 0 g.pxClamp(20px, 180px, $minViewport: 768px);
+  }
+}
+
+.trade-details__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: g.pxClamp(20px, 30px);
+  padding-bottom: g.pxClamp(20px, 30px);
+  border-bottom: 1px solid g.colors(base-black);
+  font-size: g.pxClamp(16px, 18px);
+  @include g.mq(md) {
+    flex-direction: row;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.trade-details__item span {
+  display: inline-block;
+  font-weight: 700;
+}
+
+.trade-details__num {
+  flex-shrink: 0;
+  margin-bottom: g.remClamp(8px, 16px);
+
+  @include g.mq(md) {
+    flex-basis: g.pxClamp(60px, 80px, $minViewport: 768px);
+    flex-shrink: 0;
+    margin-bottom: 0;
+    margin-right: g.pxClamp(20px, 30px);
+    border-right: 1px solid g.colors(base-black);
+  }
+}
+
+.trade-details__text {
+  flex-grow: 1;
+}
