@@ -1,0 +1,45 @@
+@use "../../global/" as g;
+
+.merit-voice {
+  width: g.pxClamp(320px, 1280px);
+  margin-inline: auto;
+}
+
+.merit-voice__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: g.pxClamp(30px, 50px);
+  @include g.mq(md) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.merit-voice__icon {
+  flex-shrink: 0;
+  display: flex;
+  margin-bottom: g.pxClamp(20px, 30px);
+  flex-direction: row;
+  align-items: center;
+  @include g.mq(md) {
+    flex-direction: column;
+    margin-bottom: 0;
+    margin-right: g.pxClamp(20px, 60px, $minViewport: 768px);
+  }
+
+  & > * {
+    display: inline-block;
+  }
+  & > img {
+    width: g.pxClamp(90px, 120px);
+    margin-right: 20px;
+    @include g.mq(md) {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.merit-voice__text {
+  padding: g.pxClamp(20px, 30px) g.pxClamp(20px, 40px);
+  background-color: g.colors(dif);
+}
