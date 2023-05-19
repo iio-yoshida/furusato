@@ -1,0 +1,73 @@
+@use "../../global/" as g;
+
+.en-cta {
+  width: g.pxClamp(320px, 1160px);
+  margin-inline: auto;
+  padding: g.pxClamp(30px, 50px) 0 0;
+}
+
+.en-cta__inner {
+  @include g.mq(md) {
+    padding: 0 g.pxClamp(20px, 80px, $minViewport: 768px);
+  }
+}
+
+.en-cta__item {
+  margin-bottom: g.pxClamp(20px, 30px);
+}
+
+.en-cta__head {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid g.colors(base-black);
+}
+
+.en-cta__head img {
+  width: g.pxClamp(40px, 60px);
+  height: g.pxClamp(40px, 60px);
+}
+
+.en-cta__head span {
+  font-size: g.remClamp(16px, 24px);
+  font-weight: 700;
+  margin-left: 1em;
+}
+
+.en-cta__body {
+  margin-top: g.pxClamp(10px, 20px);
+  font-size: g.remClamp(16px, 18px);
+}
+
+.en-cta__body a {
+  position: relative;
+  color: g.colors(main);
+  font-weight: 700;
+  transition: opacity .25s;
+
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: -.1em;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: g.colors(main);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .25s;
+  }
+
+  @include g.hover() {
+    opacity: .6;
+
+    &::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+}
+
+.ua-pc .en-cta__body a[href^="tel:"] {
+  pointer-events: none;
+}

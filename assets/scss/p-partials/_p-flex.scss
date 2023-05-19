@@ -8,6 +8,9 @@
   @include g.mq(md) {
     flex-direction: row;
   }
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 .p-flex.--rev {
   @include g.mq(md) {
