@@ -8,9 +8,6 @@
     flex-direction: row;
   }
 }
-.p-flex:last-of-type {
-  margin-bottom: 0;
-}
 
 @media screen and (min-width: 768px) {
   .p-flex.--rev {

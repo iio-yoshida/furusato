@@ -1,0 +1,150 @@
+.sitemap {
+  width: clamp(320px, 40px + 77.78vw, 1160px);
+  margin-inline: auto;
+}
+
+.sitemap__item {
+  border-bottom: 1px solid #222;
+}
+
+.sitemap__item > a,
+.sitemap__item > span {
+  position: relative;
+  display: inline-block;
+  padding: 1em 0 1em 3.5em;
+  color: #222;
+  font-size: clamp(1rem, 0.958rem + 0.19vw, 1.125rem);
+  font-weight: 700;
+  transition: color 0.25s;
+}
+
+.sitemap__item > a::before,
+.sitemap__item > span::before {
+  position: absolute;
+  content: "";
+  width: 2.5em;
+  height: 2.5em;
+  top: 50%;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transform: translateY(-50%);
+}
+
+.sitemap__item > a::after {
+  position: absolute;
+  content: "";
+  width: calc(100% - 3em);
+  height: 1px;
+  bottom: 0.8em;
+  left: 3em;
+  background-color: #c24524;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.25s;
+}
+
+.sitemap__child {
+  padding: 0.25em 0 1em 1em;
+}
+
+.sitemap__childItem > a {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 0 0.5em 1em;
+  color: #222;
+  font-size: clamp(1rem, 0.958rem + 0.19vw, 1.125rem);
+  font-weight: 700;
+  transition: color 0.25s;
+}
+
+.sitemap__childItem > a::before {
+  position: absolute;
+  content: "";
+  width: 0.2em;
+  height: 0.2em;
+  border-radius: 50%;
+  top: 50%;
+  left: 0;
+  background-color: #222;
+  transform: translateY(-50%);
+}
+
+.sitemap__childItem > a::after {
+  position: absolute;
+  content: "";
+  width: calc(100% - 1em);
+  height: 1px;
+  bottom: 0.3em;
+  left: 1em;
+  background-color: #c24524;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.25s;
+}
+
+.sitemap__item > a:focus,
+.sitemap__childItem > a:focus {
+  color: #c24524;
+}
+.sitemap__item > a:focus::after,
+.sitemap__childItem > a:focus::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+@media (hover: hover) and (pointer: fine) {
+  .sitemap__item > a:hover,
+  .sitemap__childItem > a:hover {
+    color: #c24524;
+  }
+  .sitemap__item > a:hover::after,
+  .sitemap__childItem > a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+}
+
+.sitemap__item > a.--top::before {
+  background-image: url(../img/sitemap/icon_top.png);
+}
+
+.sitemap__item > a.--properties::before {
+  background-image: url(../img/sitemap/icon_prop.png);
+}
+
+.sitemap__item > a.--trade::before {
+  background-image: url(../img/sitemap/icon_trade.png);
+}
+
+.sitemap__item > a.--merit::before {
+  background-image: url(../img/sitemap/icon_merit.png);
+}
+
+.sitemap__item > span.--column::before {
+  background-image: url(../img/sitemap/icon_column.png);
+}
+
+.sitemap__item > a.--contact::before {
+  background-image: url(../img/sitemap/icon_contact.png);
+}
+
+.sitemap__item > a.--faq::before {
+  background-image: url(../img/sitemap/icon_faq.png);
+}
+
+.sitemap__item > a.--news::before {
+  background-image: url(../img/sitemap/icon_news.png);
+}
+
+.sitemap__item > a.--privacy::before {
+  background-image: url(../img/sitemap/icon_privacy.png);
+}
+
+.sitemap__item > a.--company::before {
+  background-image: url(../img/sitemap/icon_company.png);
+}
+
+.sitemap__item > a.--english::before {
+  background-image: url(../img/sitemap/icon_english.png);
+}
