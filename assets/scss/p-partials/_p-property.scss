@@ -1,6 +1,6 @@
 @use "../global/" as g;
 
-.p-property__inner {
+.p-property__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -22,6 +22,7 @@
   flex-direction: column;
   width: g.pxClamp(320px, 480px, $maxViewport: 768px);
   box-shadow: 0 3px 6px rgba(g.colors(base-black), .2);
+  transition: opacity .25s;
   z-index: 1;
 
   @include g.mq(md) {
@@ -40,6 +41,10 @@
   transform-origin: top right;
   transition: transform .4s;
   z-index: 3;
+}
+
+.p-property__unit.is-hidden {
+  display: none;
 }
 
 .p-property__imgWrapper  {
@@ -131,6 +136,14 @@
     will-change: transform;
     z-index: -1;
   }
+}
+.p-property__code {
+  position: absolute;
+  top: .5em;
+  right: 1em;
+  color: g.colors(base-black);
+  font-size: g.rem(14px);
+  transition: color .4s;
 }
 
 .p-property__summary {
@@ -243,6 +256,9 @@
     }
     .p-property__body::after {
       transform: translateY(0);
+    }
+    .p-property__code {
+      color: g.colors(base-white);
     }
     .p-property__summary dl {
       color: g.colors(base-white);

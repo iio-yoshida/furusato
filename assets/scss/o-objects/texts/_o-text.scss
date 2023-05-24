@@ -4,3 +4,7 @@
   font-size: g.remClamp(16px, 18px);
   text-align: center;
 }
+
+.o-text.is-hidden {
+  display: none;
+}

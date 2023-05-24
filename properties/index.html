@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/assets/css/common.css">
     <link rel="stylesheet" href="/assets/css/properties.css">
     <script src="/assets/js/common.js" type="module" defer></script>
+    <script src="/assets/js/properties.js" type="module" defer></script>
   </head>
 <body>
   <div class="l-siteWrapper">
@@ -135,10 +136,168 @@
           </h1>
         </div>
       </section>
-
-
-
-
+      <section class="l-section">
+        <div class="l-section__inner">
+          <details class="p-filter js-details">
+            <summary class="p-filter__btn js-summary">
+              <div class="p-filter__btnInner">
+                <span class="p-filter__btnText">エリア・条件で絞り込む</span>
+                <span class="p-filter__btnIcon"></span>
+              </div>
+            </summary>
+            <div class="p-filter__wrapper js-content">
+              <div class="p-filter__container">
+                <p class="p-filter__category"><span>エリア</span></p>
+                <p class="p-filter__subCategory">京都府</p>
+                <div class="p-filter__tags js-area">
+                  <label for="area1" class="p-filter__tag js-tag">
+                    <input type="checkbox" id="area1" name="area" value="船井郡京丹波町">
+                    <span>船井郡京丹波町</span>
+                  </label>
+                  <label for="area2" class="p-filter__tag js-tag">
+                    <input type="checkbox" id="area2" name="area" value="京丹後市">
+                    <span>京丹後市</span>
+                  </label>
+                  <label for="area3" class="p-filter__tag js-tag">
+                    <input type="checkbox" id="area3" name="area" value="福知山市">
+                    <span>福知山市</span>
+                  </label>
+                  <label for="area4" class="p-filter__tag js-tag">
+                    <input type="checkbox" id="area4" name="area" value="南丹市">
+                    <span>南丹市</span>
+                  </label>
+                  <label for="area5" class="p-filter__tag js-tag">
+                    <input type="checkbox" id="area5" name="area" value="京都市右京区">
+                    <span>京都市右京区</span>
+                  </label>
+                </div>
+              </div>
+              <div class="p-filter__container">
+                <p class="p-filter__category"><span>条件</span></p>
+                <div class="p-filter__tags js-category">
+                  <label for="category1" class="p-filter__tag js-tag">
+                    <input type="checkbox" id="category1" name="category" value="古民家">
+                    <span>古民家</span>
+                  </label>
+                  <label for="category2" class="p-filter__tag js-tag">
+                    <input type="checkbox" id="category2" name="category" value="リフォーム済">
+                    <span>リフォーム済</span>
+                  </label>
+                  <label for="category3" class="p-filter__tag js-tag">
+                    <input type="checkbox" id="category3" name="category" value="農地付き">
+                    <span>農地付き</span>
+                  </label>
+                  <label for="category4" class="p-filter__tag js-tag">
+                    <input type="checkbox" id="category4" name="category" value="上質邸宅">
+                    <span>上質邸宅</span>
+                  </label>
+                  <label for="category5" class="p-filter__tag js-tag">
+                    <input type="checkbox" id="category5" name="category" value="里山の近く">
+                    <span>里山の近く</span>
+                  </label>
+                  <label for="category6" class="p-filter__tag js-tag">
+                    <input type="checkbox" id="category6" name="category" value="海・川の近く">
+                    <span>海・川の近く</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </details>
+          <div class="p-property">
+            <div class="p-property__list">
+              <a class="p-property__unit js-item is-sold" href="" data-area="船井郡京丹波町" data-category='["古民家", "リフォーム済", "里山の近く"]'>
+                <div class="p-property__imgWrapper">
+                  <img src="/assets/img/property_dummy.png" alt="物件画像">
+                  <span>詳細を見る</span>
+                </div>
+                <div class="p-property__body">
+                  <span class="p-property__code">［物件ID:000］</span>
+                  <div class="p-property__summary">
+                    <dl class="p-property__location">
+                      <dt><span>所在地</span></dt>
+                      <dd>京都府船井郡京丹波町</dd>
+                    </dl>
+                    <dl>
+                      <dt><span>土地</span><span>坪数</span></dt>
+                      <dd>約1580坪</dd>
+                    </dl>
+                    <dl>
+                      <dt><span>母屋</span><span>坪数</span></dt>
+                      <dd>約57坪</dd>
+                    </dl>
+                  </div>
+                  <div class="p-property__tags">
+                    <span>古民家</span>
+                    <span>リフォーム済</span>
+                    <span>里山の近く</span>
+                  </div>
+                </div>
+              </a>
+              <a class="p-property__unit js-item" href="" data-area="南丹市" data-category='["古民家", "リフォーム済", "農地付き", "里山の近く"]'>
+                <div class="p-property__imgWrapper">
+                  <img src="/assets/img/property_dummy.png" alt="物件画像">
+                  <span>詳細を見る</span>
+                </div>
+                <div class="p-property__body">
+                  <span class="p-property__code">［物件ID:000］</span>
+                  <div class="p-property__summary">
+                    <dl class="p-property__location">
+                      <dt><span>所在地</span></dt>
+                      <dd>京都府南丹市</dd>
+                    </dl>
+                    <dl>
+                      <dt><span>土地</span><span>坪数</span></dt>
+                      <dd>約1580坪</dd>
+                    </dl>
+                    <dl>
+                      <dt><span>母屋</span><span>坪数</span></dt>
+                      <dd>約57坪</dd>
+                    </dl>
+                  </div>
+                  <div class="p-property__tags">
+                    <span>古民家</span>
+                    <span>リフォーム済</span>
+                    <span>農地付き</span>
+                    <span>里山の近く</span>
+                  </div>
+                </div>
+              </a>
+              <a class="p-property__unit js-item" href="" data-area="福知山市" data-category='["古民家", "リフォーム済", "上質邸宅", "海・川の近く"]'>
+                <div class="p-property__imgWrapper">
+                  <img src="/assets/img/property_dummy.png" alt="物件画像">
+                  <span>詳細を見る</span>
+                </div>
+                <div class="p-property__body">
+                  <span class="p-property__code">［物件ID:000］</span>
+                  <div class="p-property__summary">
+                    <dl class="p-property__location">
+                      <dt><span>所在地</span></dt>
+                      <dd>京都府綾部市</dd>
+                    </dl>
+                    <dl>
+                      <dt><span>土地</span><span>坪数</span></dt>
+                      <dd>約1580坪</dd>
+                    </dl>
+                    <dl>
+                      <dt><span>母屋</span><span>坪数</span></dt>
+                      <dd>約57坪</dd>
+                    </dl>
+                  </div>
+                  <div class="p-property__tags">
+                    <span>古民家</span>
+                    <span>リフォーム済</span>
+                    <span>上質邸宅</span>
+                    <span>海・川の近く</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="p-btnWrapper">
+              <p class="o-text js-noItems is-hidden">恐れ入りますが、ご選択いただいた条件に該当する物件はございません。</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer__inner">

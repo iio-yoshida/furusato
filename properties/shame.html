@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="/assets/js/properties.js" type="module" defer></script>
+</head>
+<body>
+  <div class="filter-container">
+    <p class="filter-category"><span>エリア</span></p>
+    <div class="filter-tags js-area">
+      <label for="" class="filter-tag">
+        <input type="checkbox" name="area" value="area1">
+        <span>area1</span>
+      </label>
+      <label for="" class="filter-tag">
+        <input type="checkbox" name="area" value="area2">
+        <span>area2</span>
+      </label>
+      <label for="" class="filter-tag">
+        <input type="checkbox" name="area" value="area3">
+        <span>area3</span>
+      </label>
+      <label for="" class="filter-tag">
+        <input type="checkbox" name="area" value="area4">
+        <span>area4</span>
+      </label>
+      <label for="" class="filter-tag">
+        <input type="checkbox" name="area" value="area5">
+        <span>area5</span>
+      </label>
+    </div>
+  </div>
+  <div class="filter-container">
+    <p class="filter-category"><span>条件</span></p>
+    <div class="filter-tags js-category">
+      <label for="" class="filter-tag">
+        <input type="checkbox" name="category" value="category1">
+        <span>category1</span>
+      </label>
+      <label for="" class="filter-tag">
+        <input type="checkbox" name="category" value="category2">
+        <span>category2</span>
+      </label>
+      <label for="" class="filter-tag">
+        <input type="checkbox" name="category" value="category3">
+        <span>category3</span>
+      </label>
+      <label for="" class="filter-tag">
+        <input type="checkbox" name="category" value="category4">
+        <span>category4</span>
+      </label>
+      <label for="" class="filter-tag">
+        <input type="checkbox" name="category" value="category5">
+        <span>category5</span>
+      </label>
+      <label for="" class="filter-tag">
+        <input type="checkbox" name="category" value="category6">
+        <span>category6</span>
+      </label>
+    </div>
+  </div>
+
+
+  <ul class="prop-list">
+    <li class="prop-item js-item" data-area="area1" data-category='["category1", "category3", "category5"]'>propA</li>
+    <li class="prop-item js-item" data-area="area2" data-category='["category2", "category4", "category6"]'>propB</li>
+    <li class="prop-item js-item" data-area="area3" data-category='["category1", "category3", "category5"]'>propC</li>
+    <li class="prop-item js-item" data-area="area4" data-category='["category2", "category4", "category6"]'>propD</li>
+    <li class="prop-item js-item" data-area="area5" data-category='["category1", "category2", "category3"]'>propE</li>
+    <li class="prop-item js-item" data-area="area1" data-category='["category1", "category2", "category3"]'>propF</li>
+  </ul>
+</body>
+</html>

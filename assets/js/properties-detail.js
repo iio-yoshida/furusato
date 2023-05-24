@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   );
 
+  // 物件情報 ギャラリー部分のスライド
   const swiper = new Swiper('.swiper', {
     // Optional parameters
     loop: true,
@@ -58,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
     },
   });
 
+  // 問い合わせフォームの未入力エラー表示
   let errorEl = document.querySelector('.error');
   if (errorEl) {
     let mw_wp_form = document.querySelector('.mw_wp_form');
