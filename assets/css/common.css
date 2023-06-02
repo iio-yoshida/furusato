@@ -501,6 +501,20 @@ input::placeholder {
   text-align: center;
 }
 
+.p-btnWrapper--mb {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.p-btnWrapper > *:not(:first-child) {
+  margin-top: 30px;
+}
+
+.p-btnWrapper + .p-btnWrapper {
+  margin-top: 30px;
+}
+
 .header {
   position: fixed;
   height: clamp(60px, 40px + 5.56vw, 120px);
@@ -1610,4 +1624,16 @@ body.is-active {
   background-image: url(../img/common/bg_photo02.png);
   background-size: cover;
   background-position: center;
+}
+
+.js-confirmHidden.is-hidden {
+  display: none;
+}
+
+.js-confirmShown {
+  display: none;
+}
+
+.js-confirmShown.is-active {
+  display: block;
 }

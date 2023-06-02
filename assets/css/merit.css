@@ -125,9 +125,15 @@
   margin-bottom: 10px;
   padding-right: 0.4em;
   border-right: 1px solid #222;
+  color: #c24524;
   font-size: clamp(30px, 24px + 1.67vw, 48px);
   font-weight: 700;
   line-height: 1;
+}
+
+.merit-main__num > span {
+  color: #222;
+  font-size: clamp(20px, 16px + 1.11vw, 32px);
 }
 
 .merit-main__subtitle {

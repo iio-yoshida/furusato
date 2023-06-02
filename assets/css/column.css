@@ -153,3 +153,8 @@
   object-fit: cover;
   aspect-ratio: 11/6;
 }
+
+.p-flex__body img.--rect {
+  object-fit: contain;
+  aspect-ratio: 1/1;
+}

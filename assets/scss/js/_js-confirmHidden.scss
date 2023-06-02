@@ -1,0 +1,11 @@
+@use "../global/" as g;
+
+.js-confirmHidden.is-hidden {
+  display: none;
+}
+.js-confirmShown {
+  display: none;
+}
+.js-confirmShown.is-active {
+  display: block;
+}

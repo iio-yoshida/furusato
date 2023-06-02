@@ -55,10 +55,16 @@
   margin-bottom: 10px;
   padding-right: .4em;
   border-right: 1px solid g.colors(base-black);
+  color: g.colors(main);
   font-size: g.pxClamp(30px, 48px);
   font-weight: 700;
   line-height: 1;
 }
+.merit-main__num > span {
+  color: g.colors(base-black);
+  font-size: g.pxClamp(20px, 32px);
+}
+
 .merit-main__subtitle {
   margin-bottom: 10px;
   padding-bottom: .5em;

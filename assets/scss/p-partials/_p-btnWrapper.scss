@@ -5,3 +5,15 @@
   text-align: center;
 }
 
+.p-btnWrapper--mb {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.p-btnWrapper > *:not(:first-child) {
+  margin-top: 30px;
+}
+.p-btnWrapper + .p-btnWrapper {
+  margin-top: 30px;
+}

@@ -1,6 +1,7 @@
 @use "../../global/" as g;
 
 .company-info {
+  margin-top: g.pxClamp(60px, 80px);
   padding-bottom: g.pxClamp(80px, 100px);
 }
 

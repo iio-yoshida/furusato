@@ -87,6 +87,11 @@
   aspect-ratio: 11/6;
 }
 
+.p-flex__body img.--rect {
+  object-fit: contain;
+  aspect-ratio: 1/1;
+}
+
 .en-header {
   position: fixed;
   height: clamp(60px, 40px + 5.56vw, 120px);
