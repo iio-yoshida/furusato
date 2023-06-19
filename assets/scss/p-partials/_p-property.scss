@@ -66,6 +66,7 @@
 .p-property__imgWrapper img {
   object-fit: cover;
   width: 100%;
+  height: 100%;
   aspect-ratio: 3 / 2;
   transition: transform .4s;
   will-change: transform;

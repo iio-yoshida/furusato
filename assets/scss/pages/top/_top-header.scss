@@ -17,7 +17,7 @@
   .header__navItem > a {
     color: g.colors(base-white);
     & span::after {
-      background-color: g.colors(base-white);
+      background-color: g.colors(main);
     }
   }
   .header__navMenuBtn {
@@ -52,7 +52,7 @@
       .header__navItem > a {
         color: g.colors(base-black);
         & span::after {
-          background-color: g.colors(base-black);
+          background-color: g.colors(main);
         }
       }
       .header__navMenuBtn {
@@ -89,7 +89,7 @@
   .header__navItem > a {
     color: g.colors(base-black);
     & span::after {
-      background-color: g.colors(base-black);
+      background-color: g.colors(main);
     }
   }
   .header__navMenuBtn {

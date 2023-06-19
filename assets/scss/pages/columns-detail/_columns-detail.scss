@@ -1,0 +1,76 @@
+@use "../../global/" as g;
+
+.columns {
+  width: 100%;
+  max-width: 1360px;
+  margin-inline: auto;
+  padding: g.pxClamp(20px, 40px, $maxViewport: 768px);
+
+  @include g.mq(md) {
+    padding: g.pxClamp(20px, 40px, $minViewport: 768px);
+  }
+}
+
+.columns__date {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-align: right;
+}
+
+.columns__title {
+  margin-bottom: g.remClamp(10px, 20px);
+  padding-bottom: g.pxClamp(20px, 24px);
+  border-bottom: 1px solid g.colors(base-black);
+  font-size: g.remClamp(20px, 32px);
+  font-weight: 700;
+}
+
+.columns__kv {
+  width: 100%;
+  height: g.pxClamp(320px, 480px);
+}
+.columns__kv img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.block-editor,
+.editor-styles-wrapper .is-root-container {
+  .columns__inner {
+    width: 100%;
+    max-width: 768px;
+    margin-top: g.pxClamp(20px, 40px);
+    margin-bottom: g.pxClamp(60px, 80px);
+  }
+
+  p {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: g.remClamp(16px, 18px);
+    line-height: 1.75;
+  }
+
+  h2.wp-block-heading {
+    margin-top: g.pxClamp(20px, 40px);
+    margin-bottom: 10px;
+    padding-left: .75em;
+    border-left: 6px solid g.colors(main);
+    font-size: g.remClamp(20px, 24px);
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  h3.wp-block-heading {
+    margin-top: 20px;
+    font-size: g.remClamp(18px, 20px);
+    font-weight: 700;
+  }
+  h4.wp-block-heading {
+    margin-top: 20px;
+    font-size: g.remClamp(16px, 18px);
+    font-weight: 700;
+  }
+
+}

@@ -1,0 +1,107 @@
+@use "../global/" as g;
+
+.swiper--modal {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: g.pxClamp(20px, 40px) g.pxClamp(20px, 40px) g.pxClamp(40px, 60px);
+
+  .swiper-slide__item {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide p {
+    font-size: g.pxClamp(12px, 16px);
+    text-align: center;
+    opacity: 0;
+    transition: opacity .4s;
+  }
+  .swiper-slide-active p {
+    opacity: 1;
+  }
+
+  .swiper-slide__imgWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide__imgWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+  }
+  .swiper-slide__btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 45%;
+    width: g.pxClamp(20px, 30px);
+    height: g.pxClamp(20px, 30px);
+    background-color: rgba(g.colors(base-black), .4);
+    border-radius: 50%;
+    transition: background-color .25s;
+    @include g.mq(md) {
+      top: 50%;
+    }
+    @include g.hover() {
+      background-color: rgba(g.colors(main), 1);
+    }
+  }
+  .swiper-button-prev {
+    left: 0;
+  }
+  .swiper-button-next {
+    right: 0;
+  }
+
+  .swiper-button-prev::before,
+  .swiper-button-next::before,
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    position: absolute;
+    content: '';
+    width: g.pxClamp(12px, 18px);
+    height: 1px;
+    background-color: g.colors(base-white);
+  }
+  .swiper-button-prev::before,
+  .swiper-button-prev::after {
+    left: 15%;
+  }
+  .swiper-button-next::before,
+  .swiper-button-next::after {
+    right: 15%;
+  }
+  .swiper-button-prev::before {
+    bottom: g.pxClamp(12px, 19px);
+    transform: rotate(-30deg);
+  }
+  .swiper-button-next::before {
+    bottom: g.pxClamp(12px, 19px);
+    transform: rotate(30deg);
+  }
+  .swiper-button-prev::after {
+    top: g.pxClamp(12px, 18px);
+    transform: rotate(30deg);
+  }
+  .swiper-button-next::after {
+    top: g.pxClamp(12px, 18px);
+    transform: rotate(-30deg);
+  }
+
+  .swiper-pagination-bullet {
+    bottom: 0;
+    background-color: g.colors(base-gray);
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: g.colors(main);
+  }
+}
